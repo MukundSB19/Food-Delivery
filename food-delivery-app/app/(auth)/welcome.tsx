@@ -9,6 +9,8 @@ import {
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
+import CustomButton from "@/components/CustomButton";
+
 
 const Welcome = () => {
   return (
@@ -40,12 +42,17 @@ const Welcome = () => {
                 <Text className="text-7xl font-boldFont text-fontPrimary-0 ml-7 mt-11 tracking-tighter2">
                   Fresh. Organic.
                 </Text>
-                <Text className="text-5xl font-boldFont text-white ml-7 mt-4 tracking-tighter2 bg-[#ffffff33]  ">
+                <Text className="text-5xl font-boldFont text-white ml-7 mt-4 tracking-tighter2 bg-[#ffffff33] p-2 w-4/5 rounded-2xl">
                   Delivered to your
                 </Text>
-                <Text className="text-5xl font-boldFont text-white ml-7 mt-4 tracking-tighter2 bg-[#ffffff33]">
+                <Text className="text-5xl font-boldFont text-white ml-7 mt-4 tracking-tighter2 bg-[#ffffff33] p-2 w-[45%] rounded-2xl  ">
                   Doorstep
                 </Text>
+                <Text className="font-boldFont tracking-tighter text-fontPrimary-0 p-2 ml-7 mt-4 text-base">Green Basket brings you fresh organic and locally-sourced produce, making it simple to shop for high-quality fruits,vegetables, dairy and pantry staples.</Text>
+                <View className="flex items-center mt-9 ">
+              {/* <CustomButton title="Get Started" /> */}
+              <CustomButton title="Get Started" />
+              </View>
                 {/* lower section*/}
               </View>
             </View>
