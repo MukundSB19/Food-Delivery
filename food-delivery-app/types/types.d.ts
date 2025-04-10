@@ -1,4 +1,4 @@
-import { TouchableOpacityProps } from "react-native";
+import { TouchableOpacityProps , TextInputProps} from "react-native";
 
 declare interface ButtonProps extends TouchableOpacityProps {
     title?: string;
@@ -10,3 +10,15 @@ declare interface ButtonProps extends TouchableOpacityProps {
     textStyle?: string;
     disabled: boolean;
 }
+declare interface InputFieldProps extends TextInputProps {
+    label: string;
+    icon?: any;
+    secureTextEntry?: boolean;
+    labelStyle?: string;
+    containerStyle?: string;
+    inputStyle?: string;
+    iconStyle?: string;
+    className?: string;
+    inputModeType?: string;
+    editable?: boolean;
+  }

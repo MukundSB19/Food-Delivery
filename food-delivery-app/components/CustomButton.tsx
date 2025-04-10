@@ -15,7 +15,7 @@ const CustomButton = ({
 }: ButtonProps) => {
     return (
         <TouchableOpacity
-            className={`bg-buttonPrimary-0 py-3 px-5 w-4/5 rounded-full items-center shadow-md shadow-black ${
+            className={`bg-buttonPrimary-0  rounded-full items-center shadow-md shadow-black ${
                 disabled ? "bg-gray-400" : ""
             } ${className}`}
             disabled={disabled}
