@@ -1,4 +1,5 @@
 import { TouchableOpacityProps , TextInputProps} from "react-native";
+import { ImageSourcePropType } from "react-native";
 
 declare interface ButtonProps extends TouchableOpacityProps {
     title?: string;
@@ -11,7 +12,7 @@ declare interface ButtonProps extends TouchableOpacityProps {
     disabled: boolean;
 }
 declare interface InputFieldProps extends TextInputProps {
-    label: string;
+    label?: string;
     icon?: any;
     secureTextEntry?: boolean;
     labelStyle?: string;
@@ -22,3 +23,14 @@ declare interface InputFieldProps extends TextInputProps {
     inputModeType?: string;
     editable?: boolean;
   }
+  declare interface Slideshow {
+       id:number,
+       image:ImageSourcePropType, 
+        
+    }
+
+declare interface horizontalImage{
+    
+    image:ImageSourcePropType,
+    text: string,
+}

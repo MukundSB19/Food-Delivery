@@ -34,7 +34,7 @@ const Welcome = () => {
             <View className="flex flex-col justify-between h-screen ">
               <View className="flex items-end ">
                 <TouchableOpacity className="px-2 py-2 m-3 border bg-white/10 border-white/30 rounded-xl backdrop-blur-2xl" onPress={() => {
-                router.push("/(tabs)/home");
+                router.push("/home");
               }}>
                   <Text className="text-2xl font-semibold text-fontPrimary-0">
                     SKIP{" "}
