@@ -5,6 +5,10 @@ import veges from "@/assets/images/vegetables.png";
 import dairy from "@/assets/images/dairy.png";
 import grains from "@/assets/images/grains.png";
 import spice from "@/assets/images/spice.png";
+import cardOne from "@/assets/images/card1.png";
+import cardTwo from "@/assets/images/card2.png";
+import cardThree from "@/assets/images/card3.png";
+import cardFour from "@/assets/images/card4.png";
 
 
 
@@ -18,6 +22,10 @@ veges,
 dairy,
 grains,
 spice,
+cardOne,
+cardTwo,
+cardThree,
+cardFour,
 }
 
 export const icons = {
@@ -66,4 +74,26 @@ export const onboarding = [
   text: "Spice",
 },
 
-  ]
+  ];
+ export const CardContent = [
+  {
+    image:images.cardOne,
+    text: "Sunny Avocado Breakfast",
+    category: "Breakfast",
+  },
+  {
+    image:images.cardTwo,
+    text: "Veggie Symphony Bowl",
+    category: "Lunch",
+  },
+  {
+    image:images.cardThree,
+    text: "Berry Bliss Smoothie",
+    category: "Snacks"
+  },
+  {
+    image:images.cardFour,
+    text: "Carnitas Burrito Bowl",
+    category: "Dinner",
+  },
+ ]

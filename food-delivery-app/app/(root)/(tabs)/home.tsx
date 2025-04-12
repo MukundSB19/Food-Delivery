@@ -14,13 +14,14 @@ import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import InputField from "@/components/InputField";
 import SlideShow from "@/components/SlideShow";
-import { listImage, onboarding } from "@/constants";
+import { CardContent, listImage, onboarding } from "@/constants";
 import CustomButton from "@/components/CustomButton";
 import HorizontalList from "@/components/HorizontalList";
+import Cards from "@/components/Cards";
 
 const home = () => {
   return (
-    <View className="">
+    <View className="pb-56 h-full">
       <StatusBar
         translucent
         backgroundColor="transparent"
@@ -30,10 +31,10 @@ const home = () => {
         colors={["#EAECCC", "#9EDC88"]}
         start={{ x: 0, y: 0.5 }}
         end={{ x: 0, y: 1 }}
-        className="h-screen"
+        className="h-screen "
       >
-        <SafeAreaView>
-          <ScrollView>
+        <SafeAreaView >
+          <ScrollView >
             <View>
               <View className="flex flex-row justify-between px-5 pt-3 items-center">
                 <TouchableOpacity>
@@ -85,13 +86,15 @@ const home = () => {
               <View className="mt-3">
                 <SlideShow slideObject={onboarding} />
               </View>
-              <View className=" flex ">
-                <HorizontalList listObject={listImage} />
+              <View className=" flex "> 
+                  <HorizontalList listObject={listImage} />
               </View>
-
-              {/* middle part */}
             </View>
-            <View>{/* lower part  */}</View>
+            <View>
+              <View>
+                <Cards listObject={CardContent} /> 
+               </View>
+              {/* lower part  */}</View>
           </ScrollView>
         </SafeAreaView>
       </LinearGradient>
