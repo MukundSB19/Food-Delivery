@@ -1,7 +1,6 @@
-import React, { useRef, useState } from "react";
+import { useRef } from "react";
 import { Image, View } from "react-native";
 import Swiper from "react-native-swiper";
-import { onboarding } from "@/constants";
 import { Slideshow } from "@/types/types";
 import CustomButton from "./CustomButton";
 

@@ -1,4 +1,4 @@
-import { View, Text, FlatList, Image, ImageBackground, TouchableOpacity } from 'react-native'
+import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native'
 
 import { horizontalImage } from '@/types/types'
 

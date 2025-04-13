@@ -15,7 +15,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import InputField from "@/components/InputField";
 import SlideShow from "@/components/SlideShow";
 import { CardContent, listImage, onboarding } from "@/constants";
-import CustomButton from "@/components/CustomButton";
 import HorizontalList from "@/components/HorizontalList";
 import Cards from "@/components/Cards";
 
