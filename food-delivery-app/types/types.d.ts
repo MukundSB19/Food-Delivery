@@ -1,4 +1,4 @@
-import { TouchableOpacityProps, TextInputProps } from "react-native";
+import { TouchableOpacityProps, TextInputProps, ModalBaseProps, ModalProps } from "react-native";
 import { ImageSourcePropType } from "react-native";
 
 declare interface ButtonProps extends TouchableOpacityProps {
@@ -39,3 +39,4 @@ declare interface CardsType {
     text: string;
     category: string;
 }
+

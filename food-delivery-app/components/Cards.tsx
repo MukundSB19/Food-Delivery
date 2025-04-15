@@ -4,7 +4,7 @@ import { CardsType } from "@/types/types";
 const Cards = ({ listObject }: { listObject: CardsType[] }) => {
   return (
     <FlatList
-      className="ml-5 mt-10 mb-28"
+      className="pl-3 mt-10 mb-28"
       horizontal
       data={listObject}
       showsHorizontalScrollIndicator={false}
