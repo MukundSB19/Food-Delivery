@@ -1,6 +1,13 @@
+// metro.config.js
 const { getDefaultConfig } = require("expo/metro-config");
-const { withNativeWind } = require('nativewind/metro');
+const { withNativeWind } = require("nativewind/metro");
+const { wrapWithReanimatedMetroConfig } = require("react-native-reanimated/metro-config");
 
-const config = getDefaultConfig(__dirname)
+// Get default config
+const config = getDefaultConfig(__dirname);
 
-module.exports = withNativeWind(config, { input: './global.css' })
+// Apply NativeWind first, then wrap with Reanimated
+const nativeWindConfig = withNativeWind(config, { input: './global.css' });
+const finalConfig = wrapWithReanimatedMetroConfig(nativeWindConfig);
+
+module.exports = finalConfig;

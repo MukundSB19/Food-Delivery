@@ -1,5 +1,6 @@
 import { View, Text, StatusBar } from "react-native";
 import React from "react";
+import HomeScreen from "@/app/(drawer)/bookMark";
 
 import { LinearGradient } from "expo-linear-gradient";
 const Cart = () => {
@@ -15,7 +16,9 @@ const Cart = () => {
                 start={{ x: 0, y: 0.5 }}
                 end={{ x: 0, y: 1 }}
                 className="h-screen"
-            ></LinearGradient>
+            >  
+           
+            </LinearGradient>
         </View>
     );
 };
