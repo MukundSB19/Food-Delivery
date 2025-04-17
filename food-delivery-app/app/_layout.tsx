@@ -5,6 +5,7 @@ import * as SplashScreen from "expo-splash-screen";
 import "../gesture-handler";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
+import CustomDrawerContent from "@/components/CustomDrawerContent";
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -26,11 +27,20 @@ export default function RootLayout() {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <Drawer>
+      <Drawer screenOptions={{
+        drawerStatusBarAnimation:"slide",
+        drawerLabelStyle:{fontFamily:"regularFont" , fontSize:23 ,  color:"black",},
+        drawerStyle:{backgroundColor:"#EAECCC",},
+        drawerActiveTintColor:"black",
+        headerShown:false,
+      }}
+      drawerContent={(props)=> <CustomDrawerContent {...props} />}
+      >
         
         <Drawer.Screen
           name="(drawer)/language"
-          options={{ title: "Language" }}
+          options={{ title: "Language"  }}
+          
         />
         <Drawer.Screen
           name="(drawer)/settings"

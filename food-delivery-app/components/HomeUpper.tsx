@@ -8,14 +8,16 @@ import InputField from "@/components/InputField";
 
 import LocationModal from "@/components/LocationModal";
 import { useState } from "react";
-import HomeScreen from "@/app/(drawer)/bookMark";
+import DrawerComponent from "./DrawerComponent";
+
+
 
 const HomeUpper = () => {
   const [modalVisible, setModalVisible] = useState(false);
   return (
     <>
       <View className="flex flex-row justify-between px-5 pt-3 items-center">
-       <HomeScreen />
+       <DrawerComponent/>
         <TouchableOpacity onPress={() => setModalVisible(true)}>
           <View className="flex flex-row gap-2 px-5 pt-3 items-center justify-center">
             <FontAwesome6 name="location-dot" size={24} color="#fa003f" />
