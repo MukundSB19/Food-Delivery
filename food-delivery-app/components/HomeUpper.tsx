@@ -9,6 +9,7 @@ import InputField from "@/components/InputField";
 import LocationModal from "@/components/LocationModal";
 import { useState } from "react";
 import DrawerComponent from "./DrawerComponent";
+import Entypo from '@expo/vector-icons/Entypo';
 
 
 
@@ -57,19 +58,10 @@ const HomeUpper = () => {
             setModalVisible(false);
           }}
         >
-          <View className="flex-1 justify-center items-center bg-[rgba(0,0,0,0.5)]">
-            <View className="w-[380] p-[20] bg-white rounded-3xl items-center">
-              <Text className="color-fontPrimary-0 font-regularFont tracking-tighter2 text-3xl">
-                Select Your Location
-              </Text>
-              <TouchableOpacity onPress={() => setModalVisible(false)}>
-                <Text className="bg-buttonPrimary-0 p-3 color-white rounded-xl text-lg">
-                  Close Modal
-                </Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </LocationModal>
+         <TouchableOpacity className="" onPress={() => setModalVisible(false)}>
+         <Entypo name="circle-with-cross" size={29} color="black" />
+                            </TouchableOpacity>
+                            </LocationModal>
       </View>
     </>
   );
