@@ -38,9 +38,8 @@ export default function RootLayout() {
       >
         
         <Drawer.Screen
-          name="(drawer)/language"
-          options={{ title: "Language"  }}
-          
+          name="(root)"
+          options={{ headerShown: false, title:"Home" }}
         />
         <Drawer.Screen
           name="(drawer)/settings"
@@ -60,10 +59,7 @@ export default function RootLayout() {
           name="(auth)"
           options={{ headerShown: false, drawerItemStyle: { display: "none" } }}
         />
-        <Drawer.Screen
-          name="(root)"
-          options={{ headerShown: false, drawerItemStyle: { display: "none" } }}
-        />
+        
         <Drawer.Screen
           name="+not-found"
           options={{ headerShown: false, drawerItemStyle: { display: "none" } }}
