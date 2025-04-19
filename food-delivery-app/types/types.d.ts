@@ -38,5 +38,6 @@ declare interface CardsType {
     image: ImageSourcePropType;
     text: string;
     category: string;
+    ingredients?:string;
 }
 

@@ -64,20 +64,25 @@ export const CardContent = [
         image: images.cardOne,
         text: "Sunny Avocado Breakfast",
         category: "Breakfast",
+        ingredients: "falana dhimkana "
+        
     },
     {
         image: images.cardTwo,
         text: "Veggie Symphony Bowl",
         category: "Lunch",
+        ingredients: "falana dhimkana "
     },
     {
         image: images.cardThree,
         text: "Berry Bliss Smoothie",
         category: "Snacks",
+        ingredients: "falana dhimkana "
     },
     {
         image: images.cardFour,
         text: "Carnitas Burrito Bowl",
         category: "Dinner",
+        ingredients: "falana dhimkana "
     },
 ];

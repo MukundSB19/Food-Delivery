@@ -12,6 +12,7 @@ import Entypo from "@expo/vector-icons/Entypo";
 
 const HomeUpper = () => {
     const [modalVisible, setModalVisible] = useState(false);
+   
     return (
         <>
             <View className="flex flex-row justify-between px-5 pt-3 items-center">
