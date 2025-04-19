@@ -1,5 +1,5 @@
-import CustomButton from "@/components/CustomButton";
-import InputField from "@/components/InputField";
+import CustomButton from "@/components/ui/CustomButton";
+import InputField from "@/components/ui/InputField";
 import { router } from "expo-router";
 import { Text, TouchableOpacity, View, StatusBar } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";

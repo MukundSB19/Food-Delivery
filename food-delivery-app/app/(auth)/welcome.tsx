@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
-import CustomButton from "@/components/CustomButton";
+import CustomButton from "@/components/ui/CustomButton";
 import { router } from "expo-router";
 
 const Welcome = () => {
@@ -61,8 +61,8 @@ const Welcome = () => {
                                     <CustomButton
                                         title="Get Started"
                                         className="py-3 px-5 w-4/5"
-                                        onPress={
-                                            () => router.push("/(auth)/sign-in")
+                                        onPress={() =>
+                                            router.push("/(auth)/sign-in")
                                         }
                                         disabled={false}
                                     />

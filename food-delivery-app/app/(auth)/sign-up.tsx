@@ -1,5 +1,5 @@
-import CustomButton from "@/components/CustomButton";
-import InputField from "@/components/InputField";
+import CustomButton from "@/components/ui/CustomButton";
+import InputField from "@/components/ui/InputField";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import { useState } from "react";

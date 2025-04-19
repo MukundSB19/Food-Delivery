@@ -29,12 +29,10 @@ export const icons = {};
 export const onboarding = [
     {
         id: 1,
-
         image: images.slideOne,
     },
     {
         id: 2,
-
         image: images.slideTwo,
     },
 ];
