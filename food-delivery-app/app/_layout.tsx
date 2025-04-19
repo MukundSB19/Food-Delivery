@@ -5,6 +5,7 @@ import "../gesture-handler";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
 import CustomDrawerContent from "@/components/CustomDrawerContent";
+import { StatusBar } from "react-native";
 
 export default function RootLayout() {
     const [loaded] = useFonts({
@@ -26,63 +27,71 @@ export default function RootLayout() {
 
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
-            <Drawer
-                screenOptions={{
-                    drawerStatusBarAnimation: "slide",
-                    drawerLabelStyle: {
-                        fontFamily: "regularFont",
-                        fontSize: 23,
-                        color: "black",
-                    },
-                    drawerStyle: { backgroundColor: "#EAECCC" },
-                    drawerActiveTintColor: "black",
-                    headerShown: false,
-                }}
-                drawerContent={(props) => <CustomDrawerContent {...props} />}
-            >
-                <Drawer.Screen
-                    name="(root)"
-                    options={{ headerShown: false, title: "Home" }}
-                />
-                <Drawer.Screen
-                    name="(drawer)/settings"
-                    options={{ title: "Settings" }}
-                />
-                <Drawer.Screen
-                    name="(drawer)/faq"
-                    options={{ title: "FAQs" }}
-                />
-                <Drawer.Screen
-                    name="(drawer)/contact"
-                    options={{ title: "Contact Us" }}
-                />
-                <Drawer.Screen
-                    name="(drawer)/bookMark"
-                    options={{ title: "Liked" }}
-                />
-                <Drawer.Screen
-                    name="index"
-                    options={{
+                        <StatusBar
+                            translucent
+                            backgroundColor="transparent"
+                            barStyle="dark-content"
+                            className=""
+                        />
+                <Drawer
+                    screenOptions={{
+                        drawerStatusBarAnimation: "slide",
+                        drawerLabelStyle: {
+                            fontFamily: "regularFont",
+                            fontSize: 23,
+                            color: "black",
+                        },
+                        drawerStyle: { backgroundColor: "#EAECCC" },
+                        drawerActiveTintColor: "black",
                         headerShown: false,
-                        drawerItemStyle: { display: "none" },
                     }}
-                />
-                <Drawer.Screen
-                    name="(auth)"
-                    options={{
-                        headerShown: false,
-                        drawerItemStyle: { display: "none" },
-                    }}
-                />
+                    drawerContent={(props) => (
+                        <CustomDrawerContent {...props} />
+                    )}
+                >
+                    <Drawer.Screen
+                        name="(root)"
+                        options={{ headerShown: false, title: "Home" }}
+                    />
+                    <Drawer.Screen
+                        name="(drawer)/settings"
+                        options={{ title: "Settings" }}
+                    />
+                    <Drawer.Screen
+                        name="(drawer)/faq"
+                        options={{ title: "FAQs" }}
+                    />
+                    <Drawer.Screen
+                        name="(drawer)/contact"
+                        options={{ title: "Contact Us" }}
+                    />
+                    <Drawer.Screen
+                        name="(drawer)/bookMark"
+                        options={{ title: "Liked" }}
+                    />
+                    <Drawer.Screen
+                        name="index"
+                        options={{
+                            headerShown: false,
+                            drawerItemStyle: { display: "none" },
+                        }}
+                    />
+                    <Drawer.Screen
+                        name="(auth)"
+                        options={{
+                            headerShown: false,
+                            drawerItemStyle: { display: "none" },
+                        }}
+                    />
 
-                <Drawer.Screen
-                    name="+not-found"
-                    options={{
-                        headerShown: false,
-                        drawerItemStyle: { display: "none" },
-                    }}
-                />
-            </Drawer>
+                    <Drawer.Screen
+                        name="+not-found"
+                        options={{
+                            headerShown: false,
+                            drawerItemStyle: { display: "none" },
+                        }}
+                    />
+                </Drawer>
         </GestureHandlerRootView>
     );
 }

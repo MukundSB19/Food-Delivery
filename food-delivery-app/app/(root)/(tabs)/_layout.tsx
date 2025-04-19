@@ -33,7 +33,6 @@ export default function RootLayout() {
                     backgroundColor: "#254F1A",
                     position: "absolute",
                     display: "flex",
-                    justifyContent: "",
                     alignItems: "center",
                     borderRadius: 25,
                     marginBottom: 10,
