@@ -1,6 +1,4 @@
-import { View, Text, StatusBar, StyleSheet } from "react-native";
-import React from "react";
-import HomeScreen from "@/app/(drawer)/bookMark";
+import { View, StyleSheet } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
 const Cart = () => {

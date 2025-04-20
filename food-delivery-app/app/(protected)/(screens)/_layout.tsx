@@ -4,7 +4,6 @@ export default function RootLayout() {
     return (
         <Stack>
             <Stack.Screen name="location" options={{ headerShown: false }} />
-         
         </Stack>
     );
 }

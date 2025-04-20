@@ -6,6 +6,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
 import CustomDrawerContent from "@/components/CustomDrawerContent";
 import { StatusBar } from "react-native";
+import { AuthProvider } from "../utils/AuthContext";
 
 export default function RootLayout() {
     const [loaded] = useFonts({
@@ -27,12 +28,12 @@ export default function RootLayout() {
 
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
-                        <StatusBar
-                            translucent
-                            backgroundColor="transparent"
-                            barStyle="dark-content"
-                            className=""
-                        />
+            <AuthProvider>
+                <StatusBar
+                    translucent
+                    backgroundColor="transparent"
+                    barStyle="dark-content"
+                />
                 <Drawer
                     screenOptions={{
                         drawerStatusBarAnimation: "slide",
@@ -50,7 +51,7 @@ export default function RootLayout() {
                     )}
                 >
                     <Drawer.Screen
-                        name="(root)"
+                        name="(protected)"
                         options={{ headerShown: false, title: "Home" }}
                     />
                     <Drawer.Screen
@@ -92,6 +93,7 @@ export default function RootLayout() {
                         }}
                     />
                 </Drawer>
+            </AuthProvider>
         </GestureHandlerRootView>
     );
 }

@@ -3,15 +3,16 @@ import {
     DrawerItemList,
 } from "@react-navigation/drawer";
 import { View, Text, Animated, TouchableOpacity } from "react-native";
-import { useEffect, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import Entypo from "@expo/vector-icons/Entypo";
-import { router, useNavigation } from "expo-router";
+import { useNavigation } from "expo-router";
 import { DrawerActions } from "@react-navigation/native";
+import { AuthContext } from "@/utils/AuthContext";
 
 export default function CustomDrawerContent(props: any) {
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const navigation = useNavigation();
-
+    const authState = useContext(AuthContext);
     useEffect(() => {
         Animated.timing(fadeAnim, {
             toValue: 1,
@@ -25,18 +26,18 @@ export default function CustomDrawerContent(props: any) {
             {...props}
             contentContainerStyle={{ flex: 1, paddingTop: 0 }}
         >
-            <View className=" px-4 py-7 ">
+            <View className="px-4 py-7">
                 {/* <Image
             source={require("")} // your image
-            className="w-16 h-16 rounded-full mb-2"
+            className="w-16 h-16 mb-2 rounded-full"
             
           /> */}
                 <View className="flex flex-row justify-between py-4">
                     <View>
-                        <Text className="font-boldFont text-xl text-fontPrimary-0">
+                        <Text className="text-xl font-boldFont text-fontPrimary-0">
                             John Doe
                         </Text>
-                        <Text className="text-gray-600 text-lg font-regularFont">
+                        <Text className="text-lg text-gray-600 font-regularFont">
                             john@example.com
                         </Text>
                     </View>
@@ -64,16 +65,13 @@ export default function CustomDrawerContent(props: any) {
                 className=""
             ></Animated.View>
 
-            <View className="mt-auto border-t border-gray-200 px-4 py-4 ">
+            <View className="px-4 py-4 mt-auto border-t border-gray-200 ">
                 <TouchableOpacity
-                    className="flex gap-3 flex-row"
-                    onPress={() => {
-                        // logout logic here
-                        router.replace("/(auth)/sign-in");
-                    }}
+                    className="flex flex-row gap-3"
+                    onPress={() => authState.logOut()}
                 >
                     <Entypo name="log-out" size={24} color="text-red-600" />
-                    <Text className="text-red-600 font-boldFont text-2xl">
+                    <Text className="text-2xl text-red-600 font-boldFont">
                         Logout
                     </Text>
                 </TouchableOpacity>

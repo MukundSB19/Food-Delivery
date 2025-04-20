@@ -3,7 +3,7 @@ import InputField from "@/components/ui/InputField";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import { useState } from "react";
-import { Text, TouchableOpacity, View, StatusBar } from "react-native";
+import { Text, TouchableOpacity, View, StatusBar, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const signUp = () => {
@@ -19,16 +19,12 @@ const signUp = () => {
 
     return (
         <View className="h-full">
-            <StatusBar
-                translucent
-                backgroundColor="transparent"
-                barStyle="dark-content"
-            />
+
             <LinearGradient
                 colors={["#EAECCC", "#9EDC88"]}
                 start={{ x: 0, y: 0.5 }}
                 end={{ x: 0, y: 1 }}
-                className="h-screen"
+                style={StyleSheet.absoluteFill}
             >
                 <SafeAreaView>
                     <View className="mb-40">
@@ -40,18 +36,18 @@ const signUp = () => {
                             {/* <Image source={Icons.exitIcon} className="mt-8 ml-6" /> */}
                         </TouchableOpacity>
 
-                        <View className="flex justify-center items-center  ">
-                            <Text className="font-boldFont tracking-tighter text-5xl mt-24 text-fontPrimary-0">
+                        <View className="flex items-center justify-center ">
+                            <Text className="mt-24 text-5xl tracking-tighter font-boldFont text-fontPrimary-0">
                                 Create Account
                             </Text>
-                            <Text className="m-3 text-center font-boldFont tracking-tighter text-lg mt-7 text-fontPrimary-0">
+                            <Text className="m-3 text-lg tracking-tighter text-center font-boldFont mt-7 text-fontPrimary-0">
                                 Welcome ! Sign up to access your account, manage
                                 bookings, and enjoy a smooth car rental
                                 experience.
                             </Text>
                         </View>
 
-                        <View className=" mt-6">
+                        <View className="mt-6 ">
                             <InputField
                                 label="Name"
                                 placeholder="Ex. Ashley Mark"
@@ -97,7 +93,7 @@ const signUp = () => {
                         <View className="flex items-center mt-10">
                             <CustomButton
                                 title="Sign up"
-                                className="py-3 px-5 w-4/5 "
+                                className="w-4/5 px-5 py-3 "
                                 textStyle="text-white text-center w-full  font-boldFont tracking-tighter text-2xl"
                                 onPress={handleSignup}
                                 disabled={false}
@@ -105,10 +101,10 @@ const signUp = () => {
                         </View>
 
                         {/* <View>
-              <Text className="text-center font-LeagueSpartanMedium text-base mt-5 mb-6 ">
+              <Text className="mt-5 mb-6 text-base text-center font-LeagueSpartanMedium ">
                 Or Sign up with
               </Text>
-              {/* <View className="flex flex-row justify-center items-center  gap-7">
+              {/* <View className="flex flex-row items-center justify-center gap-7">
               <Image source={Icons.facebookIcon} />
               <Image source={Icons.googleIcon} />
               <Image source={Icons.appleIcon} />
