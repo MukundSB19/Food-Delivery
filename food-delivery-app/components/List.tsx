@@ -72,6 +72,7 @@ const List: React.FC<ListProps> = ({ searchPhrase, setClicked, data }) => {
                     data={data}
                     renderItem={renderItem}
                     keyExtractor={(item) => item.id}
+                    maxToRenderPerBatch={2}
                 />
             </View>
         </SafeAreaView>

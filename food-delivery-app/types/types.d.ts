@@ -34,10 +34,11 @@ declare interface horizontalImage {
 }
 
 declare interface CardsType {
-    id?: number;
+    
     image: ImageSourcePropType;
     text: string;
+    text2: string;
     category: string;
-    ingredients?:string;
+    ingredients:{name:string,quantity:string}[];
 }
 
