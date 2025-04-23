@@ -7,19 +7,21 @@ import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 const TabIcon = ({
     focused,
     tabName,
+    color
 }: {
     focused: boolean;
     tabName: "home" | "cart" | "account";
+    color:string;
 }) => (
-    <View>
+    <View className={focused ? "bg-[#00000044] w-12 h-12 items-center justify-center rounded-full":"bg-transparent w-full h-full"}>
         {tabName === "home" && (
-            <Octicons name="home" size={26} color="#ffffffdd" />
+            <Octicons name="home" size={26} color={color} />
         )}
         {tabName === "cart" && (
-            <MaterialCommunityIcons name="cart" size={28} color="#ffffffdd" />
+            <MaterialCommunityIcons name="cart" size={28} color={color} />
         )}
         {tabName === "account" && (
-            <MaterialIcons name="account-circle" size={29} color="#ffffffdd" />
+            <MaterialIcons name="account-circle" size={29} color={color} />
         )}
     </View>
 );
@@ -27,29 +29,35 @@ const TabIcon = ({
 export default function RootLayout() {
     return (
         <Tabs
+           
             screenOptions={{
                 tabBarShowLabel: false,
+                tabBarActiveTintColor: '#EAECCC',
+                    tabBarInactiveTintColor: 'white',
                 tabBarStyle: {
-                    backgroundColor: "#254F1A",
+                   backgroundColor:"#254F1A",
                     position: "absolute",
                     display: "flex",
                     alignItems: "center",
                     borderRadius: 25,
                     marginBottom: 10,
+                    
                     marginHorizontal: "30%",
                     overflow: "hidden",
-                    paddingTop: 4,
+                   paddingTop:4
                 },
             }}
+            
         >
             <Tabs.Screen
                 name="home"
                 options={{
                     headerShown: false,
                     title: "Home",
-                    tabBarIcon: ({ focused }: { focused: boolean }) => (
-                        <TabIcon focused={focused} tabName="home" />
+                    tabBarIcon: ({ focused,color }: { focused: boolean, color:string }) => (
+                        <TabIcon focused={focused} color={color} tabName="home" />
                     ),
+                    
                 }}
             />
             <Tabs.Screen
@@ -57,8 +65,8 @@ export default function RootLayout() {
                 options={{
                     headerShown: false,
                     title: "Cart",
-                    tabBarIcon: ({ focused }: { focused: boolean }) => (
-                        <TabIcon focused={focused} tabName="cart" />
+                    tabBarIcon: ({ focused,color }: { focused: boolean, color:string }) => (
+                        <TabIcon focused={focused} color={color} tabName="cart" />
                     ),
                 }}
             />
@@ -67,8 +75,8 @@ export default function RootLayout() {
                 options={{
                     headerShown: false,
                     title: "Account",
-                    tabBarIcon: ({ focused }: { focused: boolean }) => (
-                        <TabIcon focused={focused} tabName="account" />
+                    tabBarIcon: ({ focused,color }: { focused: boolean, color:string }) => (
+                        <TabIcon focused={focused} color={color} tabName="account" />
                     ),
                 }}
             />

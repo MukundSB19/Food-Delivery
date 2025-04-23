@@ -13,7 +13,9 @@ const HorizontalList = ({ listObject }: { listObject: horizontalImage[] }) => {
       showsHorizontalScrollIndicator={false}
       renderItem={({ item }) => (
         <TouchableOpacity
-        
+         onPress={() => {
+          router.push("/Discoverfeed")
+         }}
         >
           <View className="mr-5 ">
             <Image

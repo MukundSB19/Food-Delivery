@@ -24,6 +24,7 @@ const SlideShow = ({ slideObject }: { slideObject: Slideshow[] }) => {
                     <Image
                         className="w-full rounded-[24] "
                         source={item.image}
+                        resizeMode="cover"
                     />
                     {item.id % 2 === 0 && (
                         <CustomButton
