@@ -14,7 +14,7 @@ const HorizontalList = ({ listObject }: { listObject: horizontalImage[] }) => {
       renderItem={({ item }) => (
         <TouchableOpacity
          onPress={() => {
-          router.push("/Discoverfeed")
+          router.push({pathname:"/discover-feed/[category]",params:{category:"fruits"}})
          }}
         >
           <View className="mr-5 ">

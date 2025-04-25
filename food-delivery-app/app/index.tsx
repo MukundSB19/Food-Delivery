@@ -25,7 +25,7 @@ const index = () => {
         // If not, redirect to the sign-in page
         return <Redirect href={"/(auth)/sign-in"} />;
     }
-    return <Redirect href={"/home"} />;
+    return <Redirect href={"/discover-feed/[cattegory]"} />;
 };
 
 
