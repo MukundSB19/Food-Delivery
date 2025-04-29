@@ -1,7 +1,5 @@
 import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
-
 import { horizontalImage } from "@/types/types";
-import { navigate } from "expo-router/build/global-state/routing";
 import { router } from "expo-router";
 
 const HorizontalList = ({ listObject }: { listObject: horizontalImage[] }) => {
@@ -10,23 +8,26 @@ const HorizontalList = ({ listObject }: { listObject: horizontalImage[] }) => {
       className="ml-2 mt-6"
       horizontal
       data={listObject}
+      keyExtractor={(item) => item.slug}
       showsHorizontalScrollIndicator={false}
       renderItem={({ item }) => (
         <TouchableOpacity
-         onPress={() => {
-          router.push({pathname:"/discover-feed/[category]",params:{category:"fruits"}})
-         }}
+          onPress={() =>
+            router.push({
+              pathname: "/discover-feed/[slug]",
+              params: { slug: item.slug },
+            })
+          }
+          className="mr-5 items-center"
         >
-          <View className="mr-5 ">
-            <Image
-              className=" w-[100] h-[100] bg-[#ffffff55] rounded-full"
-              resizeMode="cover"
-              source={item.image}
-            />
-            <Text className="text-center font-boldFont tracking-tight color-fontPrimary-0">
-              {item.text}
-            </Text>
-          </View>
+          <Image
+            className="w-[100px] h-[100px] bg-[#ffffff55] rounded-full"
+            resizeMode="cover"
+            source={typeof item.imageUrl === "string" ? { uri: item.imageUrl } : item.imageUrl}
+          />
+          <Text className="text-center font-boldFont tracking-tight color-fontPrimary-0">
+            {item.title}
+          </Text>
         </TouchableOpacity>
       )}
     />

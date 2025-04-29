@@ -6,6 +6,7 @@ import { CardContent, listImage, onboarding } from "@/constants";
 import HorizontalList from "@/components/HorizontalList";
 import Cards from "@/components/Cards";
 import HomeUpper from "@/components/HomeUpper";
+import { category } from "@/data/category";
 
 const home = () => {
   return (
@@ -24,7 +25,7 @@ const home = () => {
                 <SlideShow slideObject={onboarding} />
               </View>
               <View className="flex ">
-                <HorizontalList listObject={listImage} />
+                <HorizontalList listObject={category} />
               </View>
             </View>
             <View>

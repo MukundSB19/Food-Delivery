@@ -28,10 +28,10 @@ declare interface Slideshow {
     image: ImageSourcePropType;
 }
 
-declare interface horizontalImage {
-    image: ImageSourcePropType;
-    text: string;
-}
+// declare interface horizontalImage {
+//     image: ImageSourcePropType;
+//     text: string;
+// }
 
 declare interface CardsType {
     
@@ -42,3 +42,8 @@ declare interface CardsType {
     ingredients:{name:string,quantity:string}[];
 }
 
+export type horizontalImage = {
+    slug: string;         // e.g., "pizza"
+    title: string;         // e.g., "Pizza"
+    imageUrl: ImageSourcePropType;           // URI string or require()
+  };
