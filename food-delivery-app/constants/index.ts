@@ -9,6 +9,11 @@ import cardOne from "@/assets/images/card1.png";
 import cardTwo from "@/assets/images/card2.png";
 import cardThree from "@/assets/images/card3.png";
 import cardFour from "@/assets/images/card4.png";
+import FruitOne from "@/assets/images/orange.png";
+import FruitTwo from "@/assets/images/mango.png";
+import FruitThree from "@/assets/images/grapes.png";
+import FruitFour from "@/assets/images/blueberry.png";
+import FruitFive from "@/assets/images/banana.png";
 
 export const images = {
   slideOne,
@@ -22,6 +27,11 @@ export const images = {
   cardTwo,
   cardThree,
   cardFour,
+  FruitOne,
+  FruitTwo,
+  FruitThree,
+  FruitFour,
+  FruitFive,
 };
 
 export const icons = {};

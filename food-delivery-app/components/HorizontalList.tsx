@@ -15,7 +15,7 @@ const HorizontalList = ({ listObject }: { listObject: horizontalImage[] }) => {
           onPress={() =>
             router.push({
               pathname: "/discover-feed/[slug]",
-              params: { slug: item.slug },
+              params: { slug: item.slug, description:item.description },
             })
           }
           className="mr-5 items-center"

@@ -45,5 +45,6 @@ declare interface CardsType {
 export type horizontalImage = {
     slug: string;         // e.g., "pizza"
     title: string;         // e.g., "Pizza"
-    imageUrl: ImageSourcePropType;           // URI string or require()
+    imageUrl: ImageSourcePropType;  
+    description: string;         // URI string or require()
   };

@@ -27,8 +27,9 @@ export default function RootLayout() {
   }
 
   return (
+    <AuthProvider>
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <AuthProvider>
+      
         <StatusBar
           translucent
           backgroundColor="transparent"
@@ -88,7 +89,8 @@ export default function RootLayout() {
             }}
           />
         </Drawer>
-      </AuthProvider>
+     
     </GestureHandlerRootView>
+    </AuthProvider>
   );
 }
