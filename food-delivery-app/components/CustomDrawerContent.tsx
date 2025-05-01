@@ -7,7 +7,7 @@ import { useContext, useEffect, useRef } from "react";
 import Entypo from "@expo/vector-icons/Entypo";
 import { useNavigation } from "expo-router";
 import { DrawerActions } from "@react-navigation/native";
-import { AuthContext } from "@/utils/AuthContext";
+import { AuthContext } from "@/context/AuthContext";
 
 export default function CustomDrawerContent(props: any) {
     const fadeAnim = useRef(new Animated.Value(0)).current;

@@ -1,10 +1,16 @@
+import SplashGuard from "@/components/shared/SplashGuard";
 import { Stack } from "expo-router";
 
 export default function ProtectedLayout() {
     return (
-        <Stack>
-            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="(screens)" options={{ headerShown: false }} />
-        </Stack>
+        <SplashGuard requiredRole="user">
+            <Stack>
+                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                <Stack.Screen
+                    name="(screens)"
+                    options={{ headerShown: false }}
+                />
+            </Stack>
+        </SplashGuard>
     );
 }
