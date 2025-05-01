@@ -1,4 +1,5 @@
 import {
+    DrawerContentComponentProps,
     DrawerContentScrollView,
     DrawerItemList,
 } from "@react-navigation/drawer";
@@ -9,7 +10,7 @@ import { useNavigation } from "expo-router";
 import { DrawerActions } from "@react-navigation/native";
 import { AuthContext } from "@/context/AuthContext";
 
-export default function CustomDrawerContent(props: any) {
+export default function CustomDrawerContent(props: DrawerContentComponentProps) {
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const navigation = useNavigation();
     const authState = useContext(AuthContext);

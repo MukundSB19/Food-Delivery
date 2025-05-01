@@ -5,7 +5,7 @@ import { router } from "expo-router";
 const HorizontalList = ({ listObject }: { listObject: horizontalImage[] }) => {
   return (
     <FlatList
-      className="ml-2 mt-6"
+      className="mt-6 ml-2"
       horizontal
       data={listObject}
       keyExtractor={(item) => item.slug}
@@ -18,14 +18,14 @@ const HorizontalList = ({ listObject }: { listObject: horizontalImage[] }) => {
               params: { slug: item.slug, description:item.description },
             })
           }
-          className="mr-5 items-center"
+          className="items-center mr-5"
         >
           <Image
             className="w-[100px] h-[100px] bg-[#ffffff55] rounded-full"
             resizeMode="cover"
             source={typeof item.imageUrl === "string" ? { uri: item.imageUrl } : item.imageUrl}
           />
-          <Text className="text-center font-boldFont tracking-tight color-fontPrimary-0">
+          <Text className="tracking-tight text-center font-boldFont text-fontPrimary-0">
             {item.title}
           </Text>
         </TouchableOpacity>

@@ -1,4 +1,4 @@
-import { View, Text, Button, TouchableOpacity } from "react-native";
+import { TouchableOpacity } from "react-native";
 import { useNavigation } from "expo-router";
 import { DrawerActions } from "@react-navigation/native";
 import Ionicons from "@expo/vector-icons/Ionicons";
