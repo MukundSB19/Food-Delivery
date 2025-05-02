@@ -5,12 +5,12 @@ const CustomButton = ({
     title,
     disabled = false,
     className,
-      bgVariant,
-      textVariant,
-      textStyle,
-      IconLeft,
-      IconRight,
-      ...props
+    bgVariant,
+    textVariant,
+    textStyle,
+    IconLeft,
+    IconRight,
+    ...props
 }: ButtonProps) => {
     return (
         <TouchableOpacity

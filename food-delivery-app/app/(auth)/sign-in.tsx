@@ -1,7 +1,13 @@
 import CustomButton from "@/components/ui/CustomButton";
 import InputField from "@/components/ui/InputField";
 import { router } from "expo-router";
-import { Text, TouchableOpacity, View, StatusBar, ScrollView } from "react-native";
+import {
+    Text,
+    TouchableOpacity,
+    View,
+    StatusBar,
+    ScrollView,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { useContext, useState } from "react";
 import { AuthContext } from "@/context/AuthContext";

@@ -1,4 +1,9 @@
-import { TouchableOpacityProps, TextInputProps, ModalBaseProps, ModalProps } from "react-native";
+import {
+    TouchableOpacityProps,
+    TextInputProps,
+    ModalBaseProps,
+    ModalProps,
+} from "react-native";
 import { ImageSourcePropType } from "react-native";
 
 declare interface ButtonProps extends TouchableOpacityProps {
@@ -34,17 +39,16 @@ declare interface Slideshow {
 // }
 
 declare interface CardsType {
-    
     image: ImageSourcePropType;
     text: string;
     text2: string;
     category: string;
-    ingredients:{name:string,quantity:string}[];
+    ingredients: { name: string; quantity: string }[];
 }
 
 export type horizontalImage = {
-    slug: string;         // e.g., "pizza"
-    title: string;         // e.g., "Pizza"
-    imageUrl: ImageSourcePropType;  
-    description: string;         // URI string or require()
-  };
+    slug: string; // e.g., "pizza"
+    title: string; // e.g., "Pizza"
+    imageUrl: ImageSourcePropType;
+    description: string; // URI string or require()
+};

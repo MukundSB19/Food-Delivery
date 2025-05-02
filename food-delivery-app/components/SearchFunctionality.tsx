@@ -4,50 +4,50 @@ import List from "../components/List";
 import SearchBar from "../components/SearchBar";
 
 type DataItem = {
-  id: string;
-  name: string;
-  details: string;
+    id: string;
+    name: string;
+    details: string;
 };
 
 const SearchFunctionality = () => {
-  const [searchPhrase, setSearchPhrase] = useState("");
-  const [clicked, setClicked] = useState(false);
-  const [fakeData, setFakeData] = useState<DataItem[] | null>(null);
+    const [searchPhrase, setSearchPhrase] = useState("");
+    const [clicked, setClicked] = useState(false);
+    const [fakeData, setFakeData] = useState<DataItem[] | null>(null);
 
-  // *get data from the fake api endpoint
-  useEffect(() => {
-    const getData = async () => {
-      const apiResponse = await fetch(
-        "https://my-json-server.typicode.com/kevintomas1995/logRocket_searchBar/languages"
-      );
-      const data: DataItem[] = await apiResponse.json();
-      setFakeData(data);
-    };
-    getData();
-  }, []);
+    // *get data from the fake api endpoint
+    useEffect(() => {
+        const getData = async () => {
+            const apiResponse = await fetch(
+                "https://my-json-server.typicode.com/kevintomas1995/logRocket_searchBar/languages"
+            );
+            const data: DataItem[] = await apiResponse.json();
+            setFakeData(data);
+        };
+        getData();
+    }, []);
 
-  return (
-    <SafeAreaView className="justify-center items-center">
-      {!clicked && (
-        <Text className="w-full mt-[20] text-sm ml-[10%] font-bold">
-          Programming Languages
-        </Text>
-      )}
-      <SearchBar
-        searchPhrase={searchPhrase}
-        setSearchPhrase={setSearchPhrase}
-        clicked={clicked}
-        setClicked={setClicked}
-      />
-      {
-        <List
-          searchPhrase={searchPhrase}
-          data={fakeData}
-          setClicked={setClicked}
-        />
-      }
-    </SafeAreaView>
-  );
+    return (
+        <SafeAreaView className="justify-center items-center">
+            {!clicked && (
+                <Text className="w-full mt-[20] text-sm ml-[10%] font-bold">
+                    Programming Languages
+                </Text>
+            )}
+            <SearchBar
+                searchPhrase={searchPhrase}
+                setSearchPhrase={setSearchPhrase}
+                clicked={clicked}
+                setClicked={setClicked}
+            />
+            {
+                <List
+                    searchPhrase={searchPhrase}
+                    data={fakeData}
+                    setClicked={setClicked}
+                />
+            }
+        </SafeAreaView>
+    );
 };
 
 export default SearchFunctionality;
