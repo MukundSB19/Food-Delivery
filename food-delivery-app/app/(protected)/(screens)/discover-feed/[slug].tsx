@@ -1,10 +1,9 @@
-import { View, Text, Image, FlatList, TouchableOpacity } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+import { View, Text, Image, FlatList } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { useLocalSearchParams } from "expo-router";
 import { allItems } from "@/data/category";
-import CustomButton from "@/components/ui/CustomButton";
+import { CustomButton } from '@/components/ui';
+import {AppScreenWrapper} from "@/components/shared";
 
 export default function CategoryScreen() {
     const { slug, description } = useLocalSearchParams();
@@ -12,17 +11,17 @@ export default function CategoryScreen() {
     const filteredItems = allItems.filter((item) => item.category === slug);
 
     const renderItem = ({ item }: { item: (typeof allItems)[0] }) => (
-        <View className="flex-row items-center bg-slate-100 rounded-3xl p-4 mb-4 shadow-md">
+        <View className="flex-row items-center p-4 mb-4 shadow-md bg-slate-100 rounded-3xl">
             <Image
                 source={item.image}
                 className="w-24 h-20 mr-4"
                 resizeMode="contain"
             />
             <View className="flex-1">
-                <Text className="text-base font-regularFont mb-1">
+                <Text className="mb-1 text-base font-regularFont">
                     {item.title}
                 </Text>
-                <View className="flex-row justify-between items-center">
+                <View className="flex-row items-center justify-between">
                     <Text className="text-sm text-gray-700">
                         Vitamin {item.vitamin}
                     </Text>
@@ -38,35 +37,27 @@ export default function CategoryScreen() {
     );
 
     return (
-        <View className="flex-1">
-            <LinearGradient
-                colors={["#EAECCC", "#9EDC88"]}
-                start={{ x: 0, y: 0.5 }}
-                end={{ x: 0, y: 1 }}
-                className="absolute inset-0"
-            />
-            <SafeAreaView className="flex-1 px-4 ">
-                <Text className="text-3xl font-regularFont tracking-tighter2 mb-2 mt-6 ml-2 capitalize bg-white w-[50%] p-3 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl">
-                    Popular {slug}
-                </Text>
-                <Text className="ml-2 font-regularFont tracking-tighter mb-4">
-                    {description}
-                </Text>
+        <AppScreenWrapper gradientColors={["#EAECCC", "#9EDC88"]}>
+            <Text className="text-3xl font-regularFont tracking-tighter2 mb-2 mt-6 ml-2 capitalize bg-white w-[50%] p-3 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl">
+                Popular {slug}
+            </Text>
+            <Text className="mb-4 ml-2 tracking-tighter font-regularFont">
+                {description}
+            </Text>
 
-                {filteredItems.length === 0 ? (
-                    <Text className="text-center text-gray-500 mt-4">
-                        No items found in this category.
-                    </Text>
-                ) : (
-                    <FlatList
-                        data={filteredItems}
-                        keyExtractor={(item, index) => `${item.title}-${index}`}
-                        renderItem={renderItem}
-                        showsVerticalScrollIndicator={false}
-                        contentContainerStyle={{ paddingBottom: 80 }}
-                    />
-                )}
-            </SafeAreaView>
-        </View>
+            {filteredItems.length === 0 ? (
+                <Text className="mt-4 text-center text-gray-500">
+                    No items found in this category.
+                </Text>
+            ) : (
+                <FlatList
+                    data={filteredItems}
+                    keyExtractor={(item, index) => `${item.title}-${index}`}
+                    renderItem={renderItem}
+                    showsVerticalScrollIndicator={false}
+                    contentContainerStyle={{ paddingBottom: 80 }}
+                />
+            )}
+        </AppScreenWrapper>
     );
 }

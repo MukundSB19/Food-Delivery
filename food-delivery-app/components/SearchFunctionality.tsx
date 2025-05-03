@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Text, SafeAreaView } from "react-native";
 import List from "../components/List";
-import SearchBar from "../components/SearchBar";
-
+import { SearchBar } from "@/components";
 type DataItem = {
     id: string;
     name: string;
     details: string;
 };
+
 
 const SearchFunctionality = () => {
     const [searchPhrase, setSearchPhrase] = useState("");
@@ -27,7 +27,7 @@ const SearchFunctionality = () => {
     }, []);
 
     return (
-        <SafeAreaView className="justify-center items-center">
+        <SafeAreaView className="items-center justify-center">
             {!clicked && (
                 <Text className="w-full mt-[20] text-sm ml-[10%] font-bold">
                     Programming Languages

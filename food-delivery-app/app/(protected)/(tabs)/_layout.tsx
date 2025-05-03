@@ -3,6 +3,7 @@ import { View } from "react-native";
 import Octicons from "@expo/vector-icons/Octicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import AppScreenWrapper from "@/components/shared/AppScreenWrapper";
 
 const TabIcon = ({
     focused,
@@ -30,7 +31,7 @@ const TabIcon = ({
     </View>
 );
 
-export default function RootLayout() {
+export default function TabLayout() {
     return (
         <Tabs
             screenOptions={{
@@ -51,66 +52,66 @@ export default function RootLayout() {
                 },
             }}
         >
-            <Tabs.Screen
-                name="home"
-                options={{
-                    headerShown: false,
-                    title: "Home",
-                    tabBarIcon: ({
-                        focused,
-                        color,
-                    }: {
-                        focused: boolean;
-                        color: string;
-                    }) => (
-                        <TabIcon
-                            focused={focused}
-                            color={color}
-                            tabName="home"
-                        />
-                    ),
-                }}
-            />
-            <Tabs.Screen
-                name="cart"
-                options={{
-                    headerShown: false,
-                    title: "Cart",
-                    tabBarIcon: ({
-                        focused,
-                        color,
-                    }: {
-                        focused: boolean;
-                        color: string;
-                    }) => (
-                        <TabIcon
-                            focused={focused}
-                            color={color}
-                            tabName="cart"
-                        />
-                    ),
-                }}
-            />
-            <Tabs.Screen
-                name="account"
-                options={{
-                    headerShown: false,
-                    title: "Account",
-                    tabBarIcon: ({
-                        focused,
-                        color,
-                    }: {
-                        focused: boolean;
-                        color: string;
-                    }) => (
-                        <TabIcon
-                            focused={focused}
-                            color={color}
-                            tabName="account"
-                        />
-                    ),
-                }}
-            />
+                <Tabs.Screen
+                    name="home"
+                    options={{
+                        headerShown: false,
+                        title: "Home",
+                        tabBarIcon: ({
+                            focused,
+                            color,
+                        }: {
+                            focused: boolean;
+                            color: string;
+                        }) => (
+                            <TabIcon
+                                focused={focused}
+                                color={color}
+                                tabName="home"
+                            />
+                        ),
+                    }}
+                />
+                <Tabs.Screen
+                    name="cart"
+                    options={{
+                        headerShown: false,
+                        title: "Cart",
+                        tabBarIcon: ({
+                            focused,
+                            color,
+                        }: {
+                            focused: boolean;
+                            color: string;
+                        }) => (
+                            <TabIcon
+                                focused={focused}
+                                color={color}
+                                tabName="cart"
+                            />
+                        ),
+                    }}
+                />
+                <Tabs.Screen
+                    name="account"
+                    options={{
+                        headerShown: false,
+                        title: "Account",
+                        tabBarIcon: ({
+                            focused,
+                            color,
+                        }: {
+                            focused: boolean;
+                            color: string;
+                        }) => (
+                            <TabIcon
+                                focused={focused}
+                                color={color}
+                                tabName="account"
+                            />
+                        ),
+                    }}
+                />
         </Tabs>
     );
 }

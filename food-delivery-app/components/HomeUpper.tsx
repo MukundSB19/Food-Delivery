@@ -1,10 +1,7 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
-
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-
-import InputField from "@/components/ui/InputField";
-
+import { InputField } from "@/components/ui";
 import LocationModal from "@/components/LocationModal";
 import { useState } from "react";
 import DrawerComponent from "./DrawerComponent";
@@ -15,16 +12,16 @@ const HomeUpper = () => {
 
     return (
         <>
-            <View className="flex flex-row justify-between px-5 pt-3 items-center">
+            <View className="flex flex-row items-center justify-between px-5 pt-3">
                 <DrawerComponent />
                 <TouchableOpacity onPress={() => setModalVisible(true)}>
-                    <View className="flex flex-row gap-2 px-5 pt-3 items-center justify-center">
+                    <View className="flex flex-row items-center justify-center gap-2 px-5 pt-3">
                         <FontAwesome6
                             name="location-dot"
                             size={24}
                             color="#fa003f"
                         />
-                        <Text className="text-xl font-boldFont tracking-tighter text-fontPrimary-0">
+                        <Text className="text-xl tracking-tighter font-boldFont text-fontPrimary-0">
                             South Delhi 142,DL
                         </Text>
                         <FontAwesome5
@@ -42,7 +39,7 @@ const HomeUpper = () => {
                     />
                 </TouchableOpacity>
             </View>
-            <Text className="text-center font-regularFont tracking-tighter2 text-4xl mt-6 text-fontPrimary-0">
+            <Text className="mt-6 text-4xl text-center font-regularFont tracking-tighter2 text-fontPrimary-0">
                 What's on your list today?
             </Text>
             <View className="mt-3">

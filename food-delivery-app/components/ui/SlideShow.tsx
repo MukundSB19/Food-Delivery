@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Image, View } from "react-native";
 import Swiper from "react-native-swiper";
 import { Slideshow } from "@/types/types";
-import CustomButton from "./CustomButton";
+import { CustomButton } from "@/components/ui";
 
 const SlideShow = ({ slideObject }: { slideObject: Slideshow[] }) => {
     const swiperRef = useRef<Swiper>(null);
@@ -11,15 +11,15 @@ const SlideShow = ({ slideObject }: { slideObject: Slideshow[] }) => {
             className="h-[230px]"
             ref={swiperRef}
             loop={true}
-            dot={<View className=" w-4 h-4 bg-white rounded-full mx-1" />}
+            dot={<View className="w-4 h-4 mx-1 bg-white rounded-full " />}
             activeDot={
-                <View className="w-4 h-4 bg-slate-600 rounded-full mx-1" />
+                <View className="w-4 h-4 mx-1 rounded-full bg-slate-600" />
             }
         >
             {slideObject.map((item) => (
                 <View
                     key={item.id}
-                    className="w-full  flex justify-center items-center px-8 "
+                    className="flex items-center justify-center w-full px-8 "
                 >
                     <Image
                         className="w-full rounded-[24] "

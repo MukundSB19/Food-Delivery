@@ -5,7 +5,6 @@ import "../gesture-handler";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
 import CustomDrawerContent from "@/components/CustomDrawerContent";
-import { StatusBar } from "react-native";
 import { AuthProvider } from "../context/AuthContext";
 
 export default function RootLayout() {
@@ -29,11 +28,6 @@ export default function RootLayout() {
     return (
         <AuthProvider>
             <GestureHandlerRootView style={{ flex: 1 }}>
-                <StatusBar
-                    translucent
-                    backgroundColor="transparent"
-                    barStyle="dark-content"
-                />
                 <Drawer
                     screenOptions={{
                         drawerStatusBarAnimation: "slide",
