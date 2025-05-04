@@ -4,8 +4,8 @@ import * as SplashScreen from "expo-splash-screen";
 import "../gesture-handler";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Drawer } from "expo-router/drawer";
-import CustomDrawerContent from "@/components/CustomDrawerContent";
-import { AuthProvider } from "../context/AuthContext";
+import { CustomDrawerContent} from "@/components";
+import { AuthProvider } from "@/context/AuthContext";
 
 export default function RootLayout() {
     const [loaded] = useFonts({

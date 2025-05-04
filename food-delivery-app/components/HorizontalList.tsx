@@ -1,8 +1,8 @@
-import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
-import { horizontalImage } from "@/types/types";
+import { Text, FlatList, Image, TouchableOpacity } from "react-native";
+import { HorizontalImage } from "@/types";
 import { router } from "expo-router";
 
-const HorizontalList = ({ listObject }: { listObject: horizontalImage[] }) => {
+const HorizontalList = ({ listObject }: { listObject: HorizontalImage[] }) => {
     return (
         <FlatList
             className="mt-6 ml-2"

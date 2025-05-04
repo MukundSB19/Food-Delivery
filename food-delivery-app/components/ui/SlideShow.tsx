@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { Image, View } from "react-native";
 import Swiper from "react-native-swiper";
-import { Slideshow } from "@/types/types";
+import { Slideshow } from "@/types";
 import { CustomButton } from "@/components/ui";
 
 const SlideShow = ({ slideObject }: { slideObject: Slideshow[] }) => {

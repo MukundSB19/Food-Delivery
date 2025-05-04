@@ -1,13 +1,14 @@
 import { View, Text } from "react-native";
-import React from "react";
-import DrawerComponent from "@/components/DrawerComponent";
+import { AppScreenWrapper, DrawerComponent } from "@/components";
 
 const settings = () => {
     return (
-        <View>
-            <Text>settings</Text>
-            <DrawerComponent />
-        </View>
+        <AppScreenWrapper>
+            <View>
+                <Text>settings</Text>
+                <DrawerComponent />
+            </View>
+        </AppScreenWrapper>
     );
 };
 

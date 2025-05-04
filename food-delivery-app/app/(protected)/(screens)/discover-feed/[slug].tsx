@@ -1,9 +1,8 @@
 import { View, Text, Image, FlatList } from "react-native";
-import React from "react";
 import { useLocalSearchParams } from "expo-router";
-import { allItems } from "@/data/category";
-import { CustomButton } from '@/components/ui';
-import {AppScreenWrapper} from "@/components/shared";
+import { allItems } from "@/data";
+import { CustomButton } from "@/components/ui";
+import { AppScreenWrapper } from "@/components/shared";
 
 export default function CategoryScreen() {
     const { slug, description } = useLocalSearchParams();

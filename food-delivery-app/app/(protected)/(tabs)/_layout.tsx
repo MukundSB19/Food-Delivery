@@ -3,7 +3,6 @@ import { View } from "react-native";
 import Octicons from "@expo/vector-icons/Octicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import AppScreenWrapper from "@/components/shared/AppScreenWrapper";
 
 const TabIcon = ({
     focused,

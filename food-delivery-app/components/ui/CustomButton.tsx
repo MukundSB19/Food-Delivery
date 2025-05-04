@@ -1,4 +1,4 @@
-import { ButtonProps } from "@/types/types";
+import { ButtonProps } from "@/types";
 import { TouchableOpacity, Text } from "react-native";
 
 const CustomButton = ({

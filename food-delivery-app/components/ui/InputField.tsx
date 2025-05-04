@@ -1,4 +1,4 @@
-import { InputFieldProps } from "@/types/types";
+import { InputFieldProps } from "@/types";
 import React, { useState } from "react";
 import {
     Image,

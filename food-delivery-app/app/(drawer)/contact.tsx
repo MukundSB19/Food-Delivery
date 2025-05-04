@@ -1,12 +1,13 @@
 import { View, Text } from "react-native";
-import React from "react";
-import DrawerComponent from "@/components/DrawerComponent";
+import { AppScreenWrapper, DrawerComponent } from "@/components";
 const contact = () => {
     return (
-        <View>
-            <Text>contact</Text>
-            <DrawerComponent />
-        </View>
+        <AppScreenWrapper>
+            <View>
+                <Text>contact</Text>
+                <DrawerComponent />
+            </View>
+        </AppScreenWrapper>
     );
 };
 

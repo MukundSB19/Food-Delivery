@@ -6,13 +6,14 @@ import {
     TouchableOpacity,
     Modal,
 } from "react-native";
-import { CardsType } from "@/types/types";
-import { useRef, useState } from "react";
+import { useState } from "react";
+import { CardsType } from "@/types";
 
 type ingredientType = {
     name: string;
     quantity: string;
 };
+
 const Cards = ({ listObject }: { listObject: CardsType[] }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const [selectedIngredients, setSelectedIngredients] =
@@ -70,14 +71,14 @@ const Cards = ({ listObject }: { listObject: CardsType[] }) => {
             >
                 <View className="items-center justify-center flex-1 bg-black/50">
                     <View className="bg-[#EAECCC] p-6 rounded-2xl w-[80%] shadow-lg">
-                        <Text className="mb-4 text-xl font-boldFont tracking-tight">
+                        <Text className="mb-4 text-xl tracking-tight font-boldFont">
                             {ingredientTitle}
                         </Text>
                         <View className="flex flex-row justify-between pl-3 mt-4">
-                            <Text className="font-boldFont text-xl tracking-tight">
+                            <Text className="text-xl tracking-tight font-boldFont">
                                 Ingredient
                             </Text>
-                            <Text className="font-boldFont text-xl tracking-tight">
+                            <Text className="text-xl tracking-tight font-boldFont">
                                 Quantity (grams)
                             </Text>
                         </View>
@@ -86,10 +87,10 @@ const Cards = ({ listObject }: { listObject: CardsType[] }) => {
                             data={selectedIngredients}
                             renderItem={({ item }) => (
                                 <View className="flex flex-row justify-between mb-1">
-                                    <Text className="font-regularFont tracking-tight text-lg">
+                                    <Text className="text-lg tracking-tight font-regularFont">
                                         {item.name}
                                     </Text>
-                                    <Text className="font-regularFont tracking-tight text-lg">
+                                    <Text className="text-lg tracking-tight font-regularFont">
                                         {item.quantity}
                                     </Text>
                                 </View>
