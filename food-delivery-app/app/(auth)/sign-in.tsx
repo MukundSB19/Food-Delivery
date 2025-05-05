@@ -3,7 +3,6 @@ import { router } from "expo-router";
 import {
     Text,
     View,
-    StatusBar,
     ScrollView,
 } from "react-native";
 import { useContext, useState } from "react";

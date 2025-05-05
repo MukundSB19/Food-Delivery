@@ -24,7 +24,7 @@ const signUp = () => {
                             router.push("/(auth)/welcome");
                         }}
                     >
-                        {/* <Image source={Icons.exitIcon} className="mt-8 ml-6" /> */}
+                        {/* <Image source={icons.exitIcon} className="mt-8 ml-6" /> */}
                     </TouchableOpacity>
 
                     <View className="flex items-center justify-center ">

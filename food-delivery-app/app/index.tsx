@@ -47,7 +47,7 @@ export default function Index() {
     }
 
     if (!authState.isLoggedIn) {
-        return <Redirect href="/(auth)/sign-in" />;
+        return <Redirect href="/(auth)/welcome" />;
     }
 
     return <Redirect href="/home" />;

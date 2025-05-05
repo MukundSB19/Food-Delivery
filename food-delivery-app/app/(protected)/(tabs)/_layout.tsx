@@ -44,7 +44,7 @@ export default function TabLayout() {
                     alignItems: "center",
                     borderRadius: 25,
                     marginBottom: 10,
-
+                    
                     marginHorizontal: "30%",
                     overflow: "hidden",
                     paddingTop: 4,

@@ -1,36 +1,37 @@
-import { View, ScrollView } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import { SlideShow } from "@/components/ui";
 import { CardContent, onboarding } from "@/constants";
 import { HomeUpper, Cards, HorizontalList } from "@/components";
 import { category } from "@/data";
 import { AppScreenWrapper } from "@/components/shared";
+import { foods } from "@/data/foods";
+import { FoodItemCard } from "@/components/ui";
 
 const home = () => {
     return (
         <AppScreenWrapper gradientColors={["#EAECCC", "#9EDC88"]}>
-            <ScrollView>
-                <HomeUpper />
+            <FlatList
+                data={foods}
+                keyExtractor={(item) => item.id}
+                renderItem={({ item }) => <FoodItemCard item={item} />}
+                ListHeaderComponent={
+                    <View className="mb-4">
+                        <HomeUpper />
 
-                <View>
-                    {/* Slide show section */}
-
-                    <View className="mt-5 ">
                         <SlideShow slideObject={onboarding} />
-                    </View>
-                    {/* Category list */}
 
-                    <View className="flex ">
                         <HorizontalList listObject={category} />
-                    </View>
-                </View>
-                {/* Cards section */}
 
-                <View>
-                    <View>
                         <Cards listObject={CardContent} />
+
+                        <Text className="text-xl font-bold mt-6 mb-2 px-4">
+                            Popular Food
+                        </Text>
                     </View>
-                </View>
-            </ScrollView>
+                }
+                contentContainerStyle={{ paddingBottom: 80 }}
+                showsVerticalScrollIndicator={false}
+            />
         </AppScreenWrapper>
     );
 };

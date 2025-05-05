@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Text, SafeAreaView } from "react-native";
 import List from "../components/List";
-import { SearchBar } from "@/components";
+import SearchBar from "./SearchBar";
 type DataItem = {
     id: string;
     name: string;

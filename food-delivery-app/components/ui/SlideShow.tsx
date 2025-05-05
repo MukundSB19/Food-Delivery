@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { Image, View } from "react-native";
 import Swiper from "react-native-swiper";
 import { Slideshow } from "@/types";
-import { CustomButton } from "@/components/ui";
+import CustomButton from "./CustomButton";
 
 const SlideShow = ({ slideObject }: { slideObject: Slideshow[] }) => {
     const swiperRef = useRef<Swiper>(null);

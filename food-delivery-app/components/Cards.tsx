@@ -28,7 +28,7 @@ const Cards = ({ listObject }: { listObject: CardsType[] }) => {
     return (
         <View>
             <FlatList
-                className="pl-3 mt-10 mb-28"
+                className="pl-3 mt-10"
                 horizontal
                 data={listObject}
                 showsHorizontalScrollIndicator={false}
