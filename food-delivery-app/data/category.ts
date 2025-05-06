@@ -34,3 +34,4 @@ export const category: HorizontalImage[] = [
         description: "aasas",
     },
 ];
+
