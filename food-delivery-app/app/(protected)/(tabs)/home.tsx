@@ -8,32 +8,32 @@ import { foods } from "@/data/foods";
 import { FoodItemCard } from "@/components/ui";
 
 const home = () => {
-    return (
-        <AppScreenWrapper gradientColors={["#EAECCC", "#9EDC88"]}>
-            <FlatList
-                data={foods}
-                keyExtractor={(item) => item.id}
-                renderItem={({ item }) => <FoodItemCard item={item} />}
-                ListHeaderComponent={
-                    <View className="mb-4">
-                        <HomeUpper />
+  return (
+    <AppScreenWrapper gradientColors={["#EAECCC", "#9EDC88"]}>
+      <FlatList
+        data={foods}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => <FoodItemCard item={item} />}
+        ListHeaderComponent={
+          <View className="mb-4">
+            <HomeUpper />
 
-                        <SlideShow slideObject={onboarding} />
+            <SlideShow slideObject={onboarding} />
 
-                        <HorizontalList listObject={category} />
+            <HorizontalList listObject={category} />
 
-                        <Cards listObject={CardContent} />
+            <Cards listObject={CardContent} />
 
-                        <Text className="text-xl font-bold mt-6 mb-2 px-4">
-                            Popular Food
-                        </Text>
-                    </View>
-                }
-                contentContainerStyle={{ paddingBottom: 80 }}
-                showsVerticalScrollIndicator={false}
-            />
-        </AppScreenWrapper>
-    );
+            <Text className="text-2xl font-regularFont tracking-tighter mt-9 ml-5 text-fontPrimary-0 bg-[#00000011] self-start px-3 py-2 rounded-xl">
+              International Cuisines 
+            </Text>
+          </View>
+        }
+        contentContainerStyle={{ paddingBottom: 80 }}
+        showsVerticalScrollIndicator={false}
+      />
+    </AppScreenWrapper>
+  );
 };
 
 export default home;

@@ -14,6 +14,11 @@ import FruitTwo from "@/assets/images/mango.png";
 import FruitThree from "@/assets/images/grapes.png";
 import FruitFour from "@/assets/images/blueberry.png";
 import FruitFive from "@/assets/images/banana.png";
+import MoongDall from "@/assets/images/moong dal.png"
+import Momos from "@/assets/images/momos.png"
+import Burrito from "@/assets/images/Burrito.png"
+import Soup from "@/assets/images/miso soup.png"
+import Grilled from "@/assets/images/grilled.png"
 
 export const images = {
     slideOne,
@@ -32,6 +37,11 @@ export const images = {
     FruitThree,
     FruitFour,
     FruitFive,
+    MoongDall,
+    Momos,
+    Burrito,
+    Soup,
+    Grilled,
 };
 
 export const icons = {};

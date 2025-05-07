@@ -6,13 +6,14 @@ import React, {
     ReactNode,
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { ImageSourcePropType } from "react-native";
 
 type CartItem = {
     id: string;
     name: string;
     price: number;
     quantity: number;
-    image?: string;
+    image?:ImageSourcePropType;
 };
 
 type CartState = {

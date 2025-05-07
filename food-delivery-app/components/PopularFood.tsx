@@ -5,7 +5,7 @@ import { foods } from '@/data/foods';
 const PopularFood = () => {
   return (
       <View className="mt-6 p-4">
-          <Text className="text-xl font-bold mb-4">Popular Foods</Text>
+          <Text className="text-xl font-bold mb-4">International Cuisines</Text>
           <FlatList
               data={foods}
               keyExtractor={(item) => item.id}

@@ -1,57 +1,45 @@
+import { images } from "@/constants";
+import { ImageSourcePropType } from "react-native";
+
 export type FoodItem = {
     id: string;
     name: string;
     price: number;
-    image: string;
+    image: ImageSourcePropType;
 };
 
 export const foods: FoodItem[] = [
     {
         id: "1",
-        name: "Margherita Pizza",
-        price: 249,
-        image: "https://images.unsplash.com/photo-1601924582975-4c1e6da02a6d",
+        name: "Moong Dal Khichdi",
+        price: 349,
+        image: images.MoongDall,
     },
     {
         id: "2",
-        name: "Paneer Butter Masala",
-        price: 199,
-        image: "https://images.unsplash.com/photo-1631515243340-bd8b4c1f5478",
+        name: "Steamed Vegetable Dumplings",
+        price: 459,
+        image: images.Momos,
     },
     {
         id: "3",
-        name: "Veg Burger",
-        price: 129,
-        image: "https://images.unsplash.com/photo-1599021069827-89c2f9306e42",
+        name: "Miso Soup",
+        price: 350,
+        image: images.Soup,
     },
     {
         id: "4",
-        name: "Chole Bhature",
-        price: 149,
-        image: "https://images.unsplash.com/photo-1685453789544-09f318b6750b",
+        name: "Grilled Vegetable Panini",
+        price: 200,
+        image: images.Grilled,
     },
     {
         id: "5",
-        name: "Schezwan Noodles",
-        price: 179,
-        image: "https://images.unsplash.com/photo-1631778411029-e0f8e95f556d",
+        name: "Veggie Burrito Bowl",
+        price: 450,
+        image: images.Burrito,
     },
-    {
-        id: "6",
-        name: "Masala Dosa",
-        price: 99,
-        image: "https://images.unsplash.com/photo-1669181506473-4ea24937fc46",
-    },
-    {
-        id: "7",
-        name: "Butter Chicken",
-        price: 269,
-        image: "https://images.unsplash.com/photo-1613145993485-d1b3f48c6f29",
-    },
-    {
-        id: "8",
-        name: "Chocolate Cake",
-        price: 149,
-        image: "https://images.unsplash.com/photo-1601978977312-9a29e5174645",
-    },
+    
+    
+    
 ];
