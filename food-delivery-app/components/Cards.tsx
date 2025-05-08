@@ -5,9 +5,11 @@ import {
   Image,
   TouchableOpacity,
   Modal,
+  Pressable,
 } from "react-native";
 import { useState } from "react";
 import { CardsType } from "@/types";
+import { router } from "expo-router";
 
 type ingredientType = {
   name: string;
@@ -33,12 +35,25 @@ const Cards = ({ listObject }: { listObject: CardsType[] }) => {
         data={listObject}
         showsHorizontalScrollIndicator={false}
         renderItem={({ item }) => (
+          
           <View className="mr-7 ">
+            <Pressable android_ripple={{color:"#dddddd"}} 
+             onPress={() =>
+                                    router.push({
+                                        pathname: "/discover-feed/products/[products]",
+                                        params: {
+                                            slug: item.category,
+                                            description: item.text2,
+                                        },
+                                    })
+                                }
+            >
             <Image
               className=" w-[183] h-[290]  rounded-3xl"
               resizeMode="cover"
               source={item.image}
             />
+            </Pressable>
             {/* // TODO: implement on press functionality */}
             <TouchableOpacity className="absolute m-5 bg-[#00000066] px-3 py-2 rounded-2xl">
               <Text className="text-lg tracking-tight rounded-lg font-boldFont color-white ">

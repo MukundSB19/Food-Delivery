@@ -18,6 +18,7 @@ const HorizontalList = ({ listObject }: { listObject: HorizontalImage[] }) => {
                             params: {
                                 slug: item.slug,
                                 description: item.description,
+                               
                             },
                         })
                     }

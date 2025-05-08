@@ -17,9 +17,13 @@ export default function CategoryScreen() {
         resizeMode="contain"
       />
       <View className="flex-1">
-        <Text className="mb-1 text-2xl font-regularFont text-fontPrimary-0 tracking-tighter">{item.title}</Text>
+        <Text className="mb-1 text-2xl font-regularFont text-fontPrimary-0 tracking-tighter">
+          {item.title}
+        </Text>
         <View className="flex-row items-center justify-between my-3">
-          <Text className="text-base text-black bg-[#9EDC88] px-2 py-1 rounded-xl tracking-tighter">Vitamin {item.vitamin}</Text>
+          <Text className="text-base text-black bg-[#9EDC88] px-2 py-1 rounded-xl tracking-tighter">
+            Vitamin {item.vitamin}
+          </Text>
           <CustomButton
             title="Add to bag"
             className="w-[38%] px-3 py-2"
@@ -27,10 +31,14 @@ export default function CategoryScreen() {
             disabled={false}
           />
         </View>
-        <Text className="bg-[#00000012] self-start px-2 py-1 text-lg rounded-lg mb-3">{item.price}</Text>
-        <Text className="font-regularFont tracking-tighter text-fontPrimary-0 text-base">{item.info}</Text>
+        <Text className="bg-[#00000012] self-start px-2 py-1 text-lg rounded-lg mb-3">
+          {item.price}
+        </Text>
+        <Text className="font-regularFont tracking-tighter text-fontPrimary-0 text-base">
+          {item.info}
+        </Text>
       </View>
-    </View>  
+    </View>
   );
 
   return (
@@ -38,11 +46,10 @@ export default function CategoryScreen() {
       gradientColors={["#EAECCC", "#9EDC88"]}
       style={{ marginHorizontal: 13 }}
     >
-        
       <Text className="text-3xl font-regularFont tracking-tighter2 mb-2 mt-6 ml-2 capitalize bg-white p-3 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl self-start ">
         Popular {slug}
       </Text>
-      
+
       <Text className="mb-4 ml-2 tracking-tighter font-regularFont">
         {description}
       </Text>

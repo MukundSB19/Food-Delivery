@@ -10,6 +10,7 @@ type FoodItem = {
   name: string;
   price: number;
   image?: ImageSourcePropType;
+  country: string;
 };
 
 export default function FoodItemCard({ item }: { item: FoodItem }) {
@@ -50,23 +51,30 @@ export default function FoodItemCard({ item }: { item: FoodItem }) {
         resizeMode="cover"
         source={item.image}
       />
-      <TouchableOpacity className="absolute m-5 bg-[#00000066] px-3 py-2 rounded-2xl">
-        <Text className="text-lg tracking-tight rounded-lg font-boldFont color-white ">
-          
+      <View className="absolute flex-row justify-between items-baseline w-full mt-3 px-3">
+        <Text className="color-white font-regularFont  p-2 px-3 rounded-lg shadow-2xl shadow-black bg-[#00000055] text-xl self-start mt-">
+          {item.country}
         </Text>
-      </TouchableOpacity>
-      <Text className="text-center font-boldFont tracking-tight ml-2 p-1 rounded-lg bg-[#00000066] color-white absolute bottom-16">
+      <CustomButton className="  bg-[#00000066] px-3 py-2 rounded-2xl" textStyle="text-lg tracking-tight rounded-lg font-boldFont color-white" title="See More"/>
         
-      </Text>
-      {/* // TODO: implement on press functionality */}
-<View className=" w-full flex   bottom-3 absolute gap-2">
-      <Text className="color-white font-regularFont  p-2 px-3 mx-2 rounded-lg shadow-2xl shadow-black bg-[#00000055] text-xl self-start">
-        {item.name}
-      </Text>
-      <View className="flex-row justify-between ">
-      <CustomButton className="self-start px-3 py-2 mx-2" title="Add to cart" textStyle="text-xl"/>
-      <Text className="text-white my-auto mr-10">{item.price}</Text>
+     
       </View>
+      <Text className="text-center font-boldFont tracking-tight ml-2 p-1 rounded-lg bg-[#00000066] color-white absolute bottom-16"></Text>
+      {/* // TODO: implement on press functionality */}
+      <View className=" w-full flex   bottom-3 absolute gap-2">
+        <Text className="color-white font-regularFont  p-2 px-3 mx-2 rounded-lg shadow-2xl shadow-black bg-[#00000055] text-xl self-start">
+          {item.name}
+        </Text>
+        <View className="flex-row justify-between ">
+          <CustomButton
+            className="self-start px-3 py-2 mx-2"
+            title="Add to cart"
+            textStyle="text-xl"
+          />
+          <Text className="text-black my-auto mr-6 text-2xl bg-[#9EDC88] p-1 px-3 rounded-2xl font-boldFont tracking-tighter">
+            {item.price} ₹
+          </Text>
+        </View>
       </View>
     </View>
   );
