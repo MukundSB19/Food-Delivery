@@ -11,7 +11,7 @@ const  productScreen = () => {
 
   return (
     <View>
-   <Text>pakistan ka ma ka bhosda 100000 BAAR</Text>
+   <Text>pakistan ka ma ka bhosda 100000000000000 BAAR</Text>
     </View>
   )
 }
