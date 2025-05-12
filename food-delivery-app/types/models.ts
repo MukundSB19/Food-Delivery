@@ -59,5 +59,7 @@ export interface CardsType {
     text: string;
     text2: string;
     category: string;
+    image2:ImageSourcePropType;
+    id?:string;
     ingredients: { name: string; quantity: string }[];
 }

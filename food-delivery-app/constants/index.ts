@@ -19,6 +19,10 @@ import Momos from "@/assets/images/momos.png"
 import Burrito from "@/assets/images/Burrito.png"
 import Soup from "@/assets/images/miso soup.png"
 import Grilled from "@/assets/images/grilled.png"
+import ProductOne from "@/assets/images/product1.png"
+import ProductTwo from "@/assets/images/product2.png"
+import ProductThree from "@/assets/images/product3.png"
+import ProductFour from "@/assets/images/product4.png"
 
 export const images = {
     slideOne,
@@ -42,6 +46,10 @@ export const images = {
     Burrito,
     Soup,
     Grilled,
+    ProductOne,
+    ProductTwo,
+    ProductThree,
+    ProductFour
 };
 
 export const icons = {};
@@ -82,6 +90,8 @@ export const listImage = [
 export const CardContent = [
     {
         image: images.cardOne,
+        image2: images.ProductOne,
+        id:0,
         text: "Sunny Avocado Breakfast",
         text2: "🥑 Sunny Avocado Breakfast Bowl",
         category: "Breakfast",
@@ -101,6 +111,8 @@ export const CardContent = [
     },
     {
         image: images.cardTwo,
+        image2: images.ProductTwo,
+        id:1,
         text: "Veggie Symphony Bowl",
         text2: "🥗 Veggie Symphony Bowl",
         category: "Lunch",
@@ -120,6 +132,8 @@ export const CardContent = [
     },
     {
         image: images.cardThree,
+         image2: images.ProductThree,
+         id:2,
         text: "Berry Bliss Smoothie",
         text2: "🍓 Berry Bliss Smoothie",
         category: "Snacks",
@@ -133,6 +147,8 @@ export const CardContent = [
     },
     {
         image: images.cardFour,
+         image2: images.ProductFour,
+         id:3,
         text: "Carnitas Burrito Bowl",
         text2: "🌯 Carnitas Burrito Bowl",
         category: "Dinner",

@@ -42,8 +42,9 @@ const Cards = ({ listObject }: { listObject: CardsType[] }) => {
                                     router.push({
                                         pathname: "/discover-feed/products/[products]",
                                         params: {
-                                            slug: item.category,
+                                            products: item.category,
                                             description: item.text2,
+                                            id:item.id,
                                         },
                                     })
                                 }
