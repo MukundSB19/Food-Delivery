@@ -1,15 +1,16 @@
 import { ImageSourcePropType } from "react-native";
 import { OrderStatus } from "./enums";
+import { Ingredient, Product } from "./menu";
 
-export interface Product {
-    id: string;
-    name: string;
-    image: ImageSourcePropType;
-    price: number;
-    description?: string;
-    category: string;
-    available?: boolean;
-}
+// export interface Product {
+//     id: string;
+//     name: string;
+//     image: ImageSourcePropType;
+//     price: number;
+//     description?: string;
+//     category: string;
+//     available?: boolean;
+// }
 
 export interface CartItem {
     product: Product;
@@ -55,11 +56,7 @@ export interface Review {
     createdAt: string;
 }
 export interface CardsType {
-    image: ImageSourcePropType;
-    text: string;
-    text2: string;
-    category: string;
-    image2:ImageSourcePropType;
+    product: Product;
     id?:string;
-    ingredients: { name: string; quantity: string }[];
+    ingredients: Ingredient[];
 }

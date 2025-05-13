@@ -1,10 +1,42 @@
-// import { Ingredient } from "@/types/menu";
+import { Ingredient } from "@/types";
 
-// export const ingredients: Ingredient[] = [
-//   { id: "i1", name: "Cooked white rice", quantity: "120g" },
-//   { id: "i2", name: "Pinto beans", quantity: "80g" },
-//   { id: "i3", name: "Shredded carnitas", quantity: "100g" },
-//   { id: "i4", name: "Shredded cheese", quantity: "30g" },
-//   { id: "i5", name: "Guacamole", quantity: "40g" },
-//   // ...more
-// ];
+export const ingredients: Ingredient[] = [
+    { id: "1",  name: "Cooked white rice", quantity: "120g" },
+    { id: "2",  name: "Pinto beans", quantity: "80g" },
+    { id: "3",  name: "Shredded carnitas", quantity: "100g" },
+    { id: "4",  name: "Shredded cheese", quantity: "30g" },
+    { id: "5",  name: "Guacamole", quantity: "40g" },
+    { id: "6",  name: "Sour cream", quantity: "20g" },
+    { id: "7",  name: "Romaine lettuce (chopped)", quantity: "25g" },
+    { id: "8",  name: "Pico de gallo", quantity: "60g" },
+    { id: "9",  name: "Fresh cilantro (garnish)", quantity: "5g" },
+    { id: "10",  name: "Lime wedges", quantity: "2 wedges (~20g)" },
+    { id: "11",  name: "brown rice", quantity: "120g" },
+    { id: "12",  name: "Roasted chickpeas", quantity: "80g" },
+    { id: "13",  name: "sautéed bell peppers (mixed colors)", quantity: "60g" },
+    { id: "14",  name: "Steamed broccoli", quantity: "50g" },
+    { id: "15",  name: "Avocado (sliced)", quantity: "50g" },
+    { id: "16",  name: "Cherry tomatoes (halved)", quantity: "50g" },
+    { id: "17",  name: "Shredded carrots", quantity: "30g" },
+    { id: "18",  name: "Red cabbage (shredded)", quantity: "30g" },
+    { id: "19",  name: "Hummus", quantity: "40g" },
+    { id: "20",  name: "Lemon", quantity: "1 wedge (~10g)" },
+    { id: "21",  name: "Fresh herbs (cilantro)", quantity: "5g" },
+    { id: "22",  name: "Frozen mixed berries ", quantity: "150g" },
+    { id: "23",  name: "Banana (ripe)", quantity: "100g" },
+    { id: "24",  name: "Greek yogurt ", quantity: "100g" },
+    { id: "25",  name: "Almond milk", quantity: "200ml (~200g)" },
+    { id: "26",  name: "Honey", quantity: "10g (about 1 tsp)" },
+    { id: "27",  name: "Cooked white rice", quantity: "120g" },
+    { id: "28",  name: "Slow-cooked carnitas (shredded pork)", quantity: "100g" },
+    { id: "29",  name: "Black beans", quantity: "80g" },
+    { id: "30",  name: "Grilled corn", quantity: "60g" },
+    { id: "31",  name: "Pico de gallo (fresh tomato salsa)", quantity: "60g" },
+    { id: "32",  name: "Guacamole", quantity: "50g" },
+    { id: "33",  name: "Sour cream", quantity: "20g" },
+    { id: "34",  name: "Shredded cheddar", quantity: "	30g" },
+    { id: "35",  name: "Chopped romaine lettuce", quantity: "40g" },
+    { id: "36",  name: "Fresh cilantro (for garnish)", quantity: "5g" },
+    { id: "37",  name: "Lime wedge", quantity: " 1 wedge (~10g)" },
+    // ...more
+];

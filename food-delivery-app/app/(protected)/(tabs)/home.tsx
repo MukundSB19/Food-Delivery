@@ -1,11 +1,13 @@
 import { View, Text, FlatList } from "react-native";
 import { SlideShow } from "@/components/ui";
-import { CardContent, onboarding } from "@/constants";
+import { onboarding } from "@/constants";
 import { HomeUpper, Cards, HorizontalList } from "@/components";
 import { category } from "@/data";
 import { AppScreenWrapper } from "@/components/shared";
 import { foods } from "@/data/foods";
 import { FoodItemCard } from "@/components/ui";
+import { cardContent } from "@/data/cardContent";
+import { products } from "@/data/product";
 
 const home = () => {
   return (
@@ -22,7 +24,7 @@ const home = () => {
 
             <HorizontalList listObject={category} />
 
-            <Cards listObject={CardContent} />
+            <Cards listObject={cardContent} />
 
             <Text className="text-2xl font-regularFont tracking-tighter mt-9 ml-5 text-fontPrimary-0 bg-[#00000011] self-start px-3 py-2 rounded-xl">
               International Cuisines 
