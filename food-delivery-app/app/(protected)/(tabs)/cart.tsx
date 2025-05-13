@@ -6,7 +6,7 @@ import { AppScreenWrapper } from "@/components";
 // import { Minus, Plus, Trash2 } from "lucide-react-native";
 
 const Cart = () => {
-    // const { state, addToCart, removeFromCart, totalPrice } = useCart();
+   
 
     // return (
     //     <AppScreenWrapper gradientColors={["#EAECCC", "#9EDC88"]}>
@@ -37,7 +37,7 @@ const Cart = () => {
             <View className="flex-row items-center space-x-3">
                 {item.image && (
                     <Image
-                        source={{ uri: item.image }}
+                        source={ item.image }
                         className="w-14 h-14 rounded-xl"
                         resizeMode="cover"
                     />
