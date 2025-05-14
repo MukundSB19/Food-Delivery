@@ -38,5 +38,5 @@ export type HorizontalImage = {
     slug: string; // e.g., "pizza"
     title: string; // e.g., "Pizza"
     imageUrl: ImageSourcePropType;
-    description: string; // URI string or require()
+    description: string;
 };

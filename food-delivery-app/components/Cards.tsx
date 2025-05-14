@@ -8,7 +8,7 @@ import {
     Pressable,
 } from "react-native";
 import { useState } from "react";
-import { CardsType } from "@/types";
+import { CardContent } from "@/types";
 import { router } from "expo-router";
 
 type ingredientType = {
@@ -16,7 +16,7 @@ type ingredientType = {
     quantity: string;
 };
 
-const Cards = ({ listObject }: { listObject: CardsType[] }) => {
+const Cards = ({ listObject }: { listObject: CardContent[] }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const [selectedIngredients, setSelectedIngredients] =
         useState<ingredientType[]>();
@@ -25,7 +25,7 @@ const Cards = ({ listObject }: { listObject: CardsType[] }) => {
         setSelectedIngredients(ingredients);
         setModalVisible(true);
     };
-    const [ingredientTitle, setIngredientTitle] = useState("");
+    const [ingredientTitle, setIngredientTitle] = useState<string | undefined>("");
 
     return (
         <View>
@@ -44,7 +44,7 @@ const Cards = ({ listObject }: { listObject: CardsType[] }) => {
                                         "/discover-feed/products/[products]",
                                     params: {
                                         products: item.product.category,
-                                        id: item.id,
+                                        productId: item.productId,
                                     },
                                 })
                             }
@@ -88,7 +88,7 @@ const Cards = ({ listObject }: { listObject: CardsType[] }) => {
                 <View className="items-center justify-center flex-1 bg-black/50">
                     <View className="bg-[#EAECCC] p-6 rounded-2xl w-[80%] shadow-lg">
                         <Text className="mb-4 text-xl tracking-tight font-boldFont">
-                            {ingredientTitle}
+                            {ingredientTitle && ingredientTitle}
                         </Text>
                         <View className="flex flex-row justify-between pl-3 mt-4">
                             <Text className="text-xl tracking-tight font-boldFont">

@@ -50,5 +50,58 @@ export const products: Product[] = [
         description:
             "Bold, juicy, and packed with flavor—the Carnitas Burrito Bowl is here to steal the show! 🌯🔥 Slow-cooked pork carnitas, cilantro-lime rice, black beans, fresh salsa, corn, and a dollop of guac. Every bite is a fiesta in your mouth! 🥑🌶️",
     },
+    {
+        id: "4",
+        estimatedTime: "30 min",
+        name: "Orange",
+        image: images.FruitOne,
+        category: "fruits",
+        vitamin: "C,B1,folate",
+        price: 120,
+        description: "Best Time to Eat Morning or Mid-Morning",
+    },
+    {
+        id: "5",
+        estimatedTime: "30 min",
+
+        name: "Mango",
+        image: images.FruitTwo,
+        category: "fruits",
+        vitamin: "C,B1,folate",
+        price: 200,
+        description: "Best Time to Eat Morning or Mid-Morning",
+    },
+    {
+        id: "6",
+        estimatedTime: "30 min",
+
+        name: "Grapes",
+        image: images.FruitThree,
+        category: "fruits",
+        vitamin: "C,B1,folate",
+        price: 80,
+        description: "Best Time to Eat Morning or Mid-Morning",
+    },
+    {
+        id: "7",
+        estimatedTime: "30 min",
+
+        name: "Blueberries",
+        image: images.FruitFour,
+        category: "fruits",
+        vitamin: "C,B1,folate",
+        price: 140,
+        description: "Best Time to Eat Morning or Mid-Morning",
+    },
+    {
+        id: "8",
+        estimatedTime: "30 min",
+        name: "Banana",
+        image: images.FruitFive,
+        category: "fruits",
+        vitamin: "C,B1,folate",
+        price: 70,
+        description: "Best Time to Eat Morning or Mid-Morning",
+    },
     // ... more products
 ];

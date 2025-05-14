@@ -70,7 +70,7 @@ export default function FoodItemCard({ item }: { item: FoodItem }) {
         <View className="flex-row justify-between ">
           <CustomButton
             className="self-start px-3 py-2 mx-2"
-            title="Add to cart"
+            title="Add to Bag"
             textStyle="text-xl"
             onPress={handleAdd}
           />
