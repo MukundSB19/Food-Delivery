@@ -3,6 +3,7 @@ import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import { useCart } from "@/context/CartContext";
 import { CustomButton } from "@/components/ui";
 import { AppScreenWrapper } from "@/components";
+import { images } from "@/constants";
 // import { Minus, Plus, Trash2 } from "lucide-react-native";
 
 const Cart = () => {
@@ -80,6 +81,7 @@ const Cart = () => {
                 <Text className="text-gray-500 text-center">
                     Add some delicious food to get started!
                 </Text>
+                <Image source={images.CartSticker} className="w-1/2 h-1/2" resizeMode="contain"/>
             </View>
         );
     }

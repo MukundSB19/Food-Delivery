@@ -4,7 +4,7 @@ import { allItems } from "@/data";
 import { CustomButton } from "@/components/ui";
 import { AppScreenWrapper } from "@/components/shared";
 import { useCart } from "@/context/CartContext";
-import { resolveProductById } from "@/utils/resolveCard";
+import { resolveProductById } from "@/Utils/resolveCard"
 import { Product } from "@/types";
 
 export default function CategoryScreen() {

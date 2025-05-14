@@ -1,51 +1,44 @@
 import { images } from "@/constants";
+import { Product } from "@/types";
 import { ImageSourcePropType } from "react-native";
+import { products } from "./product";
 
 export type FoodItem = {
     id: string;
-    name: string;
-    price: number;
-    image: ImageSourcePropType;
-    country: string;
+    productId:string;
+    product:Product;
 };
 
 export const foods: FoodItem[] = [
-    {
-        id: "1",
-        name: "Moong Dal Khichdi",
-        country: "Indian",
-        price: 349,
-        image: images.MoongDall,
-    },
-    {
-        id: "2",
-        name: "Steamed Vegetable Dumplings",
-        country: "Chinese",
-        price: 459,
-        image: images.Momos,
-    },
-    {
-        id: "3",
-        name: "Miso Soup",
-        country: "Japanese",
-        price: 350,
-        image: images.Soup,
-    },
-    {
-        id: "4",
-        name: "Grilled Vegetable Panini",
-        country: "Italian",
-        price: 200,
-        image: images.Grilled,
-    },
-    {
-        id: "5",
-        name: "Veggie Burrito Bowl",
-        country: "Mexican",
-        price: 450,
-        image: images.Burrito,
-    },
-    
-    
-    
+  {
+    id: "0",
+    productId: "9",
+
+    product: products.find((product) => product.id === "9")!,
+  },
+  {
+    id: "1",
+    productId: "10",
+
+    product: products.find((product) => product.id === "10")!,
+  },
+  {
+    id: "2",
+    productId: "11",
+
+    product: products.find((product) => product.id === "11")!,
+  },
+  {
+    id: "3",
+    productId: "12",
+
+    product: products.find((product) => product.id === "12")!,
+  },
+  {
+    id: "4",
+    productId: "13",
+
+    product: products.find((product) => product.id === "13")!,
+  },
+  // ...more cards
 ];

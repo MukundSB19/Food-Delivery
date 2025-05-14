@@ -23,6 +23,7 @@ import ProductOne from "@/assets/images/product1.png"
 import ProductTwo from "@/assets/images/product2.png"
 import ProductThree from "@/assets/images/product3.png"
 import ProductFour from "@/assets/images/product4.png"
+import CartSticker from "@/assets/images/shopping.png"
 
 export const images = {
     slideOne,
@@ -49,7 +50,8 @@ export const images = {
     ProductOne,
     ProductTwo,
     ProductThree,
-    ProductFour
+    ProductFour,
+    CartSticker
 };
 
 export const icons = {};
