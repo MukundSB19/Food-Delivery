@@ -9,13 +9,14 @@ export interface Ingredient {
 export interface Product {
     id: string;
     name: string;
-    text: string;
+    text?: string;
     description?: string;
     category: string;
     price: number;
+    vitamin?: string;
     estimatedTime: string;
     image: ImageSourcePropType;
-    image2: ImageSourcePropType;
+    image2?: ImageSourcePropType;
 }
 
 export interface CardContent {
