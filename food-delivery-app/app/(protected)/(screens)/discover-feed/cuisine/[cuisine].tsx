@@ -70,7 +70,7 @@ const cuisineCategoryScreen = () => {
 
         {filteredItems.length === 0 ? (
           <Text className="mt-4 text-center text-gray-500">
-            No items found in this category.
+            No items found in this Category.
           </Text>
         ) : (
           <FlatList
