@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { AppScreenWrapper, CustomButton } from "@/components";
-import {  Image, FlatList } from "react-native";
+import { Image, FlatList } from "react-native";
 import { useLocalSearchParams } from "expo-router";
 import { allItems } from "@/data";
 
@@ -11,7 +11,6 @@ import { Product } from "@/types";
 import { foods } from "@/data/foods";
 
 const cuisineCategoryScreen = () => {
-  
   const { category } = useLocalSearchParams();
   const { addToCart } = useCart();
 
@@ -23,33 +22,31 @@ const cuisineCategoryScreen = () => {
   const handleAdd = (product: Product) => {
     addToCart({ ...product, quantity: 1 });
   };
-  
+
   const renderItem = ({ item }: { item: Product }) => (
-    <View className="flex-row items-center mb-4 m-auto shadow-md bg-slate-100 rounded-3xl relative w-4/5 h-[220]">
+    <View className="flex-row items-center mb-4  shadow-md mt-4  h-[220] w-[95%] mx-auto relative">
       <Image
         source={item.image}
-        className="w-full h-full mr-4"
-        resizeMode="contain"
+        className="w-full h-full rounded-2xl"
+        resizeMode="cover"
       />
-      <View className="flex-1 absolute">
-        <Text className="mb-1 text-2xl font-regularFont text-fontPrimary-0 tracking-tighter">
+      <View className=" flex-col absolute w-full h-full justify-between bg-black">
+        <Text className="mb-1 text-2xl font-regularFont text-white  tracking-tighter">
           {item.name}
         </Text>
-        <View className="flex-row items-center justify-between my-3">
-          <Text className="text-base text-black bg-[#9EDC88] px-2 py-1 rounded-xl tracking-tighter">
-            Vitamin {item.vitamin}
-          </Text>
+        <View className="flex-row items-center justify-between">
           <CustomButton
             title="Add to Bag"
             // onPress={() => handleAdd(item)}
-            className="w-[38%] px-3 py-2"
+            className="w-[38%] px-3 py-2 "
             textStyle="text-white text-center font-boldFont tracking-tighter text-sm"
             disabled={false}
           />
+          <Text className="text-white self-start px-2 py-1 text-lg rounded-lg mb-3">
+            {item.price} ₹/kg
+          </Text>
         </View>
-        <Text className="bg-[#00000012] self-start px-2 py-1 text-lg rounded-lg mb-3">
-          {item.price} ₹/kg
-        </Text>
+
         <Text className="font-regularFont tracking-tighter text-fontPrimary-0 text-base">
           {item.description}
         </Text>
@@ -59,15 +56,10 @@ const cuisineCategoryScreen = () => {
 
   return (
     <AppScreenWrapper>
-      <View>
-        <Text className="text-3xl font-regularFont tracking-tighter2 mb-2 mt-6 ml-2 capitalize bg-white p-3 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl self-start ">
-          {category} Cuisine
-        </Text>
-
-        <Text className="mb-4 ml-2 tracking-tighter font-regularFont">
-         
-        </Text>
-
+      <Text className="text-3xl font-regularFont tracking-tighter2 mb-2 mt-6 ml-2 capitalize bg-white p-3 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl self-start ">
+        {category} Cuisine
+      </Text>
+      <View className=" mx-auto ">
         {filteredItems.length === 0 ? (
           <Text className="mt-4 text-center text-gray-500">
             No items found in this Category.
