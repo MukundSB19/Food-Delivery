@@ -22,7 +22,7 @@ export default function FoodItemCard({ item }: { item: FoodItem }) {
   };
 
   return (
-    // <View className="bg-white rounded-2xl p-3 shadow-sm mb-4 flex-row items-center justify-between mx-3">
+    // <View className="flex-row items-center justify-between p-3 mx-3 mb-4 bg-white shadow-sm rounded-2xl">
     //   <View className="flex-row items-center space-x-4">
     //     {item.image && (
     //       <Image
@@ -39,10 +39,10 @@ export default function FoodItemCard({ item }: { item: FoodItem }) {
 
     //   <TouchableOpacity
     //     onPress={handleAdd}
-    //     className="bg-green-500 p-2 rounded-full"
+    //     className="p-2 bg-green-500 rounded-full"
     //   >
     //     {/* <Plus size={20} color="white" /> */}
-    //     <Text className="text-white font-semibold">Add</Text>
+    //     <Text className="font-semibold text-white">Add</Text>
     //   </TouchableOpacity>
     // </View>
 
@@ -52,7 +52,7 @@ export default function FoodItemCard({ item }: { item: FoodItem }) {
         resizeMode="cover"
         source={item.product.image}
       />
-      <View className="absolute flex-row justify-between items-baseline w-full mt-3 px-3">
+      <View className="absolute flex-row items-baseline justify-between w-full px-3 mt-3">
         <Text className="color-white font-regularFont  p-2 px-3 rounded-lg shadow-2xl shadow-black bg-[#00000055] text-xl self-start mt-">
           {item.product.category}
         </Text>
@@ -62,7 +62,7 @@ export default function FoodItemCard({ item }: { item: FoodItem }) {
           title="See More"
            onPress={() => router.push({
             pathname:"/(protected)/(screens)/discover-feed/cuisine/[cuisine]",
-            params:{category:item.product.category},
+            params:{cuisine:item.product.category},
           
           })}
 
@@ -70,7 +70,7 @@ export default function FoodItemCard({ item }: { item: FoodItem }) {
       </View>
       <Text className="text-center font-boldFont tracking-tight ml-2 p-1 rounded-lg bg-[#00000066] color-white absolute bottom-16"></Text>
       {/* // TODO: implement on press functionality */}
-      <View className=" w-full flex   bottom-3 absolute gap-2">
+      <View className="absolute flex w-full gap-2  bottom-3">
         <Text className="color-white font-regularFont  p-2 px-3 mx-2 rounded-lg shadow-2xl shadow-black bg-[#00000055] text-xl self-start">
           {item.product.name}
         </Text>

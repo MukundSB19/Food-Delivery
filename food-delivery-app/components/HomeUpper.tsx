@@ -60,7 +60,7 @@ const HomeUpper = () => {
                 className={`bg-[#ffffff55] flex flex-row justify-between  m-auto w-3/4 py-3 px-6 rounded-full mb-6 `}
               >
                 <TextInput
-                  className="font-boldFont  tracking-tighter text-fontPrimary-0"
+                  className="tracking-tighter font-boldFont text-fontPrimary-0"
                   placeholder="Search Fruits, Vegetables, Dairy, etc."
                 />
                 <TouchableOpacity >

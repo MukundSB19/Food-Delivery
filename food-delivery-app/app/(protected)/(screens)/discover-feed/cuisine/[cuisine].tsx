@@ -9,53 +9,52 @@ import { Product } from "@/types";
 import { foods } from "@/data/foods";
 
 const cuisineCategoryScreen = () => {
-  const { category } = useLocalSearchParams();
+  const { cuisine } = useLocalSearchParams();
   const { addToCart } = useCart();
 
   // Filter items by category using resolved product data
   const filteredItems = foods
     .map((item) => resolveProductById(item.productId))
-    .filter((product) => product && product.category === category) as Product[];
+    .filter((product) => product && product.category === cuisine) as Product[];
 
   const handleAdd = (product: Product) => {
     addToCart({ ...product, quantity: 1 });
   };
 
   const renderItem = ({ item }: { item: Product }) => (
-    <View className="flex-row items-center mb-4  shadow-md mt-4  h-[220] w-[95%] mx-auto relative">
-      <Image
-        source={item.image}
-        className="w-full h-full rounded-2xl"
-        resizeMode="cover"
-      />
-      <View className="absolute flex-col justify-between w-full h-full bg-black ">
-        <Text className="mb-1 text-2xl tracking-tighter text-white font-regularFont">
-          {item.name}
-        </Text>
-        <View className="flex-row items-center justify-between">
-          <CustomButton
-            title="Add to Bag"
-            // onPress={() => handleAdd(item)}
-            className="w-[38%] px-3 py-2 "
-            textStyle="text-white text-center font-boldFont tracking-tighter text-sm"
-            disabled={false}
+      <View className="flex-row items-center mb-4  shadow-md mt-4  h-[220] w-[95%] mx-auto relative">
+          <Image
+              source={item.image}
+              className="w-full h-full rounded-2xl"
+              resizeMode="cover"
           />
-          <Text className="self-start px-2 py-1 mb-3 text-lg text-white rounded-lg">
-            {item.price} ₹/kg
-          </Text>
-        </View>
-
-        <Text className="text-base tracking-tighter font-regularFont text-fontPrimary-0">
-          {item.description}
-        </Text>
+          <View className="absolute flex-col justify-between w-full h-full ">
+              <Text className="mb-1 text-2xl tracking-tighter text-white font-regularFont">
+                  {item.name}
+              </Text>
+              <View className="relative flex-row items-baseline justify-between bottom-1">
+                  <CustomButton
+                      title="Add to Bag"
+                      // onPress={() => handleAdd(item)}
+                      className="w-[38%] px-3 py-2 "
+                      textStyle="text-white text-center font-boldFont tracking-tighter text-sm relative bottom-0"
+                      disabled={false}
+                  />
+                  <Text className="relative bottom-0 self-start px-2 py-1 mb-3 text-lg text-white rounded-lg">
+                      {item.price} ₹/kg
+                  </Text>
+                  {/* <Text className="text-base tracking-tighter font-regularFont text-fontPrimary-0">
+                      {item.description}
+                  </Text> */}
+              </View>
+          </View>
       </View>
-    </View>
   );
 
   return (
     <AppScreenWrapper>
       <Text className="self-start p-3 mt-6 mb-2 ml-2 text-3xl capitalize bg-white font-regularFont tracking-tighter2 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl ">
-        {category} Cuisine
+        {cuisine} Cuisine
       </Text>
       <View className="mx-auto ">
         {filteredItems.length === 0 ? (
