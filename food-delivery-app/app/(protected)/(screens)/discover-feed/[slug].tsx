@@ -4,7 +4,7 @@ import { allItems } from "@/data";
 import { CustomButton } from "@/components/ui";
 import { AppScreenWrapper } from "@/components/shared";
 import { useCart } from "@/context/CartContext";
-import { resolveProductById } from "@/Utils/resolveCard"
+import { resolveProductById } from "@/utils/resolveCard";
 import { Product } from "@/types";
 
 export default function CategoryScreen() {
@@ -28,7 +28,7 @@ export default function CategoryScreen() {
                 resizeMode="contain"
             />
             <View className="flex-1">
-                <Text className="mb-1 text-2xl font-regularFont text-fontPrimary-0 tracking-tighter">
+                <Text className="mb-1 text-2xl tracking-tighter font-regularFont text-fontPrimary-0">
                     {item.name}
                 </Text>
                 <View className="flex-row items-center justify-between my-3">
@@ -46,7 +46,7 @@ export default function CategoryScreen() {
                 <Text className="bg-[#00000012] self-start px-2 py-1 text-lg rounded-lg mb-3">
                     {item.price} ₹/kg
                 </Text>
-                <Text className="font-regularFont tracking-tighter text-fontPrimary-0 text-base">
+                <Text className="text-base tracking-tighter font-regularFont text-fontPrimary-0">
                     {item.description}
                 </Text>
             </View>
@@ -58,7 +58,7 @@ export default function CategoryScreen() {
             gradientColors={["#EAECCC", "#9EDC88"]}
             style={{ marginHorizontal: 13 }}
         >
-            <Text className="text-3xl font-regularFont tracking-tighter2 mb-2 mt-6 ml-2 capitalize bg-white p-3 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl self-start ">
+            <Text className="self-start p-3 mt-6 mb-2 ml-2 text-3xl capitalize bg-white font-regularFont tracking-tighter2 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl ">
                 Popular {slug}
             </Text>
 

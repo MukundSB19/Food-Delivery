@@ -3,10 +3,8 @@ import React from "react";
 import { AppScreenWrapper, CustomButton } from "@/components";
 import { Image, FlatList } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import { allItems } from "@/data";
-
 import { useCart } from "@/context/CartContext";
-import { resolveProductById } from "@/Utils/resolveCard";
+import { resolveProductById } from "@/utils/resolveCard";
 import { Product } from "@/types";
 import { foods } from "@/data/foods";
 
@@ -30,8 +28,8 @@ const cuisineCategoryScreen = () => {
         className="w-full h-full rounded-2xl"
         resizeMode="cover"
       />
-      <View className=" flex-col absolute w-full h-full justify-between bg-black">
-        <Text className="mb-1 text-2xl font-regularFont text-white  tracking-tighter">
+      <View className="absolute flex-col justify-between w-full h-full bg-black ">
+        <Text className="mb-1 text-2xl tracking-tighter text-white font-regularFont">
           {item.name}
         </Text>
         <View className="flex-row items-center justify-between">
@@ -42,12 +40,12 @@ const cuisineCategoryScreen = () => {
             textStyle="text-white text-center font-boldFont tracking-tighter text-sm"
             disabled={false}
           />
-          <Text className="text-white self-start px-2 py-1 text-lg rounded-lg mb-3">
+          <Text className="self-start px-2 py-1 mb-3 text-lg text-white rounded-lg">
             {item.price} ₹/kg
           </Text>
         </View>
 
-        <Text className="font-regularFont tracking-tighter text-fontPrimary-0 text-base">
+        <Text className="text-base tracking-tighter font-regularFont text-fontPrimary-0">
           {item.description}
         </Text>
       </View>
@@ -56,10 +54,10 @@ const cuisineCategoryScreen = () => {
 
   return (
     <AppScreenWrapper>
-      <Text className="text-3xl font-regularFont tracking-tighter2 mb-2 mt-6 ml-2 capitalize bg-white p-3 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl self-start ">
+      <Text className="self-start p-3 mt-6 mb-2 ml-2 text-3xl capitalize bg-white font-regularFont tracking-tighter2 rounded-2xl shadow--2xl text-fontPrimary-0 elevation-xl ">
         {category} Cuisine
       </Text>
-      <View className=" mx-auto ">
+      <View className="mx-auto ">
         {filteredItems.length === 0 ? (
           <Text className="mt-4 text-center text-gray-500">
             No items found in this Category.

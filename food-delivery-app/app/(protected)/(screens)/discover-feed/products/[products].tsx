@@ -2,7 +2,7 @@ import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
 import { useLocalSearchParams, router } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { resolveProductById } from "@/Utils/resolveCard"
+import { resolveProductById } from "@/utils/resolveCard"
 import { CustomButton } from "@/components";
 import { useCart } from "@/context/CartContext";
 
