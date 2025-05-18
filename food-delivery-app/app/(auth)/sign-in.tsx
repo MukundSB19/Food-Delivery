@@ -59,7 +59,7 @@ const SignIn = () => {
                         title="Sign in"
                         className="w-4/5 px-5 py-3"
                         textStyle="text-white text-center w-full font-boldFont tracking-tighter text-2xl"
-                        onPress={() => authContext.logIn("ueer")}
+                        onPress={() => authContext.logIn("user")}
                         disabled={false}
                     />
                 </View>
