@@ -24,7 +24,9 @@ import ProductTwo from "@/assets/images/product2.png"
 import ProductThree from "@/assets/images/product3.png"
 import ProductFour from "@/assets/images/product4.png"
 import CartSticker from "@/assets/images/shopping.png"
-
+import ChineseBg from "@/assets/images/bg Chinese.jpg"
+import JapanBg from "@/assets/images/bg japan.jpg"
+import IndiaBg from "@/assets/images/bg india.jpg"
 export const images = {
     slideOne,
     slideTwo,
@@ -51,7 +53,10 @@ export const images = {
     ProductTwo,
     ProductThree,
     ProductFour,
-    CartSticker
+    CartSticker,
+    ChineseBg,
+    JapanBg,
+    IndiaBg
 };
 
 export const icons = {};
