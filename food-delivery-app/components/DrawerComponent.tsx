@@ -13,7 +13,7 @@ export default function DrawerComponent() {
                 name="menu"
                 size={39}
                 color="#3A3A3A"
-                className="bg-[#ffffff55] rounded-2xl "
+                className="bg-[#ffffff55] rounded-2xl self-start"
             />
         </TouchableOpacity>
     );

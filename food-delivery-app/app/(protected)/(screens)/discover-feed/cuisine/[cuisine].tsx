@@ -36,6 +36,10 @@ const cuisineCategoryScreen = () => {
       setBgImage(images.JapanBg);
     }else if (cuisineLower==="indian"){
       setBgImage(images.IndiaBg)
+    }else if (cuisineLower==="italian"){
+      setBgImage(images.ItalianBg)
+    }else if (cuisineLower==="mexican"){
+      setBgImage(images.MexicoBg)
     }
   }, [cuisine]);
 
