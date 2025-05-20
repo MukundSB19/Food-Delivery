@@ -15,6 +15,7 @@ const SlideShow = ({ slideObject }: { slideObject: Slideshow[] }) => {
             activeDot={
                 <View className="w-4 h-4 mx-1 rounded-full bg-slate-600" />
             }
+            autoplay={true}
         >
             {slideObject.map((item) => (
                 <View

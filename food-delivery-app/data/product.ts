@@ -74,7 +74,6 @@ export const products: Product[] = [
   {
     id: "6",
     estimatedTime: "30 min",
-
     name: "Grapes",
     image: images.FruitThree,
     category: "fruits",
@@ -85,7 +84,6 @@ export const products: Product[] = [
   {
     id: "7",
     estimatedTime: "30 min",
-
     name: "Blueberries",
     image: images.FruitFour,
     category: "fruits",

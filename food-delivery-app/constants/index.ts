@@ -29,6 +29,7 @@ import JapanBg from "@/assets/images/bg japan.jpg"
 import IndiaBg from "@/assets/images/bg india.jpg"
 import ItalianBg from "@/assets/images/bg italy.jpg"
 import MexicoBg from "@/assets/images/bg mexico.jpg"
+import WelcomeBg from "@/assets/images/Background-welcome.png";
 
 export const images = {
     slideOne,
@@ -61,7 +62,8 @@ export const images = {
     JapanBg,
     IndiaBg,
     ItalianBg,
-    MexicoBg
+    MexicoBg,
+    WelcomeBg,
 };
 
 export const icons = {};

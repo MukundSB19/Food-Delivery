@@ -24,7 +24,6 @@ const settings = () => {
             <InputField
               placeholder="Esther Howard"
               containerStyle="w-[95%] rounded-xl px-4"
-              className=""
               label="Name"
               labelStyle=" ml-5 mb-2 font-regularFont tracking-tighter text-lg"
             />

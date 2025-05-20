@@ -38,7 +38,6 @@ const SignIn = () => {
                         containerStyle="py-2 px-6 rounded-2xl mb-6 "
                         labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
                         inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
-                        editable={true}
                         inputModeType="email"
                         onChangeText={setEmail}
                     />
@@ -48,7 +47,6 @@ const SignIn = () => {
                         containerStyle="py-2 px-6 rounded-2xl mb-6 "
                         labelStyle="font-boldFont text-xl w-3/4 m-auto mb-3 tracking-tighter text-fontPrimary-0"
                         inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
-                        editable={true}
                         inputModeType="password"
                         onChangeText={setPassword}
                     />

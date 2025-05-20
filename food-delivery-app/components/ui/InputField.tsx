@@ -20,7 +20,7 @@ const InputField = ({
   inputStyle,
   inputModeType,
   className,
-  editable = false,
+  editable = true,
   ...props
 }: InputFieldProps) => {
   const [isEditable, setEditable] = useState(editable);
@@ -37,7 +37,7 @@ const InputField = ({
           >
             <TextInput
               editable={isEditable}
-              className={`${inputStyle}`}
+              className={`${inputStyle} w-full`}
               {...props}
             />
             <TouchableOpacity
