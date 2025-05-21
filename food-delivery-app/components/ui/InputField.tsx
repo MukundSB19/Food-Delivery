@@ -33,11 +33,11 @@ const InputField = ({
         <View>
           <Text className={`${labelStyle}`}>{label}</Text>
           <View
-            className={`bg-[#ffffff55] flex flex-row justify-between  m-auto w-3/4 ${containerStyle}`}
+            className={`bg-[#ffffff55] flex flex-row justify-between  m-auto items-center ${containerStyle}`}
           >
             <TextInput
               editable={isEditable}
-              className={`${inputStyle} w-full`}
+              className={` ${inputStyle}  `}
               {...props}
             />
             <TouchableOpacity

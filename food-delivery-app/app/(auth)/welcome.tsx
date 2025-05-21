@@ -4,22 +4,34 @@ import {
     ImageBackground,
     TouchableOpacity,
     ScrollView,
+    StatusBar,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { CustomButton } from "@/components/ui";
 import { router } from "expo-router";
 import {AppScreenWrapper} from "@/components/shared";
+import { LinearGradient } from "expo-linear-gradient";
 
 const Welcome = () => {
     return (
-        <AppScreenWrapper gradientColors={["#EAECCC", "#9EDC88"]}>
+        <View className="h-full">
+        <StatusBar
+          translucent
+          backgroundColor="transparent"
+          barStyle="dark-content"
+        />
+        <LinearGradient
+          colors={["#EAECCC", "#9EDC88"]}
+          start={{ x: 0, y: 0.5 }}
+          end={{ x: 0, y: 1 }}
+        >
             <ImageBackground
                 source={require("@/assets/images/Background-welcome.png")}
                 className="w-full h-full"
             >
-                <ScrollView>
+                
                     <View className="flex flex-col justify-between h-screen mb-10">
-                        <View className="flex items-end ">
+                        <View className="flex items-end mt-4">
                             <TouchableOpacity
                                 className="px-2 py-2 mr-3 border bg-white/10 border-white/30 rounded-xl backdrop-blur-2xl mt-5"
                                 onPress={() => {
@@ -59,9 +71,10 @@ const Welcome = () => {
                             </View>
                         </View>
                     </View>
-                </ScrollView>
+               
             </ImageBackground>
-        </AppScreenWrapper>
+            </LinearGradient>
+        </View>
     );
 };
 

@@ -1,5 +1,5 @@
 import { ButtonProps } from "@/types";
-import { TouchableOpacity, Text } from "react-native";
+import { TouchableOpacity, Text, Image, View } from "react-native";
 
 const CustomButton = ({
     title,
@@ -10,25 +10,39 @@ const CustomButton = ({
     textStyle,
     IconLeft,
     IconRight,
+    IconRightStyle,
+    IconLeftStyle,
     ...props
 }: ButtonProps) => {
     return (
-        <TouchableOpacity
-            className={`bg-buttonPrimary-0  rounded-full items-center shadow-md shadow-black ${
-                disabled ? "bg-gray-400" : ""
-            } ${className}`}
-            disabled={disabled}
-            activeOpacity={0.8}
-            {...props}
+      <TouchableOpacity
+        className={`bg-buttonPrimary-0  rounded-full items-center shadow-md shadow-black ${
+          disabled ? "bg-gray-400" : ""
+        } ${className}`}
+        disabled={disabled}
+        activeOpacity={0.8}
+        {...props}
+      >
+        <View
+          className={` flex flex-row   items-center justify-around w-full `}
         >
-            {IconLeft && <IconLeft />}
-            <Text
-                className={`text-white font-regularFont tracking-tighter text-3xl ${textStyle}`}
-            >
-                {title}
-            </Text>
-            {IconRight && <IconRight />}
-        </TouchableOpacity>
+          {IconLeft && (
+            <TouchableOpacity onPress={() => {}}>
+              <Image source={IconLeft} className={`${IconLeftStyle}`} />
+            </TouchableOpacity>
+          )}
+          <Text
+            className={`text-white font-regularFont tracking-tighter text-3xl ${textStyle}`}
+          >
+            {title}
+          </Text>
+          {IconRight && (
+            <TouchableOpacity onPress={() => {}}>
+              <Image source={IconRight} className={`${IconRightStyle}`} />
+            </TouchableOpacity>
+          )}
+        </View>
+      </TouchableOpacity>
     );
 };
 

@@ -1,5 +1,7 @@
 import slideOne from "@/assets/images/slideOne.png";
 import slideTwo from "@/assets/images/slideTwo.png";
+import slideThree from "@/assets/images/slide3.jpg";
+import slideFour from "@/assets/images/slide4.jpg"
 import fruits from "@/assets/images/fruits.png";
 import veges from "@/assets/images/vegetables.png";
 import dairy from "@/assets/images/dairy.png";
@@ -30,10 +32,15 @@ import IndiaBg from "@/assets/images/bg india.jpg"
 import ItalianBg from "@/assets/images/bg italy.jpg"
 import MexicoBg from "@/assets/images/bg mexico.jpg"
 import WelcomeBg from "@/assets/images/Background-welcome.png";
+import EditIcon from "@/assets/images/editIcon.png";
+import RightAngle from "@/assets/images/rightAngle.png";
+
 
 export const images = {
     slideOne,
     slideTwo,
+    slideThree,
+    slideFour,
     fruits,
     veges,
     dairy,
@@ -64,19 +71,29 @@ export const images = {
     ItalianBg,
     MexicoBg,
     WelcomeBg,
+    EditIcon,
+    RightAngle
 };
 
 export const icons = {};
 
 export const onboarding = [
-    {
-        id: 1,
-        image: images.slideOne,
-    },
-    {
-        id: 2,
-        image: images.slideTwo,
-    },
+  {
+    id: 1,
+    image: images.slideOne,
+  },
+  {
+    id: 2,
+    image: images.slideTwo,
+  },
+  {
+    id: 3,
+    image: images.slideThree,
+  },
+  {
+    id: 4,
+    image: images.slideFour,
+  },
 ];
 
 export const listImage = [

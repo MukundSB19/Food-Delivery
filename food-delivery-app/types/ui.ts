@@ -8,14 +8,16 @@ import {
 
 
 export interface ButtonProps extends TouchableOpacityProps {
-    title?: string;
-    bgVariant?: "primary" | "secondary" | "danger" | "outline" | "success";
-    textVariant?: "primary" | "default" | "secondary" | "danger" | "success";
-    IconLeft?: React.ComponentType<any>;
-    IconRight?: React.ComponentType<any>;
-    classname?: string;
-    textStyle?: string;
-    disabled?: boolean;
+  title?: string;
+  bgVariant?: "primary" | "secondary" | "danger" | "outline" | "success";
+  textVariant?: "primary" | "default" | "secondary" | "danger" | "success";
+  IconLeft?: ImageSourcePropType;
+  IconRight?: ImageSourcePropType;
+  classname?: string;
+  textStyle?: string;
+  disabled?: boolean;
+  IconRightStyle?: string;
+  IconLeftStyle?:string;
 }
 
 export interface InputFieldProps extends TextInputProps {
