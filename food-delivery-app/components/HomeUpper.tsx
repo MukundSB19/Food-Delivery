@@ -50,7 +50,6 @@ const HomeUpper = () => {
         What's on your list today?
       </Text>
       <View className="mt-3">
-       
         <KeyboardAvoidingView
           behavior={Platform.OS === "ios" ? "padding" : "height"}
         >
@@ -63,7 +62,7 @@ const HomeUpper = () => {
                   className="tracking-tighter font-boldFont text-fontPrimary-0"
                   placeholder="Search Fruits, Vegetables, Dairy, etc."
                 />
-                <TouchableOpacity >
+                <TouchableOpacity>
                   <Image
                     source={require("@/assets/images/filter.png")}
                     className="w-[32] h-[32]"
@@ -71,10 +70,8 @@ const HomeUpper = () => {
                 </TouchableOpacity>
               </View>
             </View>
-    
           </TouchableWithoutFeedback>
         </KeyboardAvoidingView>
-        
       </View>
       <View className="">
         <LocationModal
@@ -84,6 +81,7 @@ const HomeUpper = () => {
           onRequestClose={() => {
             setModalVisible(false);
           }}
+          statusBarTranslucent
         >
           <TouchableOpacity className="" onPress={() => setModalVisible(false)}>
             <Entypo name="circle-with-cross" size={29} color="black" />

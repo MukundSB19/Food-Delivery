@@ -10,6 +10,8 @@ export { default as SearchBar } from "./SearchBar";
 export { default as SearchFunctionality } from "./SearchFunctionality";
 export { default as TaskBar } from "./TaskBar";
 
+
 // Re-export shared and UI components
 export * from "./shared";
 export * from "./ui";
+export * from "./modals";

@@ -8,10 +8,13 @@ const CustomButton = ({
     bgVariant,
     textVariant,
     textStyle,
-    IconLeft,
-    IconRight,
-    IconRightStyle,
-    IconLeftStyle,
+    iconLeft,
+    iconRight,
+    iconRightStyle,
+    iconLeftStyle,
+    containerStyle,
+    iconRightPress,
+    iconLeftPress,
     ...props
 }: ButtonProps) => {
     return (
@@ -24,11 +27,11 @@ const CustomButton = ({
         {...props}
       >
         <View
-          className={` flex flex-row   items-center justify-around w-full `}
+          className={` flex flex-row   items-center justify-between ${containerStyle} `}
         >
-          {IconLeft && (
-            <TouchableOpacity onPress={() => {}}>
-              <Image source={IconLeft} className={`${IconLeftStyle}`} />
+          {iconLeft && (
+            <TouchableOpacity onPress={iconLeftPress}>
+              <Image source={iconLeft} className={`${iconLeftStyle}`} />
             </TouchableOpacity>
           )}
           <Text
@@ -36,9 +39,9 @@ const CustomButton = ({
           >
             {title}
           </Text>
-          {IconRight && (
-            <TouchableOpacity onPress={() => {}}>
-              <Image source={IconRight} className={`${IconRightStyle}`} />
+          {iconRight && (
+            <TouchableOpacity onPress={iconRightPress}>
+              <Image source={iconRight} className={`${iconRightStyle}`} />
             </TouchableOpacity>
           )}
         </View>

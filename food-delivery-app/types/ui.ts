@@ -11,13 +11,16 @@ export interface ButtonProps extends TouchableOpacityProps {
   title?: string;
   bgVariant?: "primary" | "secondary" | "danger" | "outline" | "success";
   textVariant?: "primary" | "default" | "secondary" | "danger" | "success";
-  IconLeft?: ImageSourcePropType;
-  IconRight?: ImageSourcePropType;
+  iconLeft?: ImageSourcePropType;
+  iconRight?: ImageSourcePropType;
   classname?: string;
   textStyle?: string;
   disabled?: boolean;
-  IconRightStyle?: string;
-  IconLeftStyle?:string;
+  iconRightStyle?: string;
+  iconLeftStyle?:string;
+  containerStyle?:string;
+  iconRightPress?:() =>void;
+  iconLeftPress?:()=>void;
 }
 
 export interface InputFieldProps extends TextInputProps {
