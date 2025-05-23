@@ -10,8 +10,9 @@ import {
   NotificationModal,
   PaymentModal,
 } from "@/components/modals";
+import { router } from "expo-router";
 
-const Account = () => {
+const index = () => {
   const [notificationModalVisible, setNotificationModalVisible] =
     useState(false);
   const [addressModalVisible, setAddressModalVisible] = useState(false);
@@ -19,7 +20,7 @@ const Account = () => {
 
   return (
     <AppScreenWrapper>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View className=" mt-4 flex justify-center items-center ">
           <Text className="text-3xl font-regularFont tracking-tighter text-center bg-[#00000044] px-2 py-2 rounded-xl color-white">
             Account
@@ -68,6 +69,8 @@ const Account = () => {
             iconRight={images.RightAngle}
             iconRightStyle="h-[38] w-[38] "
             containerStyle="w-full px-5"
+            onPress={() => router.push("/account/order")}
+            iconRightPress={() => router.push("/account/order")}
           />
           <CustomButton
             title="Notifications"
@@ -86,8 +89,11 @@ const Account = () => {
             iconRight={images.RightAngle}
             iconRightStyle="h-[38] w-[38] "
             containerStyle="w-full px-5"
-            onPress={() => setAddressModalVisible(true)}
-            iconRightPress={() => setAddressModalVisible(true)}
+            onPress={() => router.push("/account/address")}
+            iconRightPress={() => router.push("/account/address")}
+
+            // onPress={() => setAddressModalVisible(true)}
+            // iconRightPress={() => setAddressModalVisible(true)}
           />
           <CustomButton
             title="Payment Method"
@@ -96,8 +102,8 @@ const Account = () => {
             iconRight={images.RightAngle}
             iconRightStyle="h-[38] w-[38] "
             containerStyle="w-full px-5"
-            onPress={() => setPaymentModalVisible(true)}
-            iconRightPress={() => setPaymentModalVisible(true)}
+            onPress={() => router.push("/account/payment")}
+            iconRightPress={() => router.push("/account/payment")}
           />
         </View>
         <View>
@@ -155,4 +161,4 @@ const Account = () => {
   );
 };
 
-export default Account;
+export default index;

@@ -34,7 +34,10 @@ import MexicoBg from "@/assets/images/bg mexico.jpg"
 import WelcomeBg from "@/assets/images/Background-welcome.png";
 import EditIcon from "@/assets/images/editIcon.png";
 import RightAngle from "@/assets/images/rightAngle.png";
-
+import PlusIcon from "@/assets/images/plusIcon.png";
+import HomeIcon from "@/assets/images/home.png"
+import OfficeIcon from "@/assets/images/office.png"
+import PersonIcon from "@/assets/images/pereson.png"
 
 export const images = {
     slideOne,
@@ -72,7 +75,12 @@ export const images = {
     MexicoBg,
     WelcomeBg,
     EditIcon,
-    RightAngle
+    RightAngle,
+    PlusIcon,
+    HomeIcon,
+    OfficeIcon,
+    PersonIcon
+    
 };
 
 export const icons = {};

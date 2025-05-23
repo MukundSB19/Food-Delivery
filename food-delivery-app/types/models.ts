@@ -38,13 +38,17 @@ export interface Order {
 }
 
 export interface DeliveryAddress {
-    id?: string;
-    userId?: string;
-    street: string;
-    city: string;
-    state?: string;
-    postalCode: string;
-    country: string;
+  id?: string;
+  userId?: string;
+  label: string;
+  addressLine: string;
+  city: string;
+  pincode: string;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+  type:"home"|"office"|"friend's house";
 }
 
 export interface Review {

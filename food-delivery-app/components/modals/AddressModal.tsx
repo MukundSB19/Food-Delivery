@@ -8,7 +8,7 @@ const AddressModal = ({children, ...props}:ModalProps) => {
             <View className="w-[380] p-[20] bg-white rounded-3xl items-center ">
               <View className="flex flex-row items-center w-full justify-between px-3">
                 <Text className="color-fontPrimary-0 font-regularFont tracking-tighter2 text-3xl">
-                  Add Your Address
+                Addresses
                 </Text>
                 {children}
               </View>
