@@ -48,7 +48,9 @@ export interface DeliveryAddress {
     lat: number;
     lng: number;
   };
-  type:"home"|"office"|"friend's house";
+  type: "home" | "office" | "friend's house";
+  receiver: string;
+  number:string;
 }
 
 export interface Review {
