@@ -34,6 +34,7 @@ import { AuthContext } from "@/context/AuthContext";
 import { Redirect } from "expo-router";
 import { useContext } from "react";
 import { ActivityIndicator, View } from "react-native";
+import "react-native-get-random-values";
 
 export default function Index() {
     const authState = useContext(AuthContext);

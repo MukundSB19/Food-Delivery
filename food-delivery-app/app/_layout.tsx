@@ -7,6 +7,7 @@ import { Drawer } from "expo-router/drawer";
 import { CustomDrawerContent} from "@/components";
 import { AuthProvider } from "@/context/AuthContext";
 import { CartProvider } from "@/context/CartContext";
+import { AddressProvider } from "@/context/AddressContext";
 
 export default function RootLayout() {
     const [loaded] = useFonts({
@@ -28,61 +29,66 @@ export default function RootLayout() {
 
     return (
       <AuthProvider>
-        <CartProvider>
-          <GestureHandlerRootView style={{ flex: 1 }}>
-            <Drawer
-              screenOptions={{
-                drawerStatusBarAnimation: "fade",
-                drawerLabelStyle: {
-                  fontFamily: "regularFont",
-                  fontSize: 23,
-                  color: "black",
-                },
-                drawerStyle: { backgroundColor: "#EAECCC" },
-                drawerActiveTintColor: "black",
-                headerShown: false,
-                drawerType:"back"
-              }}
-              drawerContent={(props) => <CustomDrawerContent {...props} />}
-            >
-              <Drawer.Screen
-                name="(protected)"
-                options={{ headerShown: false, title: "Home" }}
-              />
-              
-              <Drawer.Screen name="(drawer)/faq" options={{ title: "FAQs" }} />
-              <Drawer.Screen
-                name="(drawer)/contact"
-                options={{ title: "Contact Us" }}
-              />
-              <Drawer.Screen
-                name="(drawer)/bookMark"
-                options={{ title: "Liked" }}
-              />
-              <Drawer.Screen
-                name="index"
-                options={{
+        <AddressProvider>
+          <CartProvider>
+            <GestureHandlerRootView style={{ flex: 1 }}>
+              <Drawer
+                screenOptions={{
+                  drawerStatusBarAnimation: "fade",
+                  drawerLabelStyle: {
+                    fontFamily: "regularFont",
+                    fontSize: 23,
+                    color: "black",
+                  },
+                  drawerStyle: { backgroundColor: "#EAECCC" },
+                  drawerActiveTintColor: "black",
                   headerShown: false,
-                  drawerItemStyle: { display: "none" },
+                  drawerType: "back",
                 }}
-              />
-              <Drawer.Screen
-                name="(auth)"
-                options={{
-                  headerShown: false,
-                  drawerItemStyle: { display: "none" },
-                }}
-              />
-              <Drawer.Screen
-                name="+not-found"
-                options={{
-                  headerShown: false,
-                  drawerItemStyle: { display: "none" },
-                }}
-              />
-            </Drawer>
-          </GestureHandlerRootView>
-        </CartProvider>
+                drawerContent={(props) => <CustomDrawerContent {...props} />}
+              >
+                <Drawer.Screen
+                  name="(protected)"
+                  options={{ headerShown: false, title: "Home" }}
+                />
+
+                <Drawer.Screen
+                  name="(drawer)/faq"
+                  options={{ title: "FAQs" }}
+                />
+                <Drawer.Screen
+                  name="(drawer)/contact"
+                  options={{ title: "Contact Us" }}
+                />
+                <Drawer.Screen
+                  name="(drawer)/bookMark"
+                  options={{ title: "Liked" }}
+                />
+                <Drawer.Screen
+                  name="index"
+                  options={{
+                    headerShown: false,
+                    drawerItemStyle: { display: "none" },
+                  }}
+                />
+                <Drawer.Screen
+                  name="(auth)"
+                  options={{
+                    headerShown: false,
+                    drawerItemStyle: { display: "none" },
+                  }}
+                />
+                <Drawer.Screen
+                  name="+not-found"
+                  options={{
+                    headerShown: false,
+                    drawerItemStyle: { display: "none" },
+                  }}
+                />
+              </Drawer>
+            </GestureHandlerRootView>
+          </CartProvider>
+        </AddressProvider>
       </AuthProvider>
     );
 }
