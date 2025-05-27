@@ -38,7 +38,7 @@ export interface Order {
 }
 
 export interface DeliveryAddress {
-  id?: string;
+  id: string;
   userId?: string;
   label: string;
   addressLine: string;

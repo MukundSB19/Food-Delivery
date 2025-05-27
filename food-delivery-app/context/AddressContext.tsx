@@ -8,36 +8,50 @@ import React, {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { v4 as uuidv4 } from "uuid";
 
-const DEFAULT_LABELS = ["home", "office", "friend's house"] as const;
-type Label = (typeof DEFAULT_LABELS)[number];
+export const DEFAULT_TYPES = ["home", "office", "friend's house"] as const;
+export type AddressType = (typeof DEFAULT_TYPES)[number];
 
-type Address = {
+export interface DeliveryAddress {
   id: string;
-  label: Label;
-  fullAddress: string;
-  latitude: number;
-  longitude: number;
-};
+  userId?: string;
+  label: string;
+  addressLine: string;
+  city: string;
+  pincode: string;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+  type: AddressType;
+  receiver: string;
+  number: string;
+}
 
-type AddressContextType = {
-  addresses: Address[];
+type DeliveryAddressContextType = {
+  addresses: DeliveryAddress[];
   selectedAddressId: string | null;
-  selectedAddress: Address | null;
-  addAddress: (address: Omit<Address, "id">) => void;
+  selectedAddress: DeliveryAddress | null;
+  addAddress: (address: Omit<DeliveryAddress, "id">) => void;
   updateAddress: (
     id: string,
-    updatedData: Partial<Omit<Address, "id">>
+    updatedData: Partial<Omit<DeliveryAddress, "id">>
   ) => void;
   deleteAddress: (id: string) => void;
   selectAddress: (id: string) => void;
 };
 
-const AddressContext = createContext<AddressContextType | undefined>(undefined);
+const DeliveryAddressContext = createContext<
+  DeliveryAddressContextType | undefined
+>(undefined);
 
-const STORAGE_KEY = "user_addresses";
+const STORAGE_KEY = "user_delivery_addresses";
 
-export const AddressProvider = ({ children }: { children: ReactNode }) => {
-  const [addresses, setAddresses] = useState<Address[]>([]);
+export const DeliveryAddressProvider = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
+  const [addresses, setAddresses] = useState<DeliveryAddress[]>([]);
   const [selectedAddressId, setSelectedAddressId] = useState<string | null>(
     null
   );
@@ -64,19 +78,22 @@ export const AddressProvider = ({ children }: { children: ReactNode }) => {
     saveAddresses();
   }, [addresses, selectedAddressId]);
 
-  const addAddress = (address: Omit<Address, 'id'>) => {
-    // prevent duplicate labels
+  const addAddress = (address: Omit<DeliveryAddress, "id">) => {
+    // prevent duplicate types (label/type)
     if (addresses.some((a) => a.label === address.label)) {
       alert(`You already have an address labeled "${address.label}".`);
       return;
     }
-  
-    const newAddress: Address = { ...address, id: uuidv4() };
+
+    const newAddress: DeliveryAddress = { ...address, id: uuidv4() };
     setAddresses((prev) => [...prev, newAddress]);
     setSelectedAddressId(newAddress.id);
   };
-  
-  const updateAddress = (id: string, updatedData: Partial<Omit<Address, 'id'>>) => {
+
+  const updateAddress = (
+    id: string,
+    updatedData: Partial<Omit<DeliveryAddress, "id">>
+  ) => {
     if (updatedData.label) {
       const isLabelUsed = addresses.some(
         (a) => a.label === updatedData.label && a.id !== id
@@ -86,7 +103,7 @@ export const AddressProvider = ({ children }: { children: ReactNode }) => {
         return;
       }
     }
-  
+
     setAddresses((prev) =>
       prev.map((addr) => (addr.id === id ? { ...addr, ...updatedData } : addr))
     );
@@ -98,14 +115,16 @@ export const AddressProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const selectAddress = (id: string) => {
-    if (addresses.find((a) => a.id === id)) setSelectedAddressId(id);
+    if (addresses.find((a) => a.id === id)) {
+      setSelectedAddressId(id);
+    }
   };
 
   const selectedAddress =
     addresses.find((addr) => addr.id === selectedAddressId) || null;
 
   return (
-    <AddressContext.Provider
+    <DeliveryAddressContext.Provider
       value={{
         addresses,
         selectedAddressId,
@@ -117,13 +136,15 @@ export const AddressProvider = ({ children }: { children: ReactNode }) => {
       }}
     >
       {children}
-    </AddressContext.Provider>
+    </DeliveryAddressContext.Provider>
   );
 };
 
-export const useAddress = () => {
-  const context = useContext(AddressContext);
+export const useDeliveryAddress = () => {
+  const context = useContext(DeliveryAddressContext);
   if (!context)
-    throw new Error("useAddress must be used within an AddressProvider");
+    throw new Error(
+      "useDeliveryAddress must be used within a DeliveryAddressProvider"
+    );
   return context;
 };

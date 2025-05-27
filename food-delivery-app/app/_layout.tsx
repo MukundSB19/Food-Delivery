@@ -7,7 +7,7 @@ import { Drawer } from "expo-router/drawer";
 import { CustomDrawerContent} from "@/components";
 import { AuthProvider } from "@/context/AuthContext";
 import { CartProvider } from "@/context/CartContext";
-import { AddressProvider } from "@/context/AddressContext";
+import { DeliveryAddressProvider } from "@/context/AddressContext";
 
 export default function RootLayout() {
     const [loaded] = useFonts({
@@ -29,7 +29,7 @@ export default function RootLayout() {
 
     return (
       <AuthProvider>
-        <AddressProvider>
+        <DeliveryAddressProvider>
           <CartProvider>
             <GestureHandlerRootView style={{ flex: 1 }}>
               <Drawer
@@ -88,7 +88,7 @@ export default function RootLayout() {
               </Drawer>
             </GestureHandlerRootView>
           </CartProvider>
-        </AddressProvider>
+        </DeliveryAddressProvider>
       </AuthProvider>
     );
 }
