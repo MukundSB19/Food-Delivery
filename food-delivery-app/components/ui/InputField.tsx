@@ -14,12 +14,16 @@ import { View, Text } from "react-native";
 const InputField = ({
   label,
   labelStyle,
-  icon,
+  iconLeft,
+  iconRight,
   containerStyle,
-  iconStyle,
+  iconLeftStyle,
+  iconRightStyle,
   inputStyle,
   inputModeType,
   className,
+  iconRightPress,
+  iconLeftPress,
   editable = true,
   ...props
 }: InputFieldProps) => {
@@ -33,19 +37,31 @@ const InputField = ({
         <View>
           <Text className={`${labelStyle}`}>{label}</Text>
           <View
-            className={`bg-[#ffffff55] flex flex-row justify-between  m-auto items-center ${containerStyle}`}
+            className={`bg-[#ffffff55] flex flex-row justify-between  m-auto items-center  border border-solid ${containerStyle}`}
           >
+            {iconLeft && (
+              <TouchableOpacity
+                onPress={() => {
+                  setEditable(true);
+                }}
+              >
+                <Image source={iconLeft} className={`${iconLeftStyle}`} />
+              </TouchableOpacity>
+            )}
             <TextInput
               editable={isEditable}
               className={` ${inputStyle}  `}
               {...props}
             />
+
             <TouchableOpacity
               onPress={() => {
                 setEditable(true);
               }}
             >
-              {icon && <Image source={icon} className={`${iconStyle}`} />}
+              {iconRight && (
+                <Image source={iconRight} className={`${iconRightStyle}`} />
+              )}
             </TouchableOpacity>
           </View>
         </View>

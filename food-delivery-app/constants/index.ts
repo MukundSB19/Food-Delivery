@@ -39,6 +39,7 @@ import HomeIcon from "@/assets/images/home.png"
 import OfficeIcon from "@/assets/images/office.png"
 import PersonIcon from "@/assets/images/pereson.png"
 import DetectLocation from "@/assets/images/locationGeo.png"
+import SearchIcon from "@/assets/images/search.png"
 
 export const images = {
   slideOne,
@@ -82,6 +83,7 @@ export const images = {
   OfficeIcon,
   PersonIcon,
   DetectLocation,
+  SearchIcon,
 };
 
 export const icons = {};

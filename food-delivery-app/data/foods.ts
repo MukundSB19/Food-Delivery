@@ -7,7 +7,7 @@ export type FoodItem = {
     id: string;
     productId:string;
     product:Product;
-    image: ImageSourcePropType;
+   
 };
 
 export const foods: FoodItem[] = [

@@ -1,4 +1,6 @@
-export const orders = [
+import { Order, OrderStatus } from "@/types";
+
+export const orders:Order[] = [
     {
         id: "o1",
         userId: "u1",
@@ -7,8 +9,9 @@ export const orders = [
             { productId: "4", quantity: 1 },
         ],
         total: 300,
-        status: "Delivered",
-        deliveryAddress: "123 Main St",
-        date: "2025-05-01",
+        status: OrderStatus.Delivered,
+        addressId: "1",
+        createdAt:"08:00 PM",
+        updatedAt:"DKSFHVKSJ",
     },
 ];

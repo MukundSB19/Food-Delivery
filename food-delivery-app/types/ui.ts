@@ -24,14 +24,19 @@ export interface ButtonProps extends TouchableOpacityProps {
 }
 
 export interface InputFieldProps extends TextInputProps {
-    label?: string;
-    icon?: ImageSourcePropType;
-    labelStyle?: string;
-    containerStyle?: string;
-    inputStyle?: string;
-    iconStyle?: string;
-    className?: string;
-    inputModeType?: string;
+  label?: string;
+  iconLeft?: ImageSourcePropType;
+  iconRight?: ImageSourcePropType;
+  labelStyle?: string;
+  containerStyle?: string;
+  inputStyle?: string;
+  iconStyle?: string;
+  className?: string;
+  inputModeType?: string;
+  iconLeftStyle?: string;
+  iconRightStyle?: string;
+  iconRightPress?: () => void;
+  iconLeftPress?: () => void;
 }
 
 export interface Slideshow {

@@ -49,17 +49,17 @@ const HomeUpper = () => {
       <Text className="mt-6 text-4xl text-center font-regularFont tracking-tighter2 text-fontPrimary-0">
         What's on your list today?
       </Text>
-      <View className="mt-3">
+      <View className="mt-5">
         <KeyboardAvoidingView
           behavior={Platform.OS === "ios" ? "padding" : "height"}
         >
           <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
             <View>
               <View
-                className={`bg-[#ffffff55] flex flex-row justify-between  m-auto w-3/4 py-3 px-6 rounded-full mb-6 `}
+                className={`bg-[#ffffff55] flex flex-row justify-between  m-auto w-3/4 py-3 px-6 rounded-full mb-6  border border-solid`}
               >
                 <TextInput
-                  className="tracking-tighter font-boldFont text-fontPrimary-0"
+                  className="tracking-tighter font-boldFont text-fontPrimary-0 "
                   placeholder="Search Fruits, Vegetables, Dairy, etc."
                 />
                 <TouchableOpacity>

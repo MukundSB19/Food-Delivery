@@ -29,12 +29,12 @@ export interface User {
 export interface Order {
     id: string;
     userId: string;
-    items: CartItem[];
+    items: {productId:string,quantity:number}[];
     total: number;
     status: OrderStatus;
     createdAt: string;
     updatedAt?: string;
-    address: DeliveryAddress;
+    addressId: string;
 }
 
 export interface DeliveryAddress {
