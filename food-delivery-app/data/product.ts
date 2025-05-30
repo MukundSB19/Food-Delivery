@@ -6,6 +6,7 @@ export const products: Product[] = [
     image: images.cardOne,
     image2: images.ProductOne,
     id: "0",
+    restaurantId: "r1",
     estimatedTime: "30 min",
     name: "Sunny Avocado Breakfast",
     text: "🥑 Sunny Avocado Breakfast Bowl",
@@ -18,6 +19,7 @@ export const products: Product[] = [
     image: images.cardTwo,
     image2: images.ProductTwo,
     id: "1",
+    restaurantId: "r2",
     estimatedTime: "30 min",
     name: "Veggie Symphony Bowl",
     text: "🥗 Veggie Symphony Bowl",
@@ -30,6 +32,7 @@ export const products: Product[] = [
     image: images.cardThree,
     image2: images.ProductThree,
     id: "2",
+    restaurantId: "r3",
     estimatedTime: "30 min",
     name: "Berry Bliss Smoothie",
     text: "🍓 Berry Bliss Smoothie",
@@ -42,6 +45,7 @@ export const products: Product[] = [
     image: images.cardFour,
     image2: images.ProductFour,
     id: "3",
+    restaurantId: "r4",
     estimatedTime: "30 min",
     name: "Carnitas Burrito Bowl",
     text: "🌯 Carnitas Burrito Bowl",
@@ -52,6 +56,7 @@ export const products: Product[] = [
   },
   {
     id: "4",
+    restaurantId: "r5",
     estimatedTime: "30 min",
     name: "Orange",
     image: images.FruitOne,
@@ -62,6 +67,7 @@ export const products: Product[] = [
   },
   {
     id: "5",
+    restaurantId: "r5",
     estimatedTime: "30 min",
 
     name: "Mango",
@@ -73,6 +79,7 @@ export const products: Product[] = [
   },
   {
     id: "6",
+    restaurantId: "r5",
     estimatedTime: "30 min",
     name: "Grapes",
     image: images.FruitThree,
@@ -84,6 +91,7 @@ export const products: Product[] = [
   {
     id: "7",
     estimatedTime: "30 min",
+    restaurantId: "r5",
     name: "Blueberries",
     image: images.FruitFour,
     category: "fruits",
@@ -94,6 +102,7 @@ export const products: Product[] = [
   {
     id: "8",
     estimatedTime: "30 min",
+    restaurantId: "r5",
     name: "Banana",
     image: images.FruitFive,
     category: "vegetables",
@@ -103,6 +112,7 @@ export const products: Product[] = [
   },
   {
     id: "9",
+    restaurantId: "r6",
     name: "Moong Dal Khichdi",
     estimatedTime: "30 min",
     category: "Indian",
@@ -111,6 +121,7 @@ export const products: Product[] = [
   },
   {
     id: "10",
+    restaurantId: "r7",
     name: "Steamed Vegetable Dumplings",
     estimatedTime: "30 min",
     category: "Chinese",
@@ -119,6 +130,7 @@ export const products: Product[] = [
   },
   {
     id: "11",
+    restaurantId: "r8",
     name: "Miso Soup",
     estimatedTime: "30 min",
     category: "Japanese",
@@ -127,6 +139,7 @@ export const products: Product[] = [
   },
   {
     id: "12",
+    restaurantId: "r9",
     name: "Grilled Vegetable Panini",
     estimatedTime: "30 min",
     category: "Italian",
@@ -135,6 +148,7 @@ export const products: Product[] = [
   },
   {
     id: "13",
+    restaurantId: "r10",
     name: "Veggie Burrito Bowl",
     estimatedTime: "30 min",
     category: "Mexican",

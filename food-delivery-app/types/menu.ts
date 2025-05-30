@@ -8,6 +8,7 @@ export interface Ingredient {
 
 export interface Product {
     id: string;
+    restaurantId:string;
     name: string;
     text?: string;
     description?: string;
