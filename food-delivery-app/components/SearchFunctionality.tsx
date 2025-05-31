@@ -30,7 +30,7 @@ const SearchFunctionality = () => {
         <SafeAreaView className="items-center justify-center">
             {!clicked && (
                 <Text className="w-full mt-[20] text-sm ml-[10%] font-bold">
-                    Programming Languages
+                    Previous search 
                 </Text>
             )}
             <SearchBar

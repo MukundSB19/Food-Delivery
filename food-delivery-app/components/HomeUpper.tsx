@@ -33,7 +33,7 @@ const HomeUpper = () => {
           <View className="flex flex-row items-center justify-center gap-2 px-5 pt-3">
             <FontAwesome6 name="location-dot" size={24} color="#fa003f" />
             <Text className="text-xl tracking-tighter font-boldFont text-fontPrimary-0">
-              South Delhi 142,DL
+              South Delhi 182,DL
             </Text>
             <FontAwesome5 name="angle-down" size={24} color="black" />
           </View>
