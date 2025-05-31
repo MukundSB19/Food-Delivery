@@ -93,7 +93,7 @@ const OrderScreen = () => {
           renderItem={renderItem}
           ListEmptyComponent={
             <Text className="text-center text-gray-500 mt-8">
-              No Orders Found
+              No orders Found
             </Text>
           }
         />
