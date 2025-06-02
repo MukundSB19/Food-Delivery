@@ -38,6 +38,7 @@ const SearchFunctionality = () => {
                 setSearchPhrase={setSearchPhrase}
                 clicked={clicked}
                 setClicked={setClicked}
+                
             />
             {
                 <List

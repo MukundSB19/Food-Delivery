@@ -35,7 +35,7 @@ export default function CustomDrawerContent(
             className="w-16 h-16 mb-2 rounded-full"
             
           /> */}
-                <View className="flex flex-row justify-between py-4">
+                <View className="flex flex-row justify-between py-6">
                     <View>
                         <Text className="text-xl font-boldFont text-fontPrimary-0">
                             John Doe

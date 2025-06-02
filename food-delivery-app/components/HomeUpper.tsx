@@ -18,6 +18,7 @@ import {
   TouchableWithoutFeedback,
 } from "react-native";
 import { View, Text } from "react-native";
+import { router } from "expo-router";
 
 
 
@@ -39,7 +40,7 @@ const HomeUpper = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={()=>router.push("/(protected)/(tabs)/account") }>
           <Image
             source={require("@/assets/images/user.jpg")}
             className="w-[50] h-[50] rounded-full "
