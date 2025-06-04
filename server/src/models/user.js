@@ -19,40 +19,40 @@ const customerSchema = new mongoose.Schema({
   ...userSchema.obj,
   phone: { type: Number, required: true, unique: true },
   role: { type: String, enum: ["Customer"], default: "Customer" },
-  LiveLocation:{
-    latitude:{type:Number},
-    longitude: {type:Number},
+  LiveLocation: {
+    latitude: { type: Number },
+    longitude: { type: Number },
   },
-  address:{type:String},
+  address: { type: String },
 });
 
 const deliveryPartnerSchema = new mongoose.Schema({
-    ...userSchema.obj,
-    email:{ type:String, required:true, unique:true},
-    password: { type:String, required:true },
-    phone:{ type:Number, required:true },
-    role:{ type:String, enum:["DeliveryPartner"], default:"DeliveryPartner"},
-    LiveLocation:{
-        latitude:{type:Number},
-        Longitude:{type:Number},
-    },
-    address:{type:String},
-    branch:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Branch",
-    }
+  ...userSchema.obj,
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  phone: { type: Number, required: true },
+  role: { type: String, enum: ["DeliveryPartner"], default: "DeliveryPartner" },
+  LiveLocation: {
+    latitude: { type: Number },
+    Longitude: { type: Number },
+  },
+  address: { type: String },
+  branch: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Branch",
+  },
 });
 
 const adminSchema = new mongoose.Schema({
-    ...userSchema.obj,
-    email:{ type:String, required:true, unique:true},
-    password:{type:String, required:true},
-    role:{type:String, enum:["Admin"], default:"Admin"},
+  ...userSchema.obj,
+  email: { type: String, required: true, unique: true },
+  password: { type: String, required: true },
+  role: { type: String, enum: ["Admin"], default: "Admin" },
 });
 
 export const Customer = mongoose.model("Customer", customerSchema);
 export const DeliveryPartner = mongoose.model(
-    "DeliveryPartner",
-    deliveryPartnerSchema
+  "DeliveryPartner",
+  deliveryPartnerSchema
 );
-export const Admin =mongoose.model("Admin", adminSchema);
+export const Admin = mongoose.model("Admin", adminSchema);
