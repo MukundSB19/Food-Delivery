@@ -35,7 +35,6 @@ const home = () => {
         showsVerticalScrollIndicator={false}
       />
     </AppScreenWrapper>
-   
   );
 };
 

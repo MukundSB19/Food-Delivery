@@ -20,12 +20,9 @@ import {
 import { View, Text } from "react-native";
 import { router } from "expo-router";
 
-
-
 const HomeUpper = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
- 
   return (
     <>
       <View className="flex flex-row items-center justify-between px-5 pt-3">
@@ -40,7 +37,9 @@ const HomeUpper = () => {
           </View>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={()=>router.push("/(protected)/(tabs)/account") }>
+        <TouchableOpacity
+          onPress={() => router.push("/(protected)/(tabs)/account")}
+        >
           <Image
             source={require("@/assets/images/user.jpg")}
             className="w-[50] h-[50] rounded-full "

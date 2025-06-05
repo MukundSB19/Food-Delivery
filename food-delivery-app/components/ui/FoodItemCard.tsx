@@ -8,11 +8,10 @@ import { useLocalSearchParams, router } from "expo-router";
 import { category } from "@/data";
 import { Product } from "@/types";
 export type FoodItem = {
-    id: string;
-    productId:string;
-    product:Product;
+  id: string;
+  productId: string;
+  product: Product;
 };
-
 
 export default function FoodItemCard({ item }: { item: FoodItem }) {
   const { addToCart } = useCart();
@@ -60,12 +59,13 @@ export default function FoodItemCard({ item }: { item: FoodItem }) {
           className="  bg-[#00000066] px-3 py-2 rounded-2xl"
           textStyle="text-lg tracking-tight rounded-lg font-boldFont color-white"
           title="See More"
-           onPress={() => router.push({
-            pathname:"/(protected)/(screens)/discover-feed/cuisine/[cuisine]",
-            params:{cuisine:item.product.category},
-          
-          })}
-
+          onPress={() =>
+            router.push({
+              pathname:
+                "/(protected)/(screens)/discover-feed/cuisine/[cuisine]",
+              params: { cuisine: item.product.category },
+            })
+          }
         />
       </View>
       <Text className="text-center font-boldFont tracking-tight ml-2 p-1 rounded-lg bg-[#00000066] color-white absolute bottom-16"></Text>

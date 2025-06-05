@@ -13,29 +13,27 @@ import { Ingredient, Product } from "./menu";
 // }
 
 export interface CartItem {
-    product: Product;
-    quantity: number;
-    
+  product: Product;
+  quantity: number;
 }
 
 export interface User {
-    id: string;
-    name: string;
-    email: string;
-    avatarUrl?: string;
-    isAdmin?: boolean;
+  id: string;
+  name: string;
+  email: string;
+  avatarUrl?: string;
+  isAdmin?: boolean;
 }
 
 export interface Order {
-    id: string;
-    userId: string;
-    deliveryId: string;
-    items: {productId:string,quantity:number}[];
-    total: number;
-    status: OrderStatus;
-    createdAt: string;
-    updatedAt?: string;
-    
+  id: string;
+  userId: string;
+  deliveryId: string;
+  items: { productId: string; quantity: number }[];
+  total: number;
+  status: OrderStatus;
+  createdAt: string;
+  updatedAt?: string;
 }
 
 export interface DeliveryAddress {
@@ -51,19 +49,19 @@ export interface DeliveryAddress {
   };
   type: "home" | "office" | "friend's house";
   receiver: string;
-  number:string;
+  number: string;
 }
 
 export interface Review {
-    id: string;
-    userId: string;
-    productId: string;
-    rating: number;
-    comment: string;
-    createdAt: string;
+  id: string;
+  userId: string;
+  productId: string;
+  rating: number;
+  comment: string;
+  createdAt: string;
 }
 export interface CardsType {
-    product: Product;
-    id?:string;
-    ingredients: Ingredient[];
+  product: Product;
+  id?: string;
+  ingredients: Ingredient[];
 }

@@ -37,19 +37,19 @@ import { ActivityIndicator, View } from "react-native";
 import "react-native-get-random-values";
 
 export default function Index() {
-    const authState = useContext(AuthContext);
+  const authState = useContext(AuthContext);
 
-    if (!authState.isReady) {
-        return (
-            <View className="flex-1 justify-center items-center">
-                <ActivityIndicator size="large" />
-            </View>
-        );
-    }
+  if (!authState.isReady) {
+    return (
+      <View className="flex-1 justify-center items-center">
+        <ActivityIndicator size="large" />
+      </View>
+    );
+  }
 
-    if (!authState.isLoggedIn) {
-        return <Redirect href="/(auth)/welcome" />;
-    }
+  if (!authState.isLoggedIn) {
+    return <Redirect href="/(auth)/welcome" />;
+  }
 
-    return <Redirect href="/home" />;
+  return <Redirect href="/home" />;
 }

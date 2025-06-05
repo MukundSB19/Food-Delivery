@@ -69,9 +69,7 @@ const AddressScreen = () => {
           <Text className="font-regularFont text-[35px] tracking-tighter2">
             Address
           </Text>
-          <TouchableOpacity>
-            
-          </TouchableOpacity>
+          <TouchableOpacity></TouchableOpacity>
         </View>
 
         {/* Add Address Button */}

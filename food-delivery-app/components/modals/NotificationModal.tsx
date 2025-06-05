@@ -1,16 +1,16 @@
-import { View, Text, Modal, ModalProps, Switch } from 'react-native'
-import { useState } from 'react';
-import {SearchFunctionality} from "@/components";
+import { View, Text, Modal, ModalProps, Switch } from "react-native";
+import { useState } from "react";
+import { SearchFunctionality } from "@/components";
 
-const NotificationModal = ({children, ...props}:ModalProps) => {
-    const [isEnabled, setIsEnabled] = useState(false);
-    const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
-    const [isEnabled2, setIsEnabled2] = useState(false);
-    const toggleSwitch2 = () => setIsEnabled2((previousState) => !previousState);
-    const [isEnabled3, setIsEnabled3] = useState(false);
-    const toggleSwitch3 = () => setIsEnabled3((previousState) => !previousState);
-    const [isEnabled4, setIsEnabled4] = useState(false);
-    const toggleSwitch4 = () => setIsEnabled4((previousState) => !previousState);
+const NotificationModal = ({ children, ...props }: ModalProps) => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+  const [isEnabled2, setIsEnabled2] = useState(false);
+  const toggleSwitch2 = () => setIsEnabled2((previousState) => !previousState);
+  const [isEnabled3, setIsEnabled3] = useState(false);
+  const toggleSwitch3 = () => setIsEnabled3((previousState) => !previousState);
+  const [isEnabled4, setIsEnabled4] = useState(false);
+  const toggleSwitch4 = () => setIsEnabled4((previousState) => !previousState);
   return (
     <Modal {...props}>
       <View className="flex-1 justify-center items-center bg-[rgba(0,0,0,0.5)] ">
@@ -60,7 +60,7 @@ const NotificationModal = ({children, ...props}:ModalProps) => {
           <View className="flex-row items-center  justify-between mt-5">
             <View>
               <Text className="font-regularFont tracking-tighter text-2xl px-2">
-               Order Alerts
+                Order Alerts
               </Text>
               <Text className="font-regularFont tracking-tighter text-sm px-2">
                 You will Receive updates every day
@@ -97,6 +97,6 @@ const NotificationModal = ({children, ...props}:ModalProps) => {
       </View>
     </Modal>
   );
-}
+};
 
-export default NotificationModal
+export default NotificationModal;

@@ -136,4 +136,3 @@ export const faqs: FAQItem[] = [
       "Some restaurants charge higher prices on delivery platforms to cover service fees.",
   },
 ];
-

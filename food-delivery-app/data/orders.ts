@@ -12,7 +12,6 @@ export const orders: Order[] = [
     total: 300,
     deliveryId: "d1",
     status: OrderStatus.Delivered,
-    
     createdAt: "08:00 PM",
     updatedAt: "DKSFHVKSJ",
   },
@@ -27,7 +26,6 @@ export const orders: Order[] = [
     total: 300,
     deliveryId: "d2",
     status: OrderStatus.Delivered,
-    
     createdAt: "08:00 PM",
     updatedAt: "DKSFHVKSJ",
   },

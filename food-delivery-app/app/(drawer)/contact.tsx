@@ -7,13 +7,14 @@ import { Image } from "react-native";
 const Contact = () => {
   return (
     <AppScreenWrapper>
-        <View className="flex flex-row justify-between items-center mx-3 mb-6 mt-2">
-               
-                  <DrawerComponent />
-               
-                <Text className="text-center mr-7 font-regularFont tracking-tighter2 text-2xl">Contact Us</Text>
-                <View></View>
-              </View>
+      <View className="flex flex-row justify-between items-center mx-3 mb-6 mt-2">
+        <DrawerComponent />
+
+        <Text className="text-center mr-7 font-regularFont tracking-tighter2 text-2xl">
+          Contact Us
+        </Text>
+        <View></View>
+      </View>
       <ScrollView contentContainerStyle={{ padding: 16 }} className="space-y-6">
         <Text className="text-gray-600 font-regularFont tracking-tighter text-lg">
           You can get in touch with us through the platforms below. Our team

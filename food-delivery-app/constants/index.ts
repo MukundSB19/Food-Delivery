@@ -1,7 +1,7 @@
 import slideOne from "@/assets/images/slideOne.png";
 import slideTwo from "@/assets/images/slideTwo.png";
 import slideThree from "@/assets/images/slide3.jpg";
-import slideFour from "@/assets/images/slide4.jpg"
+import slideFour from "@/assets/images/slide4.jpg";
 import fruits from "@/assets/images/fruits.png";
 import veges from "@/assets/images/vegetables.png";
 import dairy from "@/assets/images/dairy.png";
@@ -16,30 +16,30 @@ import FruitTwo from "@/assets/images/mango.png";
 import FruitThree from "@/assets/images/grapes.png";
 import FruitFour from "@/assets/images/blueberry.png";
 import FruitFive from "@/assets/images/banana.png";
-import MoongDall from "@/assets/images/moong dal.png"
-import Momos from "@/assets/images/momos.png"
-import Burrito from "@/assets/images/Burrito.png"
-import Soup from "@/assets/images/miso soup.png"
-import Grilled from "@/assets/images/grilled.png"
-import ProductOne from "@/assets/images/product1.png"
-import ProductTwo from "@/assets/images/product2.png"
-import ProductThree from "@/assets/images/product3.png"
-import ProductFour from "@/assets/images/product4.png"
-import CartSticker from "@/assets/images/shopping.png"
-import ChineseBg from "@/assets/images/bg Chinese.jpg"
-import JapanBg from "@/assets/images/bg japan.jpg"
-import IndiaBg from "@/assets/images/bg india.jpg"
-import ItalianBg from "@/assets/images/bg italy.jpg"
-import MexicoBg from "@/assets/images/bg mexico.jpg"
+import MoongDall from "@/assets/images/moong dal.png";
+import Momos from "@/assets/images/momos.png";
+import Burrito from "@/assets/images/Burrito.png";
+import Soup from "@/assets/images/miso soup.png";
+import Grilled from "@/assets/images/grilled.png";
+import ProductOne from "@/assets/images/product1.png";
+import ProductTwo from "@/assets/images/product2.png";
+import ProductThree from "@/assets/images/product3.png";
+import ProductFour from "@/assets/images/product4.png";
+import CartSticker from "@/assets/images/shopping.png";
+import ChineseBg from "@/assets/images/bg Chinese.jpg";
+import JapanBg from "@/assets/images/bg japan.jpg";
+import IndiaBg from "@/assets/images/bg india.jpg";
+import ItalianBg from "@/assets/images/bg italy.jpg";
+import MexicoBg from "@/assets/images/bg mexico.jpg";
 import WelcomeBg from "@/assets/images/Background-welcome.png";
 import EditIcon from "@/assets/images/editIcon.png";
 import RightAngle from "@/assets/images/rightAngle.png";
 import PlusIcon from "@/assets/images/plusIcon.png";
-import HomeIcon from "@/assets/images/home.png"
-import OfficeIcon from "@/assets/images/office.png"
-import PersonIcon from "@/assets/images/pereson.png"
-import DetectLocation from "@/assets/images/locationGeo.png"
-import SearchIcon from "@/assets/images/search.png"
+import HomeIcon from "@/assets/images/home.png";
+import OfficeIcon from "@/assets/images/office.png";
+import PersonIcon from "@/assets/images/pereson.png";
+import DetectLocation from "@/assets/images/locationGeo.png";
+import SearchIcon from "@/assets/images/search.png";
 
 export const images = {
   slideOne,
@@ -108,24 +108,24 @@ export const onboarding = [
 ];
 
 export const listImage = [
-    {
-        image: images.fruits,
-        text: "Fruits",
-    },
-    {
-        image: images.veges,
-        text: "Vegetables",
-    },
-    {
-        image: images.dairy,
-        text: "Dairy",
-    },
-    {
-        image: images.grains,
-        text: "Grains",
-    },
-    {
-        image: images.spice,
-        text: "Spice",
-    },
+  {
+    image: images.fruits,
+    text: "Fruits",
+  },
+  {
+    image: images.veges,
+    text: "Vegetables",
+  },
+  {
+    image: images.dairy,
+    text: "Dairy",
+  },
+  {
+    image: images.grains,
+    text: "Grains",
+  },
+  {
+    image: images.spice,
+    text: "Spice",
+  },
 ];

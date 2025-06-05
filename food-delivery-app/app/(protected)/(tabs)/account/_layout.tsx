@@ -1,6 +1,6 @@
-import { View, Text } from 'react-native'
-import React from 'react'
-import { Stack } from 'expo-router';
+import { View, Text } from "react-native";
+import React from "react";
+import { Stack } from "expo-router";
 
 const accountlayout = () => {
   return (
@@ -11,6 +11,6 @@ const accountlayout = () => {
       <Stack.Screen name="payment" options={{ headerShown: false }} />
     </Stack>
   );
-}
+};
 
 export default accountlayout;

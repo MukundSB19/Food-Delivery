@@ -1,11 +1,8 @@
 import {
-    TouchableOpacityProps,
-    TextInputProps,
-    ImageSourcePropType,
+  TouchableOpacityProps,
+  TextInputProps,
+  ImageSourcePropType,
 } from "react-native";
-
-
-
 
 export interface ButtonProps extends TouchableOpacityProps {
   title?: string;
@@ -17,10 +14,10 @@ export interface ButtonProps extends TouchableOpacityProps {
   textStyle?: string;
   disabled?: boolean;
   iconRightStyle?: string;
-  iconLeftStyle?:string;
-  containerStyle?:string;
-  iconRightPress?:() =>void;
-  iconLeftPress?:()=>void;
+  iconLeftStyle?: string;
+  containerStyle?: string;
+  iconRightPress?: () => void;
+  iconLeftPress?: () => void;
 }
 
 export interface InputFieldProps extends TextInputProps {
@@ -40,13 +37,13 @@ export interface InputFieldProps extends TextInputProps {
 }
 
 export interface Slideshow {
-    id: number;
-    image: ImageSourcePropType;
+  id: number;
+  image: ImageSourcePropType;
 }
 
 export type HorizontalImage = {
-    slug: string; // e.g., "pizza"
-    title: string; // e.g., "Pizza"
-    imageUrl: ImageSourcePropType;
-    description: string;
+  slug: string; // e.g., "pizza"
+  title: string; // e.g., "Pizza"
+  imageUrl: ImageSourcePropType;
+  description: string;
 };

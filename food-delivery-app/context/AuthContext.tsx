@@ -14,11 +14,11 @@ type AuthState = {
 const AuthStorageKey = "auth-key";
 
 export const AuthContext = React.createContext<AuthState>({
-  isLoggedIn: false, 
+  isLoggedIn: false,
   isReady: false,
   logIn: () => {},
   logOut: () => {},
-  role: "user", 
+  role: "user",
   setRole: () => {},
 });
 

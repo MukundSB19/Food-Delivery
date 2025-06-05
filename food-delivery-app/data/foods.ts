@@ -4,10 +4,9 @@ import { ImageSourcePropType } from "react-native";
 import { products } from "./product";
 
 export type FoodItem = {
-    id: string;
-    productId:string;
-    product:Product;
-   
+  id: string;
+  productId: string;
+  product: Product;
 };
 
 export const foods: FoodItem[] = [

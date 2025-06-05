@@ -4,8 +4,6 @@ import { AppScreenWrapper, DrawerComponent } from "@/components";
 import { ChevronDown, ChevronUp } from "lucide-react-native";
 import { faqs } from "@/data/faqData";
 
-
-
 export default function FAQScreen() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -16,10 +14,11 @@ export default function FAQScreen() {
   return (
     <AppScreenWrapper>
       <View className="flex flex-row justify-between items-center mx-3 mb-6 mt-2">
-       
-          <DrawerComponent />
-       
-        <Text className="text-center mr-7 font-regularFont tracking-tighter2 text-2xl">FAQs</Text>
+        <DrawerComponent />
+
+        <Text className="text-center mr-7 font-regularFont tracking-tighter2 text-2xl">
+          FAQs
+        </Text>
         <View></View>
       </View>
       <ScrollView className="p-4 pb-20">

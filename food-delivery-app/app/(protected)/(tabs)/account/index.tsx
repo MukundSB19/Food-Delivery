@@ -3,7 +3,6 @@ import { AppScreenWrapper, DrawerComponent } from "@/components";
 import { CustomButton, InputField } from "@/components/ui";
 import { images } from "@/constants";
 import Entypo from "@expo/vector-icons/Entypo";
-
 import { useState } from "react";
 import {
   AddressModal,
