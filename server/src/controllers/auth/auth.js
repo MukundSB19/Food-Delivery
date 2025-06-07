@@ -28,109 +28,102 @@ export const loginCustomer = async (req, reply) => {
         isActivated: true,
       });
     }
-const {accessToken,refreshToken} = generateTokens(customer)
-return reply.send({
-    message:"Login Sucessful",
-    accessToken,
-    refreshToken,
-    customer,
-})
+    const { accessToken, refreshToken } = generateTokens(customer);
+    return reply.send({
+      message: "Login Sucessful",
+      accessToken,
+      refreshToken,
+      customer,
+    });
   } catch (error) {
-    return reply.status(500).send ({message:"An error occurred",error});
+    return reply.status(500).send({ message: "An error occurred", error });
   }
 };
 
-export const loginDeliveryPartner = async(req,reply) => {
-    try {
-        
-        const {email,password}=req.body;
-        const deliveryPartner = await DeliveryPartner.findOne({ email });
+export const loginDeliveryPartner = async (req, reply) => {
+  try {
+    const { email, password } = req.body;
+    const deliveryPartner = await DeliveryPartner.findOne({ email });
 
-        if(!deliveryPartner){
-            return reply.status(404).send ({message:"Delivery Partner not found"});
-        }
-
-        const isMatch = password ===deliveryPartner.password;
-
-        if (isMatch){
-            return reply.status(400).send({
-
-                message:"Invalid Credentials"
-            
-            });
-        }
-        const {accessToken,refreshToken} = generateTokens(deliveryPartner);
-        return reply.send({
-            message:"Login Successful",
-            accessToken,
-            refreshToken,
-            deliveryPartner,
-        });
-
-    } catch (error) {
-        return reply.status(500).send({message:"An error Occurred" ,error});
+    if (!deliveryPartner) {
+      return reply.status(404).send({ message: "Delivery Partner not found" });
     }
+
+    const isMatch = password === deliveryPartner.password;
+
+    if (isMatch) {
+      return reply.status(400).send({
+        message: "Invalid Credentials",
+      });
+    }
+    const { accessToken, refreshToken } = generateTokens(deliveryPartner);
+    return reply.send({
+      message: "Login Successful",
+      accessToken,
+      refreshToken,
+      deliveryPartner,
+    });
+  } catch (error) {
+    return reply.status(500).send({ message: "An error Occurred", error });
+  }
 };
 
- export const refreshToken = async(req,reply) => {
-  const {refreshToken}=req.body
+export const refreshToken = async (req, reply) => {
+  const { refreshToken } = req.body;
 
-  if(!refreshToken){
+  if (!refreshToken) {
     return reply.status(401).send({
-      message: "Refresh token required"
+      message: "Refresh token required",
     });
-  };
+  }
 
-try {
-  const decoded = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
-  let user;
-
-if (decoded.role === "Customer"){
-user = await Customer.findById(decoded.userId);
-}else if (decoded.role === "DeliveryPartner"){
-  user = await DeliveryPartner.findById(decoded.userId);
-} else {
-  return reply.status(403).send({ message:"Invalid Role" });
-}
-if (!user) {
-  return reply.status(403).send({ message:"User not Found"});
-}
-const { accessToken, refreshToken: newRefreshToken } = generateTokens(user);
-
-return reply.send({
-  message:"Token Refreshed",
-  accessToken,
-  refreshToken: newRefreshToken,
-})
-
-} 
-catch(error){
-  return reply.status(403).send ({message:"Inavlid Refresh Token"});
-}
-}
-
-export const fetchUser = async (req,reply)=>{
-  try{
-    const {userId, role} = req.user;
+  try {
+    const decoded = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
     let user;
 
-    if(role === "Customer"){
+    if (decoded.role === "Customer") {
+      user = await Customer.findById(decoded.userId);
+    } else if (decoded.role === "DeliveryPartner") {
+      user = await DeliveryPartner.findById(decoded.userId);
+    } else {
+      return reply.status(403).send({ message: "Invalid Role" });
+    }
+    if (!user) {
+      return reply.status(403).send({ message: "User not Found" });
+    }
+    const { accessToken, refreshToken: newRefreshToken } = generateTokens(user);
+
+    return reply.send({
+      message: "Token Refreshed",
+      accessToken,
+      refreshToken: newRefreshToken,
+    });
+  } catch (error) {
+    return reply.status(403).send({ message: "Inavlid Refresh Token" });
+  }
+};
+
+export const fetchUser = async (req, reply) => {
+  try {
+    const { userId, role } = req.user;
+    let user;
+
+    if (role === "Customer") {
       user = await Customer.findById(userId);
-    } else if (role === "DeliveryPartner"){
+    } else if (role === "DeliveryPartner") {
       user = await DeliveryPartner.findById(userId);
     } else {
-      return reply.status(403).send({ message: "Invalid Role"});
+      return reply.status(403).send({ message: "Invalid Role" });
     }
-    if (!user){
-      return reply.status(404).send({message:"User not found"});
+    if (!user) {
+      return reply.status(404).send({ message: "User not found" });
     }
 
     return reply.send({
-      message:"User Fetched Succesfully",
+      message: "User Fetched Succesfully",
       user,
-    })
-  } catch (error){
-    return reply.status(500).send({ message:"an error occured" , error});
+    });
+  } catch (error) {
+    return reply.status(500).send({ message: "an error occured", error });
   }
-}
-
+};
