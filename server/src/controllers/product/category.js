@@ -1,4 +1,4 @@
-import { Category } from "../../models";
+import { Category } from "../../models/index.js";
 
 export const getAllCategories = async (requestAnimationFrame, reply) => {
     try {
