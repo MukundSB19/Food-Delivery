@@ -146,7 +146,7 @@ export const getOrderById = async (req, reply) => {
     const order = await Order.findById(orderId).populate(
       "customer branch items.item deliveryPartner"
     );
-    if(!order) {
+    if (!order) {
       return reply.status(404).send({ message: "Order not found" });
     }
 
