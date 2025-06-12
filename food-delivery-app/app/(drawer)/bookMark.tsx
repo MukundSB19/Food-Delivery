@@ -6,6 +6,7 @@ const bookMark = () => {
     <AppScreenWrapper>
       <View>
         <Text>bookMark</Text>
+        <Text>Liked products</Text>
         <DrawerComponent />
       </View>
     </AppScreenWrapper>
