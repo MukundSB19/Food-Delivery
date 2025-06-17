@@ -1,24 +1,27 @@
+//? this file manage the orders of the app
+
+
 import {
   Customer,
   DeliveryPartner,
   Branch,
   Order,
-} from "../../models/index.js";
+} from "../../models/index.js";   //! this is we importing because this will used to read/write data
 
-export const createOrder = async (req, reply) => {
+export const createOrder = async (req, reply) => {  //! this function is for to create to new order and this (req) contains body,user info,etc
   try {
-    const { userId } = req.user;
-    const { items, branch, totalPrice } = re1.body;
+    const { userId } = req.user;  //! req.user contains data from user after auth
+    const { items, branch, totalPrice } = req.body; //! this data will come from the frontend request body
 
-    const customerData = await Customer;
-    const BranchData = await Branch;
+    const customerData = await Customer.findById(userId); //! these two lines fetch data one from customer and other from branch and why coz we need live location and address from both to create an order
+    const BranchData = await Branch.findById(branch);
     if (!customerData) {
       return reply.status(404).send({ message: "Customer not found" });
     }
 
-    const newOrder = new Order({
+    const newOrder = new Order({   //! we are creating a new order document using the mongoose model
       customer: userId,
-      items: items.map((item) => ({
+      items: items.map((item) => ({   //!items.map() reshapes the structure into what DB expects
         id: item.id,
         item: item.item,
         count: item.count,
@@ -37,19 +40,21 @@ export const createOrder = async (req, reply) => {
       },
     });
 
-    const savedData = await newOrder.save();
-    return reply.status(201).send(savedData);
+    const savedData = await newOrder.save();  //! this will saved data .save() commits the new document
+    return reply.status(201).send(savedData);   //! (201) means "created"
   } catch (error) {
     console.log(err);
     return reply.status(500).send({ message: "Failed to create order", error });
-  }
+  } 
+
+  //! always wrap DB operations in try-catch to avoid crashing server
 };
 
-export const confirmOrder = async (req, reply) => {
+export const confirmOrder = async (req, reply) => { //! this function is for conform the food delivery order by delivery partner
   try {
     const { orderId } = req.params;
     const { userId } = req.user;
-    const { deliveryPartner } = req.body;
+    
 
     const deliveryPerson = await DeliveryPartner.findById(userId);
     if (!deliveryPerson) {
@@ -66,9 +71,9 @@ export const confirmOrder = async (req, reply) => {
 
     order.deliveryPartner = userId;
     order.deliveryPersonLocation = {
-      latitude: deliveryPersonLocation?.latitude,
-      longitude: deliveryPersonLocation?.longitude,
-      address: deliveryPersonLocation.address || "",
+      latitude: deliveryPerson?.latitude,
+      longitude: deliveryPerson?.longitude,
+      address: deliveryPerson.address || "",
     };
 
     req.server.io.to(orderId).emit("orderConfirmed", order);
