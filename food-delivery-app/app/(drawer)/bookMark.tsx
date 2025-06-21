@@ -25,6 +25,10 @@ const bookMark = () => {
         <Text>Another Line</Text>
         <Text>Another Line</Text>
         <Text>Another Line</Text>
+        <Text>Another Line</Text>
+        <Text>Another Line</Text>
+        <Text>Another Line</Text>
+        <Text>Another Line</Text>
         <DrawerComponent />
       </View>
     </AppScreenWrapper>
