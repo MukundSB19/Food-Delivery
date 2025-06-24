@@ -26,9 +26,10 @@ export const updateUser = async (req, reply) => {
 
     const updatedUser = await UserModel.findByIdAndUpdate(
       //!This actually updates the user's data in the database.
-      userId,
-      { $set: updateData }, 
-      { new: true, runValidators: true }
+      userId, //! this parameter will tell mongo find the user whose id is this value
+      { $set: updateData }, //! $set is a mongo operator it means only update these fields So if updateData = { name: "Mukund", phone: "9876..." }, then only name and phone will be updated.
+      { new: true, runValidators: true } //! first parameter will return the updated document instead of the old one
+      //! second parameter will Make sure the updated data still follows your schema rules
     );
 
     if (!updatedUser) {

@@ -112,13 +112,13 @@ export const updateOrderStatus = async (req, reply) => {
       return reply.status(403).send({ message: "Unauthorized" });
     }
 
-    order.status = status;
-    order.deliveryPersonLocation = deliveryPersonLocation;
+    order.status = status; //! we are assigning a new status to the order that status value comes from the frontend via re.body
+    order.deliveryPersonLocation = deliveryPersonLocation; //! we are saving the current live location of the delivery person into the order 
     await order.save();
 
-    req.server.io(orderId.emit("liveTrackingUpdates", order));
+    req.server.io.to(orderId).emit("liveTrackingUpdates", order);
 
-    return reply.send(order);
+    return reply.send(order);  //! it will send the updated order back as a confirmation response to the frontend
   } catch (error) {
     return reply
       .status(500)
@@ -127,9 +127,10 @@ export const updateOrderStatus = async (req, reply) => {
 };
 
 export const getOrders = async (req, reply) => {
+  //!To fetch orders from the database, depending on which filter is applied
   try {
     const { status, consumerId, deliveryPartnerId, branchId } = req.query;
-    let query = {};
+    let query = {}; 
 
     if (status) query.status = status;
     if (customerId) query.customer = customerId;
