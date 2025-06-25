@@ -7,31 +7,8 @@ const bookMark = () => {
       <View>
         <Text>bookMark</Text>
         <Text>Liked products</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
-        <Text>Another Line</Text>
+        <Text>bookMark</Text>
+        <Text>Liked products</Text>
         <DrawerComponent />
       </View>
     </AppScreenWrapper>
