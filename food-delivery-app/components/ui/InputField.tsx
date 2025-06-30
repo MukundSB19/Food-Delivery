@@ -50,7 +50,7 @@ const InputField = ({
             )}
             <TextInput
               editable={isEditable}
-              className={` ${inputStyle}  `}
+              className={` ${inputStyle} w-full `}
               {...props}
             />
 

@@ -31,6 +31,8 @@ const SignIn = () => {
           <InputField
             label="Email"
             placeholder="example@gmail.com"
+            autoComplete="email"
+            keyboardType="email-address"
             containerStyle="py-2 px-6 rounded-2xl mb-6 w-[90%]"
             labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
             inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
@@ -44,6 +46,7 @@ const SignIn = () => {
             labelStyle="font-boldFont text-xl w-3/4 m-auto mb-3 tracking-tighter text-fontPrimary-0"
             inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
             inputModeType="password"
+            autoComplete="current-password"
             onChangeText={setPassword}
           />
         </View>

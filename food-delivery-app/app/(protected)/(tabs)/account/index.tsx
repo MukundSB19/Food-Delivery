@@ -36,16 +36,16 @@ const index = () => {
               containerStyle="w-[90%] rounded-xl  px-4 "
               label="Name"
               labelStyle=" ml-5 mb-2 font-regularFont tracking-tighter text-lg"
-              icon={images.EditIcon}
-              iconStyle="w-[30] h-[30] "
+              iconLeft={images.EditIcon}
+              iconLeftStyle="w-[30] h-[30] "
               editable={false}
             />
             <InputField
               placeholder="estherhoward@gmail.com"
               containerStyle="w-[90%] rounded-xl px-4"
               label="Email"
-              icon={images.EditIcon}
-              iconStyle="w-[30] h-[30] "
+              iconLeft={images.EditIcon}
+              iconLeftStyle="w-[30] h-[30] "
               labelStyle=" ml-5 mb-2 font-regularFont tracking-tighter text-lg"
               editable={false}
             />
@@ -53,8 +53,8 @@ const index = () => {
               placeholder="+91 8632878333"
               containerStyle="w-[90%] rounded-xl px-4"
               label="Phone number"
-              icon={images.EditIcon}
-              iconStyle="w-[30] h-[30]"
+              iconLeft={images.EditIcon}
+              iconLeftStyle="w-[30] h-[30]"
               labelStyle=" ml-5 mb-2 font-regularFont tracking-tighter text-lg"
               editable={false}
             />

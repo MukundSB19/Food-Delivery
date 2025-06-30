@@ -1,7 +1,7 @@
 import { AppScreenWrapper } from "@/components/shared";
 import { CustomButton, InputField } from "@/components/ui";
 import { router } from "expo-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Text, TouchableOpacity, View, ScrollView } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
@@ -53,6 +53,7 @@ const signUp = () => {
               labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
               inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
               inputModeType="text"
+              autoComplete="username"
               onChangeText={setUsername}
             />
             <InputField
@@ -62,6 +63,8 @@ const signUp = () => {
               labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
               inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
               inputModeType="email"
+              autoComplete="email"
+              keyboardType="email-address"
               onChangeText={setEmail}
             />
             <InputField
@@ -75,11 +78,13 @@ const signUp = () => {
             />
             <InputField
               label="Phone Number"
-              placeholder="*********"
+              placeholder="896*******"
               containerStyle="py-2 px-6 rounded-2xl mb-6 w-[90%] "
               labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
               inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
               inputModeType="numeric"
+              autoComplete="tel"
+              keyboardType="phone-pad"
               onChangeText={setPhone}
               maxLength={10}
             />
