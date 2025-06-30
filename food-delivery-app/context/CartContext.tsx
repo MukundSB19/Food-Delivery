@@ -8,6 +8,8 @@ import React, {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ImageSourcePropType } from "react-native";
 
+// ! Cart Item is specified two times in types/models and in this file
+
 type CartItem = {
   id: string;
   name: string;

@@ -1,15 +1,7 @@
 import { useRouter } from "expo-router";
 import React, { PropsWithChildren, useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-
-type AuthState = {
-  isLoggedIn: boolean;
-  isReady: boolean;
-  logIn: (role: string) => void;
-  logOut: () => void;
-  role: string;
-  setRole: (role: string) => void;
-};
+import { AuthState } from "@/types";
 
 const AuthStorageKey = "auth-key";
 
@@ -26,11 +18,11 @@ export function AuthProvider({ children }: PropsWithChildren) {
   const router = useRouter();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isReady, setIsReady] = useState(false);
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState<"user" | "admin" | "guest">("guest");
 
   const storeAuthState = async (state: {
     isLoggedIn: boolean;
-    role: string;
+    role: "user" | "admin" | "guest";
   }) => {
     try {
       await AsyncStorage.setItem(AuthStorageKey, JSON.stringify(state));
@@ -39,7 +31,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
     }
   };
 
-  const logIn = (userRole: string) => {
+  const logIn = (userRole: "user" | "admin") => {
     setIsLoggedIn(true);
     setRole(userRole);
     storeAuthState({ isLoggedIn: true, role: userRole });
@@ -49,7 +41,7 @@ export function AuthProvider({ children }: PropsWithChildren) {
   const logOut = () => {
     setIsLoggedIn(false);
     setRole("guest");
-    storeAuthState({ isLoggedIn: false, role: "" });
+    storeAuthState({ isLoggedIn: false, role: "guest" });
     router.replace("/(auth)/sign-in");
   };
 

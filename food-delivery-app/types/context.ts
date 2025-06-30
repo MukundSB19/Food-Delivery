@@ -1,3 +1,4 @@
+import { ImageSourcePropType } from "react-native";
 import { User, CartItem } from "./models";
 
 export interface AuthContextType {
@@ -14,3 +15,11 @@ export interface CartContextType {
   clearCart: () => void;
   total: number;
 }
+export type AuthState = {
+  isLoggedIn: boolean;
+  isReady: boolean;
+  logIn: (role: "user" | "admin") => void;
+  logOut: () => void;
+  role: "user" | "admin" | "guest";
+  setRole: (role: "user" | "admin" | "guest") => void;
+};

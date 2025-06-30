@@ -7,25 +7,10 @@ import React, {
 } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { v4 as uuidv4 } from "uuid";
+import { DeliveryAddress } from "@/types";
 
 export const DEFAULT_TYPES = ["home", "office", "friend's house"] as const;
 export type AddressType = (typeof DEFAULT_TYPES)[number];
-
-export interface DeliveryAddress {
-  id: string;
-  userId?: string;
-  label: string;
-  addressLine: string;
-  city: string;
-  pincode: string;
-  coordinates: {
-    lat: number;
-    lng: number;
-  };
-  type: AddressType;
-  receiver: string;
-  number: string;
-}
 
 type DeliveryAddressContextType = {
   addresses: DeliveryAddress[];
