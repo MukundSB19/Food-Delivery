@@ -1,21 +1,37 @@
 import { AppScreenWrapper } from "@/components/shared";
 import { CustomButton, InputField } from "@/components/ui";
 import { router } from "expo-router";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Text, TouchableOpacity, View, ScrollView } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { AuthContext } from "@/context/AuthContext";
 
 const signUp = () => {
   // TODO: authentication process is not implemented yet
+  const authContext = useContext(AuthContext);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
   const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
+  const [emailMessage, setEmailMessage] = useState("");
+  const [passwordMessage, setPasswordMessage] = useState("");
+  const [nameMessage, setNameMessage] = useState("");
+  const [phoneMessage, setPhoneMessage] = useState("");
 
-  const handleSignup = () => {};
-
+  const handleSignup = () => {
+    if (!username) {
+      setNameMessage("Please enter your username");
+    } else if (!email) {
+      setEmailMessage("Please enter a valid email");
+    } else if (!password) {
+      setPasswordMessage("Please enter a valid password");
+    } else if (!phone) {
+      setPhoneMessage("Please enter a valid phone");
+    } else {
+      authContext.logIn("user");
+    }
+  };
   return (
     <AppScreenWrapper gradientColors={["#EAECCC", "#9EDC88"]}>
       <ScrollView>
@@ -49,17 +65,19 @@ const signUp = () => {
             <InputField
               label="Name"
               placeholder="Ex. Ashley Mark"
-              containerStyle="py-2 px-6 rounded-2xl mb-6 w-[90%]"
+              containerStyle="py-2 px-6 rounded-2xl w-[90%]"
               labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
               inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
               inputModeType="text"
               autoComplete="username"
               onChangeText={setUsername}
             />
+            <Text className="mb-6 pl-6 text-red-500">{nameMessage}</Text>
+
             <InputField
               label="Email"
               placeholder="example@gmail.com"
-              containerStyle="py-2 px-6 rounded-2xl mb-6 w-[90%]"
+              containerStyle="py-2 px-6 rounded-2xl w-[90%]"
               labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
               inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
               inputModeType="email"
@@ -67,19 +85,23 @@ const signUp = () => {
               keyboardType="email-address"
               onChangeText={setEmail}
             />
+            <Text className="mb-6 pl-6 text-red-500">{emailMessage}</Text>
+
             <InputField
               label="Password"
               placeholder="*********"
-              containerStyle="py-2 px-6 rounded-2xl mb-6 w-[90%]"
+              containerStyle="py-2 px-6 rounded-2xl w-[90%]"
               labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
               inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
               inputModeType="password"
               onChangeText={setPassword}
             />
+            <Text className="mb-6 pl-6 text-red-500">{passwordMessage}</Text>
+
             <InputField
               label="Phone Number"
               placeholder="896*******"
-              containerStyle="py-2 px-6 rounded-2xl mb-6 w-[90%] "
+              containerStyle="py-2 px-6 rounded-2xl w-[90%] "
               labelStyle="font-boldFont text-xl tracking-tighter w-3/4 m-auto mb-3 text-fontPrimary-0"
               inputStyle="font-boldFont text-xl tracking-tighter text-fontPrimary-0"
               inputModeType="numeric"
@@ -88,6 +110,7 @@ const signUp = () => {
               onChangeText={setPhone}
               maxLength={10}
             />
+            <Text className="mb-6 pl-6 text-red-500">{phoneMessage}</Text>
           </View>
           <View className="flex items-center mt-10">
             <CustomButton
