@@ -3,7 +3,7 @@ import React from "react";
 import { AppScreenWrapper, InputField } from "@/components";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { router } from "expo-router";
-import { images } from "@/constants";
+import { icons } from "@/constants";
 import { orders } from "@/data";
 import { resolveProductById, resolveRestaurantById } from "@/utils/resolveCard";
 import { Order, Product } from "@/types";
@@ -81,7 +81,7 @@ const OrderScreen = () => {
       <InputField
         placeholder="Search by restaurant or dish"
         containerStyle="w-11/12 mx-auto rounded-xl pl-3 mt-3"
-        iconLeft={images.SearchIcon}
+        iconLeft={icons.IconSearch}
         iconLeftStyle="w-[25] h-[25]"
       />
 

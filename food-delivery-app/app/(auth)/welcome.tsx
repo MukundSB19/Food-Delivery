@@ -11,7 +11,7 @@ import { CustomButton } from "@/components/ui";
 import { router } from "expo-router";
 import { AppScreenWrapper } from "@/components/shared";
 import { LinearGradient } from "expo-linear-gradient";
-import { images } from "@/constants";
+import { backgrounds } from "@/constants";
 
 const Welcome = () => {
   return (
@@ -27,7 +27,7 @@ const Welcome = () => {
         end={{ x: 0, y: 1 }}
       >
         <ImageBackground
-          source={images.WelcomeBg}
+          source={backgrounds.BgWelcome}
           className="w-full h-full"
         >
           <View className="flex flex-col justify-between h-screen mb-10">

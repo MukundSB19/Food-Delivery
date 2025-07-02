@@ -3,17 +3,10 @@ import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import { useCart } from "@/context/CartContext";
 import { CustomButton } from "@/components/ui";
 import { AppScreenWrapper } from "@/components";
-import { images } from "@/constants";
+import { others } from "@/constants";
 // import { Minus, Plus, Trash2 } from "lucide-react-native";
 
 const Cart = () => {
-  // return (
-  //     <AppScreenWrapper gradientColors={["#EAECCC", "#9EDC88"]}>
-  //         <View>
-  //             <Text>Cart</Text>
-  //         </View>
-  //     </AppScreenWrapper>
-  // );
   const { state, updateQuantity, removeFromCart, totalPrice, clearCart } =
     useCart();
 
@@ -78,7 +71,7 @@ const Cart = () => {
           Add some delicious food to get started!
         </Text>
         <Image
-          source={images.CartSticker}
+          source={others.ShoppingSticker}
           className="w-1/2 h-1/2"
           resizeMode="contain"
         />

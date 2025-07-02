@@ -1,14 +1,10 @@
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-import { InputField } from "@/components/ui";
-import LocationModal from "@/components/LocationModal";
-import { useRef, useState } from "react";
+import { LocationModal } from "@/components";
+import { useState } from "react";
 import DrawerComponent from "./DrawerComponent";
 import Entypo from "@expo/vector-icons/Entypo";
-import { InputFieldProps } from "@/types";
-
 import {
-  Button,
   Image,
   Keyboard,
   KeyboardAvoidingView,
@@ -19,7 +15,7 @@ import {
 } from "react-native";
 import { View, Text } from "react-native";
 import { router } from "expo-router";
-import { images } from "@/constants";
+import { icons, others } from "@/constants";
 
 const HomeUpper = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -42,7 +38,7 @@ const HomeUpper = () => {
           onPress={() => router.push("/(protected)/(tabs)/account")}
         >
           <Image
-            source={images.userPhoto}
+            source={others.UserPhoto}
             className="w-[50] h-[50] rounded-full "
           />
         </TouchableOpacity>
@@ -64,10 +60,7 @@ const HomeUpper = () => {
                   placeholder="Search Fruits, Vegetables, Dairy, etc."
                 />
                 <TouchableOpacity>
-                  <Image
-                    source={images.filter}
-                    className="w-[32] h-[32]"
-                  />
+                  <Image source={icons.IconFilter} className="w-[32] h-[32]" />
                 </TouchableOpacity>
               </View>
             </View>

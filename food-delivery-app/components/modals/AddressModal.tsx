@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { AppScreenWrapper, CustomButton } from "@/components";
-import { images } from "@/constants";
+import { icons } from "@/constants";
 import { useDeliveryAddress, DEFAULT_TYPES } from "@/context/AddressContext";
 
 const AddressModal = ({ children, ...props }: ModalProps) => {
@@ -152,7 +152,7 @@ const AddressModal = ({ children, ...props }: ModalProps) => {
             />
             <CustomButton
               title="Detect Location"
-              iconRight={images.DetectLocation}
+              iconRight={icons.IconLocation}
               iconRightStyle="w-[28] h-[28] ml-2"
               className="px-4 py-3 "
               textStyle="text-white text-lg"

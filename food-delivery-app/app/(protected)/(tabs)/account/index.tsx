@@ -1,7 +1,7 @@
 import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
 import { AppScreenWrapper, DrawerComponent } from "@/components";
 import { CustomButton, InputField } from "@/components/ui";
-import { images } from "@/constants";
+import { icons, others } from "@/constants";
 import Entypo from "@expo/vector-icons/Entypo";
 import { useState } from "react";
 import {
@@ -27,7 +27,7 @@ const index = () => {
         </View>
         <View className="flex items-center mt-10 ">
           <Image
-            source={images.userPhoto}
+            source={others.UserPhoto}
             className="w-[120] h-[120] rounded-full "
           />
           <View className="mt-4 gap-4">
@@ -36,7 +36,7 @@ const index = () => {
               containerStyle="w-[90%] rounded-xl  px-4 "
               label="Name"
               labelStyle=" ml-5 mb-2 font-regularFont tracking-tighter text-lg"
-              iconLeft={images.EditIcon}
+              iconLeft={icons.IconEdit}
               iconLeftStyle="w-[30] h-[30] "
               editable={false}
             />
@@ -44,7 +44,7 @@ const index = () => {
               placeholder="estherhoward@gmail.com"
               containerStyle="w-[90%] rounded-xl px-4"
               label="Email"
-              iconLeft={images.EditIcon}
+              iconLeft={icons.IconEdit}
               iconLeftStyle="w-[30] h-[30] "
               labelStyle=" ml-5 mb-2 font-regularFont tracking-tighter text-lg"
               editable={false}
@@ -53,7 +53,7 @@ const index = () => {
               placeholder="+91 8632878333"
               containerStyle="w-[90%] rounded-xl px-4"
               label="Phone number"
-              iconLeft={images.EditIcon}
+              iconLeft={icons.IconEdit}
               iconLeftStyle="w-[30] h-[30]"
               labelStyle=" ml-5 mb-2 font-regularFont tracking-tighter text-lg"
               editable={false}
@@ -65,7 +65,7 @@ const index = () => {
             title="Your Orders"
             className="mx-5 mt-10"
             textStyle="py-4"
-            iconRight={images.RightAngle}
+            iconRight={icons.IconArrowRight}
             iconRightStyle="h-[38] w-[38] "
             containerStyle="w-full px-5"
             onPress={() => router.push("/account/order")}
@@ -75,7 +75,7 @@ const index = () => {
             title="Notifications"
             className="mx-5 mt-5"
             textStyle="py-4"
-            iconRight={images.RightAngle}
+            iconRight={icons.IconArrowRight}
             iconRightStyle="h-[38] w-[38] "
             containerStyle="w-full px-5"
             onPress={() => setNotificationModalVisible(true)}
@@ -85,7 +85,7 @@ const index = () => {
             title="Address"
             className="mx-5 mt-5"
             textStyle="py-4"
-            iconRight={images.RightAngle}
+            iconRight={icons.IconArrowRight}
             iconRightStyle="h-[38] w-[38] "
             containerStyle="w-full px-5"
             onPress={() => router.push("/account/address")}
@@ -98,7 +98,7 @@ const index = () => {
             title="Payment Method"
             className="mx-5 mt-5"
             textStyle="py-4"
-            iconRight={images.RightAngle}
+            iconRight={icons.IconArrowRight}
             iconRightStyle="h-[38] w-[38] "
             containerStyle="w-full px-5"
             onPress={() => router.push("/account/payment")}
@@ -130,9 +130,7 @@ const index = () => {
             }}
             statusBarTranslucent
           >
-            <TouchableOpacity
-              onPress={() => setAddressModalVisible(false)}
-            >
+            <TouchableOpacity onPress={() => setAddressModalVisible(false)}>
               <Entypo name="circle-with-cross" size={29} color="black" />
             </TouchableOpacity>
           </AddressModal>
@@ -145,9 +143,7 @@ const index = () => {
             }}
             statusBarTranslucent
           >
-            <TouchableOpacity
-              onPress={() => setPaymentModalVisible(false)}
-            >
+            <TouchableOpacity onPress={() => setPaymentModalVisible(false)}>
               <Entypo name="circle-with-cross" size={29} color="black" />
             </TouchableOpacity>
           </PaymentModal>

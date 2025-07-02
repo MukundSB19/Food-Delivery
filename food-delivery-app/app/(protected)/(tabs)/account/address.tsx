@@ -5,7 +5,7 @@ import { router } from "expo-router";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import Entypo from "@expo/vector-icons/Entypo";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import { images } from "@/constants";
+import { icons } from "@/constants";
 import { useDeliveryAddress } from "@/context/AddressContext";
 import { DeliveryAddress } from "@/types";
 
@@ -19,13 +19,13 @@ const AddressScreen = () => {
         <View className="flex flex-row justify-between w-full items-center">
           <View className="flex-row items-center mx-3 gap-3">
             {item.type === "home" && (
-              <Image source={images.HomeIcon} className="w-[33] h-[33]" />
+              <Image source={icons.IconHome} className="w-[33] h-[33]" />
             )}
             {item.type === "office" && (
-              <Image source={images.OfficeIcon} className="w-[33] h-[33]" />
+              <Image source={icons.IconOffice} className="w-[33] h-[33]" />
             )}
             {item.type === "friend's house" && (
-              <Image source={images.PersonIcon} className="w-[33] h-[33]" />
+              <Image source={icons.IconPerson} className="w-[33] h-[33]" />
             )}
             <Text className="font-regularFont text-xl tracking-tighter bg-[#9EDC88] px-2 py-1 rounded-lg">
               {item.label}
@@ -76,7 +76,7 @@ const AddressScreen = () => {
         <CustomButton
           className="mt-12 mx-3 px-2 py-2"
           title="Add New Address"
-          iconLeft={images.PlusIcon}
+          iconLeft={icons.IconPlus}
           iconLeftStyle="w-[25] h-[25]"
           textStyle="font-regularFont tracking-tighter text-[24px]"
           onPress={() => setAddressModalVisible(true)}

@@ -1,10 +1,10 @@
 import { Product } from "@/types";
-import { images } from "@/constants";
+import { cards, productItems } from "@/constants";
 
 export const products: Product[] = [
   {
-    image: images.cardOne,
-    image2: images.ProductOne,
+    image: cards.Card1,
+    image2: productItems.ProductA,
     id: "0",
     restaurantId: "r1",
     estimatedTime: "30 min",
@@ -16,8 +16,8 @@ export const products: Product[] = [
       "Kickstart your day with this sunny avocado breakfast! 🥑☀️ Freshly toasted bread, creamy avocado, a perfectly runny egg, and a sprinkle of chili flakes—simple, healthy, and delicious. The golden yolk oozes over the green mash like sunshine on a plate. Quick to make, hard to resist!",
   },
   {
-    image: images.cardTwo,
-    image2: images.ProductTwo,
+    image: cards.Card2,
+    image2: productItems.ProductB,
     id: "1",
     restaurantId: "r2",
     estimatedTime: "30 min",
@@ -29,8 +29,8 @@ export const products: Product[] = [
       "A colorful harmony of fresh veggies in one bowl! 🥦🥕🍅 The Veggie Symphony Bowl blends roasted goodness, crisp textures, and bold flavors—quinoa, sautéed greens, chickpeas, bell peppers, and a zesty tahini drizzle. Every bite is a note in a delicious plant-powered melody. Healthy never tasted this good!",
   },
   {
-    image: images.cardThree,
-    image2: images.ProductThree,
+    image: cards.Card3,
+    image2: productItems.ProductC,
     id: "2",
     restaurantId: "r3",
     estimatedTime: "30 min",
@@ -42,8 +42,8 @@ export const products: Product[] = [
       "Sip into bliss with this vibrant Berry Bliss Smoothie! 🍓🫐 A creamy blend of strawberries, blueberries, banana, and almond milk—sweet, refreshing, and packed with antioxidants. Perfect for mornings or a midday boost. One sip and you’ll feel the glow! ✨🍇",
   },
   {
-    image: images.cardFour,
-    image2: images.ProductFour,
+    image: cards.Card4,
+    image2: productItems.ProductD,
     id: "3",
     restaurantId: "r4",
     estimatedTime: "30 min",
@@ -59,7 +59,7 @@ export const products: Product[] = [
     restaurantId: "r5",
     estimatedTime: "30 min",
     name: "Orange",
-    image: images.FruitOne,
+    image: productItems.Orange,
     category: "fruits",
     vitamin: "C,B1,folate",
     price: 120,
@@ -71,7 +71,7 @@ export const products: Product[] = [
     estimatedTime: "30 min",
 
     name: "Mango",
-    image: images.FruitTwo,
+    image: productItems.Mango,
     category: "fruits",
     vitamin: "C,B1,folate",
     price: 200,
@@ -82,7 +82,7 @@ export const products: Product[] = [
     restaurantId: "r5",
     estimatedTime: "30 min",
     name: "Grapes",
-    image: images.FruitThree,
+    image: productItems.Grapes,
     category: "fruits",
     vitamin: "C,B1,folate",
     price: 80,
@@ -93,7 +93,7 @@ export const products: Product[] = [
     estimatedTime: "30 min",
     restaurantId: "r5",
     name: "Blueberries",
-    image: images.FruitFour,
+    image: productItems.Blueberry,
     category: "fruits",
     vitamin: "C,B1,folate",
     price: 140,
@@ -104,7 +104,7 @@ export const products: Product[] = [
     estimatedTime: "30 min",
     restaurantId: "r5",
     name: "Banana",
-    image: images.FruitFive,
+    image: productItems.Banana,
     category: "vegetables",
     vitamin: "C,B1,folate",
     price: 70,
@@ -117,7 +117,7 @@ export const products: Product[] = [
     estimatedTime: "30 min",
     category: "Indian",
     price: 349,
-    image: images.MoongDall,
+    image: productItems.MoongDal,
   },
   {
     id: "10",
@@ -126,7 +126,7 @@ export const products: Product[] = [
     estimatedTime: "30 min",
     category: "Chinese",
     price: 459,
-    image: images.Momos,
+    image: productItems.Momos,
   },
   {
     id: "11",
@@ -135,7 +135,7 @@ export const products: Product[] = [
     estimatedTime: "30 min",
     category: "Japanese",
     price: 350,
-    image: images.Soup,
+    image: productItems.MisoSoup,
   },
   {
     id: "12",
@@ -144,7 +144,7 @@ export const products: Product[] = [
     estimatedTime: "30 min",
     category: "Italian",
     price: 200,
-    image: images.Grilled,
+    image: productItems.GrilledPlatter,
   },
   {
     id: "13",
@@ -153,6 +153,6 @@ export const products: Product[] = [
     estimatedTime: "30 min",
     category: "Mexican",
     price: 450,
-    image: images.Burrito,
+    image: productItems.Burrito,
   },
 ];

@@ -5,25 +5,22 @@ import {
   Image,
   ImageBackground,
   FlatList,
-  StatusBar,
   ImageSourcePropType,
 } from "react-native";
 import { useLocalSearchParams } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
-
-import { AppScreenWrapper, CustomButton } from "@/components";
+import {  CustomButton } from "@/components";
 import { useCart } from "@/context/CartContext";
 import { resolveProductById } from "@/utils/resolveCard";
 import { Product } from "@/types";
 import { foods } from "@/data/foods";
-import { images } from "@/constants";
+import { backgrounds } from "@/constants";
 
 const cuisineBackgroundMap: Record<string, ImageSourcePropType> = {
-  chinese: images.ChineseBg,
-  japanese: images.JapanBg,
-  indian: images.IndiaBg,
-  italian: images.ItalianBg,
-  mexican: images.MexicoBg,
+  chinese: backgrounds.BgChinese,
+  japanese: backgrounds.BgJapanese,
+  indian: backgrounds.BgIndian,
+  italian: backgrounds.BgItalian,
+  mexican: backgrounds.BgMexican,
 };
 
 const CuisineCategoryScreen = () => {
