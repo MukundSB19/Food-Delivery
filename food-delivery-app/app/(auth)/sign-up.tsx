@@ -126,12 +126,12 @@ const signUp = () => {
               <Text className="mt-5 mb-6 text-base text-center font-LeagueSpartanMedium ">
                 Or Sign up with
               </Text>
-              {/* <View className="flex flex-row items-center justify-center gap-7">
+               <View className="flex flex-row items-center justify-center gap-7">
               <Image source={Icons.facebookIcon} />
               <Image source={Icons.googleIcon} />
               <Image source={Icons.appleIcon} />
-            </View> */}
-          {/* </View> */}
+            </View>
+           </View> */}
         </View>
       </ScrollView>
     </AppScreenWrapper>

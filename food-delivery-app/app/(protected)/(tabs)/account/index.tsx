@@ -27,7 +27,7 @@ const index = () => {
         </View>
         <View className="flex items-center mt-10 ">
           <Image
-            source={require("@/assets/images/user.jpg")}
+            source={images.userPhoto}
             className="w-[120] h-[120] rounded-full "
           />
           <View className="mt-4 gap-4">
@@ -116,7 +116,6 @@ const index = () => {
             statusBarTranslucent
           >
             <TouchableOpacity
-              className=""
               onPress={() => setNotificationModalVisible(false)}
             >
               <Entypo name="circle-with-cross" size={29} color="black" />
@@ -132,7 +131,6 @@ const index = () => {
             statusBarTranslucent
           >
             <TouchableOpacity
-              className=""
               onPress={() => setAddressModalVisible(false)}
             >
               <Entypo name="circle-with-cross" size={29} color="black" />
@@ -148,7 +146,6 @@ const index = () => {
             statusBarTranslucent
           >
             <TouchableOpacity
-              className=""
               onPress={() => setPaymentModalVisible(false)}
             >
               <Entypo name="circle-with-cross" size={29} color="black" />

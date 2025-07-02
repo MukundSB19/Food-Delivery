@@ -3,6 +3,7 @@ import { View, Text, Linking, Pressable, ScrollView } from "react-native";
 import { AppScreenWrapper, DrawerComponent } from "@/components";
 import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
 import { Image } from "react-native";
+import { images } from "@/constants";
 
 const Contact = () => {
   return (
@@ -58,19 +59,19 @@ const Contact = () => {
             {
               name: "Instagram",
               handle: "@yourapp",
-              icon: require("@/assets/images/instagram.png"),
+              icon: images.intagramLogo,
               link: "https://instagram.com/yourapp",
             },
             {
               name: "Twitter",
               handle: "@yourapp",
-              icon: require("@/assets/images/x.png"),
+              icon: images.xLogo,
               link: "https://twitter.com/yourapp",
             },
             {
               name: "Facebook",
               handle: "@yourapp",
-              icon: require("@/assets/images/facebook.png"),
+              icon: images.facebookLogo,
               link: "https://facebook.com/yourapp",
             },
           ].map((platform, index) => (

@@ -59,7 +59,6 @@ export default function CustomDrawerContent(
           flex: 1,
           opacity: fadeAnim,
         }}
-        className=""
       ></Animated.View>
 
       <View className="px-4 py-4 mt-auto border-t border-gray-200 ">

@@ -19,6 +19,7 @@ import {
 } from "react-native";
 import { View, Text } from "react-native";
 import { router } from "expo-router";
+import { images } from "@/constants";
 
 const HomeUpper = () => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -41,7 +42,7 @@ const HomeUpper = () => {
           onPress={() => router.push("/(protected)/(tabs)/account")}
         >
           <Image
-            source={require("@/assets/images/user.jpg")}
+            source={images.userPhoto}
             className="w-[50] h-[50] rounded-full "
           />
         </TouchableOpacity>
@@ -64,7 +65,7 @@ const HomeUpper = () => {
                 />
                 <TouchableOpacity>
                   <Image
-                    source={require("@/assets/images/filter.png")}
+                    source={images.filter}
                     className="w-[32] h-[32]"
                   />
                 </TouchableOpacity>
@@ -73,7 +74,7 @@ const HomeUpper = () => {
           </TouchableWithoutFeedback>
         </KeyboardAvoidingView>
       </View>
-      <View className="">
+      <View>
         <LocationModal
           animationType="fade"
           transparent={true}
@@ -83,7 +84,7 @@ const HomeUpper = () => {
           }}
           statusBarTranslucent
         >
-          <TouchableOpacity className="" onPress={() => setModalVisible(false)}>
+          <TouchableOpacity onPress={() => setModalVisible(false)}>
             <Entypo name="circle-with-cross" size={29} color="black" />
           </TouchableOpacity>
         </LocationModal>

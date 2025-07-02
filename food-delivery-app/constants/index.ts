@@ -40,8 +40,18 @@ import OfficeIcon from "@/assets/images/office.png";
 import PersonIcon from "@/assets/images/pereson.png";
 import DetectLocation from "@/assets/images/locationGeo.png";
 import SearchIcon from "@/assets/images/search.png";
+import intagramLogo from "@/assets/images/instagram.png";
+import xLogo from "@/assets/images/x.png";
+import facebookLogo from "@/assets/images/facebook.png";
+import userPhoto from "@/assets/images/user.jpg";
+import filter from "@/assets/images/filter.png";
 
 export const images = {
+  intagramLogo,
+  filter,
+  userPhoto,
+  facebookLogo,
+  xLogo,
   slideOne,
   slideTwo,
   slideThree,
