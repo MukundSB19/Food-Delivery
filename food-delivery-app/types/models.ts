@@ -1,4 +1,3 @@
-import { ImageSourcePropType } from "react-native";
 import { OrderStatus } from "./enums";
 import { Ingredient, Product } from "./menu";
 

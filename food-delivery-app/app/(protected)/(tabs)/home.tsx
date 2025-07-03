@@ -1,13 +1,15 @@
-import { View, Text, FlatList, Image } from "react-native";
-import { InputField, SlideShow } from "@/components/ui";
+import { View, Text, FlatList } from "react-native";
 import { onboarding } from "@/constants";
-import { HomeUpper, Cards, HorizontalList } from "@/components";
+import {
+  HomeUpper,
+  Cards,
+  HorizontalList,
+  AppScreenWrapper,
+} from "@/components";
 import { category } from "@/data";
-import { AppScreenWrapper, DrawerComponent } from "@/components";
 import { foods } from "@/data/foods";
-import { FoodItemCard } from "@/components/ui";
+import { FoodItemCard, SlideShow } from "@/components/ui";
 import { cardContent } from "@/data/cardContent";
-import { products } from "@/data/product";
 
 const home = () => {
   return (

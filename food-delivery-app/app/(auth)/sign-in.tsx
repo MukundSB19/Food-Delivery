@@ -1,7 +1,7 @@
 import { CustomButton, InputField } from "@/components/ui";
 import { router } from "expo-router";
 import { Text, View, ScrollView } from "react-native";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "@/context/AuthContext";
 import { AppScreenWrapper } from "@/components/shared";
 

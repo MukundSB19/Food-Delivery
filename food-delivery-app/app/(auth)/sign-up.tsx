@@ -1,7 +1,7 @@
 import { AppScreenWrapper } from "@/components/shared";
 import { CustomButton, InputField } from "@/components/ui";
 import { router } from "expo-router";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Text, TouchableOpacity, View, ScrollView } from "react-native";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { AuthContext } from "@/context/AuthContext";

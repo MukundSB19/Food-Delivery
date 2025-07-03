@@ -1,7 +1,7 @@
 import { Redirect } from "expo-router";
 import { useContext } from "react";
 import { AuthContext } from "@/context/AuthContext";
-import { ActivityIndicator, View, Text } from "react-native";
+import { ActivityIndicator, View } from "react-native";
 
 export default function SplashGuard({
   children,

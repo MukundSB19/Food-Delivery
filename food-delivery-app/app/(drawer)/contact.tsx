@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Linking, Pressable, ScrollView } from "react-native";
 import { AppScreenWrapper, DrawerComponent } from "@/components";
-import { FontAwesome, MaterialIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 import { Image } from "react-native";
 import { icons } from "@/constants";
 

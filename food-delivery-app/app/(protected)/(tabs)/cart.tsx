@@ -1,4 +1,3 @@
-import React from "react";
 import { View, Text, FlatList, Image, TouchableOpacity } from "react-native";
 import { useCart } from "@/context/CartContext";
 import { CustomButton } from "@/components/ui";

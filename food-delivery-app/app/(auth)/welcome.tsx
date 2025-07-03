@@ -3,13 +3,10 @@ import {
   Text,
   ImageBackground,
   TouchableOpacity,
-  ScrollView,
   StatusBar,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { CustomButton } from "@/components/ui";
 import { router } from "expo-router";
-import { AppScreenWrapper } from "@/components/shared";
 import { LinearGradient } from "expo-linear-gradient";
 import { backgrounds } from "@/constants";
 

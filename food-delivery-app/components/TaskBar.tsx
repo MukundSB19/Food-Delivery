@@ -1,4 +1,3 @@
-// components/TaskBar.tsx
 import {
   View,
   Text,

@@ -1,6 +1,5 @@
 import { View, Text, Modal, ModalProps, Switch } from "react-native";
 import { useState } from "react";
-import { SearchFunctionality } from "@/components";
 
 const NotificationModal = ({ children, ...props }: ModalProps) => {
   const [isEnabled, setIsEnabled] = useState(false);

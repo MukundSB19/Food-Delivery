@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
-import { AppScreenWrapper, DrawerComponent } from "@/components";
+import { AppScreenWrapper } from "@/components";
 import { CustomButton, InputField } from "@/components/ui";
 import { icons, others } from "@/constants";
 import Entypo from "@expo/vector-icons/Entypo";
