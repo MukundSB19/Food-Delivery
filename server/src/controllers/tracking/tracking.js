@@ -24,8 +24,7 @@ export const updateUser = async (req, reply) => {
       return reply.status(400).send({ message: "Invalid user role" });
     }
 
-    const updatedUser = await UserModel.findByIdAndUpdate(
-      //!This actually updates the user's data in the database.
+    const updatedUser = await UserModel.findByIdAndUpdate(  //!This actually updates the user's data in the database.
       userId, //! this parameter will tell mongo find the user whose id is this value
       { $set: updateData }, //! $set is a mongo operator it means only update these fields So if updateData = { name: "Mukund", phone: "9876..." }, then only name and phone will be updated.
       { new: true, runValidators: true } //! first parameter will return the updated document instead of the old one

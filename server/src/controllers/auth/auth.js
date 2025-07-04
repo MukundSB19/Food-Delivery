@@ -32,7 +32,7 @@ export const loginCustomer = async (req, reply) => {
       //! this will help to if user number was not found it will create a new one
       customer = new Customer({
         phone,
-        role: "Customer",
+        role: "User",
         isActivated: true,
       });
     }
