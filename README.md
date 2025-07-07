@@ -62,3 +62,6 @@ STRIPE_PUBLIC_KEY=your_key
 ```
 
 Use something like react-native-dotenv to load them.
+
+
+
