@@ -54,6 +54,7 @@ import IconInstagram from "@/assets/images/icons/instagram.png";
 import IconX from "@/assets/images/icons/x.png";
 import IconFacebook from "@/assets/images/icons/facebook.png";
 import IconFilter from "@/assets/images/icons/filter.png";
+import IconDelete from "@/assets/images/icons/delete.png"
 
 // Miscellaneous
 import ShoppingSticker from "@/assets/images/shopping.png";
@@ -120,6 +121,7 @@ export const icons = {
   IconX,
   IconFacebook,
   IconFilter,
+  IconDelete,
 };
 
 export const others = {
