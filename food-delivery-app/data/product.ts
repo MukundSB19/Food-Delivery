@@ -69,7 +69,6 @@ export const products: Product[] = [
     id: "5",
     restaurantId: "r5",
     estimatedTime: "30 min",
-
     name: "Mango",
     image: productItems.Mango,
     category: "fruits",
