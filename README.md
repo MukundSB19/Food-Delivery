@@ -12,7 +12,7 @@ A sleek and modern food delivery app built using **React Native** and **Expo**. 
 - ❤️ Save favorite restaurants
 - 🔔 Push notifications for order updates
 - 🌙 Light and dark theme support
-
+ 
 ## Tech Stack
 
 - **React Native**
